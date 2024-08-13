@@ -1,0 +1,118 @@
+.home-about {
+    padding-top: 0;
+    padding-bottom: 0;
+    min-height: 100vh;
+
+    @media (max-width: 1024px) {
+        padding-top: 0;
+    }
+
+    @media (max-width: 500px) {
+        padding-top: 0;
+    }
+
+    &__container {
+        width: 100%;
+        max-width: 100%;
+        display: flex;
+        align-items: stretch;
+
+        @include max(1024) {
+            max-width: 100%;
+            flex-direction: column-reverse;
+        }
+
+        @include max(730) {
+            max-width: 100%;
+        }
+    }
+
+    &__video {
+        position: relative;
+        flex-basis: 43.5%;
+
+        @include max(1024) {
+            flex-basis: auto;
+        }
+
+        img,
+        picture {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+
+            @include max(1024) {
+                aspect-ratio: 1/ 0.789;
+            }
+
+            @include max(500) {
+                aspect-ratio: 1/ 1.111;
+            }
+        }
+    }
+
+    &__play {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 5;
+    }
+
+    &__text {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        flex-basis: 56.5%;
+        padding: 184px 64px;
+        background-color: $c-grey;
+        background-image: url(../img/home/home_about_bg.svg);
+        background-repeat: no-repeat;
+        background-size: 47% auto;
+        background-position: bottom 48px right 48px;
+
+        @include max(1024) {
+            min-height: auto;
+            background-size: 37.76% auto;
+            background-position: bottom 110px right 50px;
+        }
+
+        @include max(768) {
+            padding: 48px;
+        }
+
+        @include max(500) {
+            padding: 40px 16px 40px;
+            background-size: 53.83% auto;
+            background-position: bottom 56px right 12px;
+        }
+    }
+
+    &__quote {
+        margin-top: 61px;
+        max-width: 518px;
+
+        @include max(768) {
+            margin-top: 40px;
+            max-width: 100%;
+        }
+    }
+
+    &__btn {
+        margin-top: auto;
+        margin-left: 62.27px;
+
+        @include max(1199) {
+            margin-top: 16px;
+        }
+
+        @include max(768) {
+            margin-left: 0;
+            margin-top: 40px;
+        }
+
+        @include max(768) {
+            margin-top: 24px;
+        }
+    }
+}

@@ -1,0 +1,127 @@
+.site-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 60;
+    background-color: transparent;
+    opacity: 0;
+    transition: all 0.5s ease;
+
+    &__container {
+        padding-top: 22px;
+        padding-bottom: 23px;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+
+        @include max(1199) {
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+
+        @include max(500) {
+            padding-top: 12px;
+            padding-bottom: 12px;
+        }
+    }
+
+    &__logo {
+        opacity: 0;
+        position: absolute;
+        top: 13px;
+        left: 50%;
+        width: 70px;
+        transform: translateX(-50%);
+        transition: opacity 0.5s ease;
+
+        @include max(1199) {
+            width: 87.78px;
+        }
+
+        @include max(500) {
+            width: 59.95px;
+        }
+
+        img {
+            width: 100%;
+        }
+
+        &--full {
+            width: 104px;
+            opacity: 1;
+
+            @include max(1199) {
+                width: 87.78px;
+            }
+        }
+    }
+
+    .header-menu {
+        display: flex;
+        align-items: center;
+        gap: 24px;
+        cursor: pointer;
+
+        &__item {
+            font-size: 16px;
+            line-height: 1.5em;
+            color: $c-white;
+            transition: opacity $tr-time-and-type;
+
+            &.noHovered {
+                opacity: 0.5;
+            }
+        }
+
+        @include max(1199) {
+            display: none;
+        }
+    }
+
+    .mobile-menu__open,
+    .site-header__call {
+        display: none;
+
+        .btn__icon {
+            color: $c-brown;
+
+            svg {
+                width: 24px;
+                height: 24px;
+            }
+        }
+
+
+        @include max(1199) {
+            display: flex;
+        }
+    }
+}
+
+.site-header {
+
+    &--hidden {
+        opacity: 0 !important;
+        top: -70px;
+    }
+
+    &--small {
+        background-color: $c-grey;
+    }
+
+    &--small &__container {
+        @include max(500) {
+            padding-top: 8px;
+            padding-bottom: 8px;
+        }
+    }
+
+    &--small &__logo {
+        opacity: 1;
+
+        &--full {
+            opacity: 0;
+        }
+    }
+}

@@ -1,0 +1,55 @@
+.cookie {
+    display: flex;
+    position: fixed;
+    bottom: 24px;
+    left: 50%;
+    transform: translateX(-50%);
+    align-items: center;
+    justify-content: space-between;
+    gap: 32px;
+    width: calc(100% - 64px * 2);
+    padding: 16px 16px 16px 64px;
+    background-color: $c-grey;
+    border-radius: 90px;
+    border: 1px solid rgba(218, 197, 177, 0.2);
+    z-index: 99;
+
+    @include max(768) {
+        width: calc(100% - 48px * 2);
+        padding: 16px 16px 16px 40px;
+    }
+
+    @include max(730) {
+        flex-direction: column;
+        width: calc(100% - 16px * 2);
+        padding: 16px 25px;
+        gap: 12px;
+        border-radius: 40px;
+    }
+
+    &__text {
+        font-size: 16px;
+        line-height: 1.5em;
+        color: rgba(255, 255, 255, 0.7);
+
+        @include max(730) {
+            text-align: center;
+        }
+
+        a {
+            color: $c-beige;
+
+            @include hover() {
+                text-decoration: underline;
+            }
+
+            &:active {
+                color: $c-beige-hover;
+            }
+
+            @include max(730) {
+                display: block;
+            }
+        }
+    }
+}

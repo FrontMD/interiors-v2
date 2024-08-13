@@ -1,0 +1,32 @@
+section.section.home-about(data-js="homeAbout")
+    .container.home-about__container
+        .home-about__video
+            <picture>
+                <source srcset="./img/home/home_about_360.jpg" media="(max-width: 500px)">
+                <source srcset="./img/home/home_about_768.jpg" media="(max-width: 768px)">
+                <img src="./img/home/home_about.png" alt="">
+            </picture>
+            +btn({
+                classes: 'home-about__play',
+                vMode: 'circle',
+                text: '',
+                cMode: 'beige',
+                icon: true,
+                iconName: 'play'
+            })(data-hystmodal='#homeAboutVideo')
+        .home-about__text
+            +title({
+                classes: 'title__h2--small home-about__title',
+                text: 'Как мы работаем'
+            })
+            +quote({
+                classes: 'home-about__quote',
+                text: 'Уверена, что облик дома формируют арт-объекты, придающие ему интеллектуальность. И с опытом я все больше убеждаюсь в том, что концепцию жилья надо начинать именно с искусства и лишь потом углубляться в технические моменты',
+                author: 'Волкова Арина Владимировна',
+                position: 'Руководитель студии VI interiors',
+            })
+            +btn({   
+                classes: 'home-about__btn',
+                text: 'Узнать подробнее',
+                cMode: 'beige2',
+            })

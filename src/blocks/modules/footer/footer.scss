@@ -1,0 +1,137 @@
+.site-footer {
+    padding: 64px 48px;
+    background-color: $c-grey;
+    color: white;
+    font-size: 16px;
+    line-height: 1.5em;
+
+    @include max(1024) {
+        padding: 48px;
+    }
+
+    @include max(500) {
+        padding: 16px 20.5px;
+    }
+
+    &__container {
+        @include max(1024) {
+            max-width: 100%;
+        }
+
+        @include max(730) {
+            max-width: 100%;
+        }
+    }
+
+    &__top {
+        display: flex;
+        justify-content: flex-start;
+        gap: 96px;
+
+        @include max(1024) {
+            flex-wrap: wrap;
+            gap: 48px;
+        }
+
+        @include max(500) {
+            gap: 32px;
+        }
+    }
+
+    &__bottom {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 48px;
+
+        @include max(1024) {
+            margin-top: 56px;
+        }
+
+        @include max(730) {
+            flex-direction: column;
+            align-items: center;
+            gap: 12px;
+        }
+
+        @include max(500) {
+            margin-top: 48px;
+        }
+    }
+
+    &__column {
+        display: flex;
+        flex-direction: column;
+        gap: 70px;
+        flex: 0 0 248px;
+
+        @include max(1024) {
+            gap: 48px;
+        }
+
+        @include max(1024) {
+            flex: 0 0 100%;
+        }
+
+        &--logo {
+            display: flex;
+            align-items: flex-end;
+            flex: 1 1 auto;
+            margin-left: auto;
+        }
+    }
+
+    &__title {
+        opacity: 0.3;
+    }
+
+    &__link {
+        display: flex;
+        align-items: center;
+        color: $c-white;
+        transition: opacity $tr-time-and-type;
+        width: fit-content;
+
+        &.noHovered {
+            opacity: 0.5;
+        }
+
+        &--noLink {
+            pointer-events: none;
+        }
+    }
+
+    &__menu {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+
+        @include max(500) {
+            gap: 12px;
+        }
+    }
+
+    &__logo {
+        max-width: 557px;
+
+        @include max(1024) {
+            flex-basis: 100%;
+            max-width: 100%;
+        }
+
+        @include max(500) {
+            margin-top: 8px;
+        }
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .link {
+        transition: color $tr-time-and-type;
+
+        @include hover() {
+            color: $c-beige;
+        }
+    }
+}

@@ -1,0 +1,73 @@
+.title {
+    font-family: $titleFont;
+    line-height: 1.08em;
+    color: $c-white;
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        color: inherit;
+        line-height: inherit;
+        font-size: inherit;
+        letter-spacing: inherit;
+        font-weight: inherit;
+        text-wrap: inherit;
+    }
+
+    &__h1 {
+        font-size: 56px;
+
+        @include max(768) {
+            font-size: 48px;
+        }
+
+        @include max(500) {
+            font-size: 40px;
+        }
+    }
+
+    &__h2 {
+        font-size: 260px;
+        text-align: center;
+
+        @include max(1300) {
+            font-size: 210px;
+        }
+
+        @include max(1199) {
+            font-size: 175px;
+        }
+
+        @include max(1024) {
+            font-size: 132px;
+        }
+
+        @include max(730) {
+            font-size: 64px;
+        }
+
+        &--small {
+            font-size: 56px;
+            text-align: left;
+
+            @include max(1300) {
+                font-size: 48px;
+            }
+
+            @include max(1199) {
+                font-size: 48px;
+            }
+
+            @include max(1024) {
+                font-size: 48px;
+            }
+
+            @include max(730) {
+                font-size: 40px;
+            }
+        }
+    }
+}

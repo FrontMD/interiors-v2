@@ -1,0 +1,46 @@
+.home-discussion {
+    padding-bottom: 120px;
+
+    @include max(1024) {
+        padding-bottom: 80px;
+    }
+
+    @include max(1024) {
+        padding-bottom: 64px;
+    }
+
+    &__container {
+        display: flex;
+        align-items: flex-start;
+        gap: 129px;
+
+        @include max(1024) {
+            flex-direction: column-reverse;
+            gap: 24px;
+        }
+
+        @include max(500) {
+            gap: 16px;
+        }
+    }
+
+    &__left {
+        flex: 0 0 auto;
+    }
+
+    &__right {
+        flex: 1 1 auto;
+    }
+
+    &__text {
+        margin-top: 32px;
+
+        @include max(1024) {
+            margin-top: 24px;
+        }
+
+        @include max(500) {
+            margin-top: 16px;
+        }
+    }
+}

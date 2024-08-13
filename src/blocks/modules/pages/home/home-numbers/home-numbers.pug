@@ -1,0 +1,27 @@
+section.section.home-numbers(id='homeNumbers' data-js="homeNumbers")
+    .container
+        .home-numbers__numbers
+            .home-numbers__number.number
+                .number__symbol(data-anim="title")!= '>'
+                .number__number(data-anim="title") 200
+                .number__text законченных проектов <br>в портфолио
+            .home-numbers__number.number
+                .number__symbol(data-anim="title")!= '>'
+                .number__number(data-anim="title") 50
+                .number__text % заказчиков <br>возвращаются  
+            .home-numbers__number.number
+                .number__symbol(data-anim="title")!= '>'
+                .number__number(data-anim="title") 500
+                .number__text литров игристого выпито <br>на завершенных объектах                
+    .home-numbers__picture
+        .container
+            .home-numbers__img(data-js="homeNumbersImg")
+                <picture>
+                    <source srcset="./img/home/home_numbers_360.jpg" media="(max-width: 500px)">
+                    <source srcset="./img/home/home_numbers_768.jpg" media="(max-width: 768px)">
+                    <img src="./img/home/home_numbers.png" alt="">
+                </picture>
+            +quote({
+                classes: 'home-numbers__quote',
+                text: 'Мы хотим, чтобы интерьеры отражали Ваш характер. имея собственный. Чтобы смотря на визуализации будущего интерьера Вы чувствовали, что мечты сбываются'
+            })(data-js="homeNumbersQuote")
