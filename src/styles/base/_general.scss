@@ -233,7 +233,7 @@ html {
     }
 
     &--home2 {
-        height: calc(100vh + 315px);
+        height: calc(100vh + 470px);
         overflow: hidden;
         z-index: 15;
     }
@@ -260,17 +260,17 @@ html {
     transition: margin-top 0.5s linear;
 }
 
+/* анимированные тексты и картинки */
 .height-anim-wrap {
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
+    justify-content: flex-start;
 
-    &--toBottom {
-        justify-content: flex-start;
+    &--toTop {
+        justify-content: flex-end;
     }
 }
 
-/* анимированные тексты и картинки */
 .height-anim-el {
     position: relative;
     width: 100%;
@@ -280,7 +280,7 @@ html {
 
 .height-anim-content {
     position: absolute;
-    bottom: 0;
+    top: 0;
 
 }
 

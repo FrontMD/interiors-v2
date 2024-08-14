@@ -27,9 +27,9 @@ mixin quote(props = defaultQuoteProps)
                         .quote__text.height-anim-content(data-anim="heightContent")
                             != checkProps.text
             if(checkProps.author)
-                .height-anim-wrap(data-anim="heightWrap")
+                .quote__author.height-anim-wrap(data-anim="heightWrap")
                     .height-anim-el(data-anim="heightEl")
-                        .quote__author.height-anim-content(data-anim="heightContent")
+                        .height-anim-content(data-anim="heightContent")
                             != checkProps.author
             if(checkProps.position)
                 .height-anim-wrap(data-anim="heightWrap")

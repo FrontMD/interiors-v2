@@ -31,7 +31,7 @@ if(preloader !== null ) {
             cookieInit()
         }
 
-	}, 2100)
+	}, 1600)
 }
 
 function startPageAnimation() {
@@ -147,8 +147,7 @@ function homePageAnimation() {
     })
 
     if(windowWidth > 1024) {
-            //расставляем элементы
-
+        //расставляем элементы
         mainTimeline.fromTo('[data-js="homeIntroFake1"]', 
         {
             scale: "1",
@@ -234,7 +233,7 @@ function homePageAnimation() {
         }, 
         {
             marginTop: 0,
-            duration: 0.5,
+            duration: 0.3,
             delay: 0.2
         }, '<')
     
@@ -244,11 +243,12 @@ function homePageAnimation() {
         }, 
         {
             opacity: '1',
-            duration: 0.5,
+            duration: 0.3,
             onComplete: () => {
                 cookieInit()
             }
         }, '<')
+
         //первый экран и цифры с картинкой
         mainTimeline.fromTo('[data-js="animContainerHome1"]', {
             y: "0",
@@ -264,7 +264,7 @@ function homePageAnimation() {
         mainTimeline.fromTo('[data-js="homeNumbers"] [data-js="titleAnimInternal"]', {
             marginTop: "1em"
         }, {
-            duration: 0.5,
+            duration: 0.3,
             delay: 0.3,
             marginTop: "0",
             ease: "none",
@@ -275,7 +275,7 @@ function homePageAnimation() {
         }, {
             height: "100%",
             delay: 0.8,
-            duration: 0.4,
+            duration: 0.3,
             ease: "none",
         }, "< -0.5");
     
@@ -283,7 +283,7 @@ function homePageAnimation() {
             top: "-20%"
         }, {
             top: "0",
-            duration: 3.2,
+            duration: 2.8,
             ease: "none",
         }, "< -0.8");
     
@@ -291,7 +291,7 @@ function homePageAnimation() {
             y: "-100%"
         }, {
             y: "50%",
-            duration: 3.2,
+            duration: 2.8,
             ease: "none",
         }, "<");
     
@@ -308,7 +308,7 @@ function homePageAnimation() {
             marginTop: "1em"
         }, {
             marginTop: 0,
-            duration: 0.5,
+            duration: 0.3,
             delay: 0.3,
             ease: "none",
         }, "<");
@@ -377,8 +377,8 @@ function homePageAnimation() {
             marginTop: "1em"
         }, {
             marginTop: 0,
-            duration: 0.5,
             delay: 0.3,
+            duration: 0.2,
             ease: "none",
         }, "<");
     
@@ -387,7 +387,7 @@ function homePageAnimation() {
         }, {
             height: "100%",
             delay: 0.3,
-            duration: 0.4,
+            duration: 0.2,
             ease: "none",
         }, "<");
     
@@ -397,7 +397,7 @@ function homePageAnimation() {
             y: "-200%",
             duration: 1.5,
             ease: "none",
-        }, "> +0.1");
+        }, "> +0.2");
     
         //истории, контакты, текст
         mainTimeline.fromTo('[data-js="animContainerHome4"]', {
@@ -412,7 +412,7 @@ function homePageAnimation() {
             marginTop: "1em"
         }, {
             marginTop: 0,
-            duration: 0.4,
+            duration: 0.2,
             delay: 0.5,
             ease: "none",
         }, "<");
@@ -421,8 +421,8 @@ function homePageAnimation() {
             height: 0
         }, {
             height: "100%",
+            duration: 0.2,
             delay: 0.5,
-            duration: 0.5,
             ease: "none",
         }, "< -0.5");
     
@@ -432,7 +432,7 @@ function homePageAnimation() {
             y: "-100%",
             duration: 2,
             ease: "none",
-        }, "> +0.1");
+        }, "> +0.3");
     
         mainTimeline.fromTo('[data-js="mContacts"] .m-contacts__title [data-js="titleAnimInternal"]', {
             marginTop: "1em"
@@ -446,7 +446,7 @@ function homePageAnimation() {
             height: 0
         }, {
             height: "100%",
-            duration: 0.4,
+            duration: 0.3,
             ease: "none",
         }, "<");
 
@@ -463,16 +463,16 @@ function homePageAnimation() {
             marginTop: "1em"
         }, {
             marginTop: 0,
-            duration: 0.4,
+            duration: 0.3,
             delay: 0.3,
             ease: "none",
-        }, "> +0.4");
+        }, "> +0.3");
     
         mainTimeline.fromTo('[data-js="homeDiscussion"] [data-anim="heightEl"]', {
             height: 0
         }, {
             height: "100%",
-            duration: 0.4,
+            duration: 0.3,
             ease: "none",
         }, "<");
 
@@ -868,7 +868,7 @@ function homePageAnimation() {
         /* убираем элементы */
        mainTimeline.fromTo('[data-js="homeIntroBg"]', 
             {
-                scale: "0.48"
+                scale: "0.58"
             }, 
             {
                 scale: '1',
@@ -912,7 +912,7 @@ function homePageAnimation() {
         mainTimeline.fromTo('[data-js="homeNumbers"] [data-js="titleAnimInternal"]', {
             marginTop: "1em"
         }, {
-            duration: 0.5,
+            duration: 0.3,
             delay: 0.4,
             marginTop: "0",
             ease: "none",
@@ -923,7 +923,7 @@ function homePageAnimation() {
         }, {
             height: "100%",
             delay: 1,
-            duration: 0.4,
+            duration: 0.2,
             ease: "none",
         }, "< -0.4");
     
@@ -931,15 +931,15 @@ function homePageAnimation() {
             top: "-20%"
         }, {
             top: "0",
-            duration: 3.2,
+            duration: 2.8,
             ease: "none",
-        }, "< -0.8");
+        }, "< -0.6");
     
         mainTimeline.fromTo('[data-js="homeNumbersQuote"]', {
             y: "-100%"
         }, {
             y: "50%",
-            duration: 3.2,
+            duration: 2.8,
             ease: "none",
         }, "<");
     
@@ -956,8 +956,8 @@ function homePageAnimation() {
             marginTop: "1em"
         }, {
             marginTop: 0,
-            duration: 0.5,
-            delay: 0.3,
+            duration: 0.2,
+            delay: 0.1,
             ease: "none",
         }, "<");
     
@@ -989,7 +989,7 @@ function homePageAnimation() {
             opacity: "1",
         }, {
             opacity: "0",
-            duration: 2,
+            duration: 2.2,
             ease: "none",
             onStart: () => {
                 projectsAnimation()
@@ -1009,7 +1009,7 @@ function homePageAnimation() {
              marginTop: "1em"
          }, {
              marginTop: 0,
-             duration: 0.5,
+             duration: 0.2,
              delay: 0.3,
              ease: "none",
          }, "<");
@@ -1019,9 +1019,9 @@ function homePageAnimation() {
          }, {
              height: "100%",
              delay: 0.3,
-             duration: 0.4,
+             duration: 0.2,
              ease: "none",
-         }, "< -0.3");
+         }, "<");
 
         mainTimeline.fromTo('[data-js="animContainerHome3"]', {
             y: "0",
@@ -1029,7 +1029,7 @@ function homePageAnimation() {
             y: "-100%",
             duration: 2,
             ease: "none",
-        }, "< -0.3");
+        }, "< -0.8");
     
     
         mainTimeline.fromTo('[data-js="animContainerHome3"]', {
@@ -1053,8 +1053,8 @@ function homePageAnimation() {
             marginTop: "1em"
         }, {
             marginTop: 0,
-            duration: 0.4,
-            delay: 0.5,
+            duration: 0.2,
+            delay: 0.3,
             ease: "none",
         }, "<");
     
@@ -1062,10 +1062,10 @@ function homePageAnimation() {
             height: 0
         }, {
             height: "100%",
-            delay: 0.5,
-            duration: 0.5,
+            delay: 0.3,
+            duration: 0.2,
             ease: "none",
-        }, "< -0.5");
+        }, "< -0.3");
     
         mainTimeline.fromTo('[data-js="animContainerHome4"]', {
             y: "-100vh",
@@ -1073,7 +1073,7 @@ function homePageAnimation() {
             y: "-100%",
             duration: 2,
             ease: "none",
-        }, "> +0.1");
+        }, "> +0.5");
     
         mainTimeline.fromTo('[data-js="mContacts"] .m-contacts__title [data-js="titleAnimInternal"]', {
             marginTop: "1em"
@@ -1104,7 +1104,7 @@ function homePageAnimation() {
             marginTop: "1em"
         }, {
             marginTop: 0,
-            duration: 0.4,
+            duration: 0.2,
             ease: "none",
         }, ">");
     
@@ -1114,7 +1114,7 @@ function homePageAnimation() {
             height: "100%",
             duration: 0.4,
             ease: "none",
-        }, "<");
+        }, "> +0.2");
     }
 
 }

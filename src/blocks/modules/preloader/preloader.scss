@@ -15,8 +15,6 @@
 		overflow: hidden;
 		width: 104px;
 		height: 68px;
-		//transform: scale(1.654);
-		//animation: sizeAnim 0s linear 1.5s forwards;
 
 		@include max(1199) {
 			width: 87.78px;
@@ -49,7 +47,7 @@
 			top: 0;
 			left: 0;
 			z-index: 10;
-			animation: logoAnim 1.5s linear 0.5s forwards;
+			animation: logoAnim 1s linear 0.5s forwards;
 
 			img {
 				display: block;
@@ -78,15 +76,5 @@
 
 	100% {
 		width: 100%;
-	}
-}
-
-@keyframes sizeAnim {
-	0% {
-		transform: scale(1.654);
-	}
-
-	100% {
-		transform: scale(1);
 	}
 }
