@@ -159,7 +159,7 @@ function homePageAnimation() {
             scale: "2",
             top: "-91.7%",
             left: "30%",        
-            duration: 1
+            duration: 0.7
         }, '0')
     
         mainTimeline.fromTo('[data-js="homeIntroFake2"]', 
@@ -172,7 +172,7 @@ function homePageAnimation() {
             scale: "2",
             top: "19%",
             left: "116%",        
-            duration: 1
+            duration: 0.7
         }, '<')
     
         mainTimeline.fromTo('[data-js="homeIntroFake3"]', 
@@ -185,7 +185,7 @@ function homePageAnimation() {
             scale: "2",
             top: "122%",
             left: "50%",
-            duration: 1
+            duration: 0.7
         }, '<')
         
         mainTimeline.fromTo('[data-js="homeIntroFake4"]', 
@@ -198,7 +198,7 @@ function homePageAnimation() {
             scale: "2",
             top: "122%",
             left: "-20%",
-            duration: 1
+            duration: 0.7
         }, '<')
     
     
@@ -212,7 +212,7 @@ function homePageAnimation() {
             scale: "2",
             top: "43%",
             left: "-42.3%",
-            duration: 1
+            duration: 0.7
         }, '<')
     
     
@@ -223,8 +223,8 @@ function homePageAnimation() {
             }, 
             {
                 scale: '1',
-                duration: 1
-            }, '>')
+                duration: 1.3
+            }, '> -0.3')
     
         //показываем контент
         mainTimeline.fromTo('[data-js="homeIntroTitle"] [data-js="titleAnimInternal"]', 
@@ -259,7 +259,7 @@ function homePageAnimation() {
             },
             duration: 1.8,
             ease: "none",
-        }, "> +0.6");
+        }, "> +0.9");
     
         mainTimeline.fromTo('[data-js="homeNumbers"] [data-js="titleAnimInternal"]', {
             marginTop: "1em"
@@ -489,7 +489,7 @@ function homePageAnimation() {
             scale: "2",
             top: "-48%",
             left: "30%",        
-            duration: 1
+            duration: 0.7
         }, '0')
     
         mainTimeline.fromTo('[data-js="homeIntroFake2"]', 
@@ -502,7 +502,7 @@ function homePageAnimation() {
             scale: "2",
             top: "11%",
             left: "127.5%",        
-            duration: 1
+            duration: 0.7
         }, '<')
     
         mainTimeline.fromTo('[data-js="homeIntroFake3"]', 
@@ -515,7 +515,7 @@ function homePageAnimation() {
             scale: "2",
             top: "116%",
             left: "57%",
-            duration: 1
+            duration: 0.7
         }, '<')
         
         mainTimeline.fromTo('[data-js="homeIntroFake4"]', 
@@ -528,7 +528,7 @@ function homePageAnimation() {
             scale: "2",
             top: "111%",
             left: "-22%",
-            duration: 1
+            duration: 0.7
         }, '<')
     
         mainTimeline.fromTo('[data-js="homeIntroFake5"]', 
@@ -541,7 +541,7 @@ function homePageAnimation() {
             scale: "2",
             top: "77%",
             left: "-51%",
-            duration: 1
+            duration: 0.7
         }, '<')
     
     
@@ -552,8 +552,8 @@ function homePageAnimation() {
             }, 
             {
                 scale: '1',
-                duration: 1
-            }, '>')
+                duration: 1.3
+            }, '> -0.3')
     
         //показываем контент
         mainTimeline.fromTo('[data-js="homeIntroTitle"] [data-js="titleAnimInternal"]', 
@@ -587,7 +587,7 @@ function homePageAnimation() {
             },
             duration: 1.8,
             ease: "none",
-        }, "> +0.6");
+        }, "> +0.9");
     
         mainTimeline.fromTo('[data-js="homeNumbers"] [data-js="titleAnimInternal"]', {
             marginTop: "1em"
@@ -809,7 +809,7 @@ function homePageAnimation() {
                 scale: "2",
                 top: "-48%",
                 left: "30%",        
-                duration: 1
+                duration: 0.7
             }, '0')
         
             mainTimeline.fromTo('[data-js="homeIntroFake2"]', 
@@ -822,7 +822,7 @@ function homePageAnimation() {
                 scale: "2",
                 top: "11%",
                 left: "127.5%",        
-                duration: 1
+                duration: 0.7
             }, '<')
         
             mainTimeline.fromTo('[data-js="homeIntroFake3"]', 
@@ -835,7 +835,7 @@ function homePageAnimation() {
                 scale: "2",
                 top: "116%",
                 left: "57%",
-                duration: 1
+                duration: 0.7
             }, '<')
             
             mainTimeline.fromTo('[data-js="homeIntroFake4"]', 
@@ -848,7 +848,7 @@ function homePageAnimation() {
                 scale: "2",
                 top: "111%",
                 left: "-22%",
-                duration: 1
+                duration: 0.7
             }, '<')
         
             mainTimeline.fromTo('[data-js="homeIntroFake5"]', 
@@ -861,7 +861,7 @@ function homePageAnimation() {
                 scale: "2",
                 top: "77%",
                 left: "-51%",
-                duration: 1
+                duration: 0.7
             }, '<')
     
     
@@ -872,8 +872,8 @@ function homePageAnimation() {
             }, 
             {
                 scale: '1',
-                duration: 1
-            }, '>')
+                duration: 1.2
+            }, '> -0.4')
     
         //показываем контент
         mainTimeline.fromTo('[data-js="homeIntroTitle"] [data-js="titleAnimInternal"]', 
@@ -907,7 +907,7 @@ function homePageAnimation() {
             },
             duration: 1.8,
             ease: "none",
-        }, "> +0.6");
+        }, "> +0.8");
     
         mainTimeline.fromTo('[data-js="homeNumbers"] [data-js="titleAnimInternal"]', {
             marginTop: "1em"
