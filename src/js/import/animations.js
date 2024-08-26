@@ -341,7 +341,7 @@ function homePageAnimation() {
             opacity: "1",
         }, {
             opacity: "0",
-            duration: 2,
+            duration: 1.5,
             ease: "none",
             onStart: () => {
                 projectsAnimation()
@@ -352,7 +352,7 @@ function homePageAnimation() {
             opacity: "1",
         }, {
             opacity: "0",
-            duration: 2,
+            duration: 1.5,
             ease: "none",
         }, "<");
     
@@ -369,7 +369,7 @@ function homePageAnimation() {
             scale: "0.3",
         }, {
             scale: "1",
-            duration: 1,
+            duration: 0.5,
             ease: "none",
         }, ">");
     
@@ -377,7 +377,6 @@ function homePageAnimation() {
             marginTop: "1em"
         }, {
             marginTop: 0,
-            delay: 0.3,
             duration: 0.2,
             ease: "none",
         }, "<");
@@ -386,7 +385,6 @@ function homePageAnimation() {
             height: 0
         }, {
             height: "100%",
-            delay: 0.3,
             duration: 0.2,
             ease: "none",
         }, "<");
@@ -397,7 +395,7 @@ function homePageAnimation() {
             y: "-200%",
             duration: 1.5,
             ease: "none",
-        }, "> +0.2");
+        }, "> +0.5");
     
         //истории, контакты, текст
         mainTimeline.fromTo('[data-js="animContainerHome4"]', {
@@ -907,7 +905,7 @@ function homePageAnimation() {
             },
             duration: 1.8,
             ease: "none",
-        }, "> +0.8");
+        }, "> +0.5");
     
         mainTimeline.fromTo('[data-js="homeNumbers"] [data-js="titleAnimInternal"]', {
             marginTop: "1em"
@@ -965,7 +963,7 @@ function homePageAnimation() {
             y: "0",
         }, {
             y: "-100%",
-            duration: 1,
+            duration: 1.5,
             ease: "none",
             onUpdate: () => {
                 projectsAnimation()
@@ -978,7 +976,7 @@ function homePageAnimation() {
             y: () => {
                 return -(document.querySelector('[data-js="mProjectsContainer"]').offsetHeight - window.innerHeight - 95) + "px"
             },
-            duration: 3,
+            duration: 3.5,
             ease: "none",
             onUpdate: () => {
                 projectsAnimation()
@@ -1045,7 +1043,7 @@ function homePageAnimation() {
             y: "0",
         }, {
             y: "-100vh",
-            duration: 1,
+            duration: 1.5,
             ease: "none",
         }, "<");
     
@@ -1071,9 +1069,9 @@ function homePageAnimation() {
             y: "-100vh",
         }, {
             y: "-100%",
-            duration: 2,
+            duration: 3,
             ease: "none",
-        }, "> +0.5");
+        }, "> +1");
     
         mainTimeline.fromTo('[data-js="mContacts"] .m-contacts__title [data-js="titleAnimInternal"]', {
             marginTop: "1em"
