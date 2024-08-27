@@ -5,7 +5,7 @@
         padding-bottom: 80px;
     }
 
-    @include max(1024) {
+    @include max(500) {
         padding-bottom: 64px;
     }
 
@@ -30,6 +30,12 @@
 
     &__right {
         flex: 1 1 auto;
+    }
+
+    &__title {
+        @include max(500) {
+            font-size: 30px;
+        }
     }
 
     &__text {

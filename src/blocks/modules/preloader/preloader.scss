@@ -13,17 +13,17 @@
 	&__container {
 		position: relative;
 		overflow: hidden;
-		width: 104px;
-		height: 68px;
+		width: 130px;
+		height: 85px;
 
 		@include max(1199) {
-			width: 87.78px;
-			height: 57.39px;
+			width: 110px;
+			height: 71.92px;
 		}
 
 		@include max(500) {
-			width: 59.95px;
-			height: 38.04px;
+			width: 75px;
+			height: 47.59px;
 		}
 	}
 
@@ -52,17 +52,17 @@
 			img {
 				display: block;
 				max-width: none;
-				width: 104px;
-				height: 68px;
+				width: 130px;
+				height: 85px;
 
 				@include max(1199) {
-					width: 87.78px;
-					height: 57.39px;
+					width: 110px;
+					height: 71.92px;
 				}
 
 				@include max(500) {
-					width: 59.95px;
-					height: 38.04px;
+					width: 75px;
+					height: 47.59px;
 				}
 			}
 		}

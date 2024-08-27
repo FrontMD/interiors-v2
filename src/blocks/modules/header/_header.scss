@@ -48,11 +48,15 @@
         }
 
         &--full {
-            width: 104px;
+            width: 130px;
             opacity: 1;
 
             @include max(1199) {
-                width: 87.78px;
+                width: 110px;
+            }
+
+            @include max(500) {
+                width: 75px;
             }
         }
     }

@@ -15,6 +15,7 @@ let currentPageName = currentPage ? currentPage.dataset.page : ""
 const windowHeight = window.innerHeight
 const windowWidth = window.innerWidth
 
+
 if(preloader !== null ) {
 	setTimeout(() => {
 		$(preloader).fadeOut("slow")
@@ -61,14 +62,14 @@ function homeIntroAnim() {
     document.activeElement.blur()
 
     let windowWidth = $(window).width()
-    let fakeLogoTop = '47px'
+    let fakeLogoTop = '54px'
 
     if(windowWidth < 1200) {
-        fakeLogoTop = '42px'
+        fakeLogoTop = '47px'
     }
 
     if(windowWidth < 501) {
-        fakeLogoTop = '32px'
+        fakeLogoTop = '37px'
     }
 
     if(document.querySelector('[data-js="homeIntro"]')) {
@@ -479,13 +480,13 @@ function homePageAnimation() {
         mainTimeline.fromTo('[data-js="homeIntroFake1"]', 
         {
             scale: "1",
-            top: "11%",
-            left: "12%",
+            top: "-32%",
+            left: "-20%",
             scale: "1"
         }, 
         {
             scale: "2",
-            top: "-48%",
+            top: "-100%",
             left: "30%",        
             duration: 0.7
         }, '0')
@@ -493,7 +494,7 @@ function homePageAnimation() {
         mainTimeline.fromTo('[data-js="homeIntroFake2"]', 
         {
             scale: "1",
-            top: "34%",
+            top: "19%",
             left: "63%"
         }, 
         {
@@ -506,39 +507,39 @@ function homePageAnimation() {
         mainTimeline.fromTo('[data-js="homeIntroFake3"]', 
         {
             scale: "1",
-            top: "56%",
-            left: "42%"
+            top: "80%",
+            left: "45%"
         }, 
         {
             scale: "2",
-            top: "116%",
-            left: "57%",
+            top: "130%",
+            left: "77%",
             duration: 0.7
         }, '<')
         
         mainTimeline.fromTo('[data-js="homeIntroFake4"]', 
         {
             scale: "1",
-            top: "55%",
-            left: "18%"
+            top: "93%",
+            left: "-14%"
         }, 
         {
             scale: "2",
-            top: "111%",
-            left: "-22%",
+            top: "121%",
+            left: "-42%",
             duration: 0.7
         }, '<')
     
         mainTimeline.fromTo('[data-js="homeIntroFake5"]', 
         {
             scale: "1",
-            top: "45%",
-            left: "5%"
+            top: "38%",
+            left: "-33%"
         },
         {
             scale: "2",
             top: "77%",
-            left: "-51%",
+            left: "-85%",
             duration: 0.7
         }, '<')
     
@@ -799,66 +800,66 @@ function homePageAnimation() {
         mainTimeline.fromTo('[data-js="homeIntroFake1"]', 
             {
                 scale: "1",
-                top: "11%",
+                top: "-13%",
                 left: "12%",
                 scale: "1"
             }, 
             {
                 scale: "2",
-                top: "-48%",
-                left: "30%",        
+                top: "-68%",
+                left: "40%",        
                 duration: 0.7
             }, '0')
         
             mainTimeline.fromTo('[data-js="homeIntroFake2"]', 
             {
                 scale: "1",
-                top: "34%",
-                left: "63%"
+                top: "23%",
+                left: "70%"
             }, 
             {
                 scale: "2",
-                top: "11%",
-                left: "127.5%",        
+                top: "20%",
+                left: "137.5%",        
                 duration: 0.7
             }, '<')
         
             mainTimeline.fromTo('[data-js="homeIntroFake3"]', 
             {
                 scale: "1",
-                top: "56%",
-                left: "42%"
+                top: "78%",
+                left: "16%"
             }, 
             {
                 scale: "2",
-                top: "116%",
-                left: "57%",
+                top: "126%",
+                left: "67%",
                 duration: 0.7
             }, '<')
             
             mainTimeline.fromTo('[data-js="homeIntroFake4"]', 
             {
                 scale: "1",
-                top: "55%",
-                left: "18%"
+                top: "50%",
+                left: "-27%"
             }, 
             {
                 scale: "2",
-                top: "111%",
-                left: "-22%",
+                top: "70%",
+                left: "-92%",
                 duration: 0.7
             }, '<')
         
             mainTimeline.fromTo('[data-js="homeIntroFake5"]', 
             {
                 scale: "1",
-                top: "45%",
-                left: "5%"
+                top: "-4%",
+                left: "-18%"
             },
             {
                 scale: "2",
-                top: "77%",
-                left: "-51%",
+                top: "-8%",
+                left: "-81%",
                 duration: 0.7
             }, '<')
     
@@ -1157,14 +1158,14 @@ function projectsAnimation() {
     const projectsAnim = windowWidth > 1024 
             ? document.querySelectorAll('[data-js="mProjectsSlides"] .swiper-slide-active [data-anim="projectAnim"]')
             : document.querySelectorAll('[data-anim="projectAnim"]')
-    const showPosition = windowWidth > 500 ? 10 : -30
+    const showPosition = windowWidth > 500 ? 200 : 200
 
     if(projectsAnim.length < 1) return
 
     projectsAnim.forEach((projectAnim)=> {
         
         let projectAnimPosition = projectAnim.getBoundingClientRect()
-        let projectAnimBottomPosition = windowHeight - projectAnimPosition.bottom
+        let projectAnimBottomPosition = windowHeight - projectAnimPosition.top
 
         let projectAnimWraps = projectAnim.querySelectorAll('[data-anim="projectAnimWrap"]')
 
