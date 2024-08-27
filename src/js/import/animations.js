@@ -51,7 +51,7 @@ function refreshPageAnimation() {
 
 
 window.addEventListener('resize', () => {
-    refreshPageAnimation()
+    //refreshPageAnimation()
 });
 
 
