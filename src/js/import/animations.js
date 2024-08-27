@@ -796,6 +796,11 @@ function homePageAnimation() {
             ease: "none",
         }, "<");
     } else {
+
+        ScrollTrigger.config({
+            autoRefreshEvents: 'visibilitychange,DOMContentLoaded,load',
+          })
+          
         //расставляем элементы
         mainTimeline.fromTo('[data-js="homeIntroFake1"]', 
             {
@@ -1210,50 +1215,16 @@ function cursorRunAway() {
                 let itemPosBottom = itemPosTop + itemPos.height
                 let cursorPosX = e.clientX
                 let cursorPosY = e.clientY
-
-                let animDuration = 1
-                let animCoeffX = 10
-                let animCoeffY = 10
                 
-
-                if(itemPosLeft + (itemPos.width / 2) > cursorPosX) {
-
-                    gsap.to(item, {
-                        x: itemPos.width / (itemPosRight - cursorPosX) * animCoeffX + "%",
-                        duration: animDuration
-                    })
-
-                    if(itemPosTop + (itemPos.height / 2) > cursorPosY) {
-                        gsap.to(item, {
-                            y: itemPos.height / (itemPosRight - cursorPosX) * animCoeffY + "%",
-                            duration: animDuration
-                        })
+                if(itemPosLeft < cursorPosX 
+                    && itemPosRight > cursorPosX
+                    && itemPosTop < cursorPosY
+                    && itemPosBottom > cursorPosY ) {
                         
-                    } else {
-                        gsap.to(item, {
-                            y: -itemPos.height / (itemPosRight - cursorPosX) * animCoeffY + "%",
-                            duration: animDuration
-                        })
-                    }
+                    item.style.transform = "scale(1.2)" 
                     
                 } else {
-                    gsap.to(item, {
-                        x: -itemPos.width / (cursorPosX - itemPosLeft) * animCoeffX + "%",
-                        duration: animDuration
-                    })
-
-                    if(itemPosTop + (itemPos.height / 2) > cursorPosY) {
-                        gsap.to(item, {
-                            y: itemPos.height / (cursorPosX - itemPosLeft) * animCoeffY + "%",
-                            duration: animDuration
-                        })
-                        
-                    } else {
-                        gsap.to(item, {
-                            y: -itemPos.height / (cursorPosX - itemPosLeft) * animCoeffY + "%",
-                            duration: animDuration
-                        })
-                    }
+                    item.style.transform = "scale(1)"
                 }
 
             })
@@ -1263,12 +1234,7 @@ function cursorRunAway() {
             currentTrigger.removeEventListener('move', mouseMoveHendler)
 
             cursorRunAwayItems.forEach(item => {
-                gsap.to(item, {
-                    x: 0,
-                    y: 0,
-                    delay: 1,
-                    duration: 0.5
-                })
+                item.style.transform = "scale(1)"
             })
 
             currentTrigger.removeEventListener('mouseleave', mouseLeaveHendler)

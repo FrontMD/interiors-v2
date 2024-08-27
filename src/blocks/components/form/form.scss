@@ -22,17 +22,17 @@
 
     &__title {
         font-family: $titleFont;
-        font-size: 56px;
+        font-size: 50px;
         line-height: 1.08em;
         text-align: center;
         color: $c-white;
 
         @include max(1024) {
-            font-size: 48px;
+            font-size: 40px;
         }
 
         @include max(730) {
-            font-size: 40px;
+            font-size: 32px;
         }
     }
 

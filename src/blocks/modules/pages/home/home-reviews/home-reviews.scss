@@ -100,6 +100,45 @@
 
     }
 
+    &__pagination {
+        position: absolute;
+        top: 690px !important;
+        bottom: auto !important;
+        left: 0;
+        width: 48.38%;
+        padding-right: 64px;
+        padding-left: calc((100% - 1312px) / 2);
+        z-index: 5;
+
+        @include max(1440) {
+            padding-left: 64px;
+        }
+
+        @include max(1024) {
+            top: auto !important;
+            bottom: calc(100vw * 1.014 + 15px) !important;
+            padding-right: 48px;
+            padding-left: 48px;
+            width: 100%;
+        }
+
+        @include max(500) {
+            padding-right: 16px;
+            padding-left: 16px;
+            bottom: calc(100vw * 1.014 + 10px) !important;
+        }
+
+        .swiper-pagination-bullet {
+            width: 10px;
+            height: 10px;
+            background-color: $c-beige;
+        }
+
+        .swiper-pagination-bullet.swiper-pagination-bullet-active {
+            background-color: $c-beige-3;
+        }
+    }
+
     &__preview {
         max-width: 198px;
         max-height: 238px;
@@ -130,7 +169,7 @@
         }
 
         @include max(500) {
-            padding: 40px 16px 24px;
+            padding: 40px 16px;
         }
     }
 

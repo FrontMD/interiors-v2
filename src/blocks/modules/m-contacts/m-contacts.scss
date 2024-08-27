@@ -31,6 +31,7 @@
     &__image {
         flex-basis: 25%;
         aspect-ratio: 1 / 1.025;
+        transition: transform 0.5s ease;
 
         img {
             width: 100%;
@@ -41,15 +42,37 @@
 
     &__title {
         position: absolute;
-        top: 130px;
+        top: 230px;
         left: 50%;
         transform: translateX(-50%) !important;
+        font-size: 130px;
+
+        @include max(1300) {
+            font-size: 130px;
+            top: 190px;
+        }
+
+        @include max(1199) {
+            font-size: 130px;
+            top: 160px;
+        }
+
+        @include max(1024) {
+            font-size: 110px;
+            top: 170px;
+        }
 
         @include max(768) {
             top: 75px;
         }
 
+        @include max(730) {
+            font-size: 90px;
+            top: 110px;
+        }
+
         @include max(500) {
+            font-size: 60px;
             top: 40px;
         }
     }
