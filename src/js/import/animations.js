@@ -15,6 +15,8 @@ let currentPageName = currentPage ? currentPage.dataset.page : ""
 const windowHeight = window.innerHeight
 const windowWidth = window.innerWidth
 
+let currentWindowWidth = windowWidth
+
 
 if(preloader !== null ) {
 	setTimeout(() => {
@@ -50,11 +52,14 @@ function refreshPageAnimation() {
     startPageAnimation();
 }
 
-
 window.addEventListener('resize', () => {
-    //refreshPageAnimation()
+    if(currentWindowWidth !== window.innerWidth) {
+        refreshPageAnimation()
+        currentWindowWidth = window.innerWidth;
+    } else {
+        return
+    }
 });
-
 
 /** Стартовая анимация первого экрана главной страницы */
 function homeIntroAnim() {
@@ -799,8 +804,8 @@ function homePageAnimation() {
 
         ScrollTrigger.config({
             autoRefreshEvents: 'visibilitychange,DOMContentLoaded,load',
-          })
-          
+        })
+
         //расставляем элементы
         mainTimeline.fromTo('[data-js="homeIntroFake1"]', 
             {
