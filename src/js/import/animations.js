@@ -906,6 +906,7 @@ function homePageAnimation() {
                 cookieInit()
             }
         }, '<')
+
         //первый экран и цифры с картинкой
         mainTimeline.fromTo('[data-js="animContainerHome1"]', {
             y: "0",
@@ -973,13 +974,24 @@ function homePageAnimation() {
         mainTimeline.fromTo('[data-js="animContainerHome2"]', {
             y: "0",
         }, {
-            y: "-100%",
-            duration: 1.5,
+            y: "-100vh",
+            duration: 1.2,
             ease: "none",
             onUpdate: () => {
                 projectsAnimation()
             },
         }, "<");
+
+        mainTimeline.fromTo('[data-js="animContainerHome2"]', {
+            y: "-100vh",
+        }, {
+            y: "-100%",
+            duration: 0.8,
+            ease: "none",
+            onUpdate: () => {
+                projectsAnimation()
+            },
+        }, ">");
     
         mainTimeline.fromTo('[data-js="mProjectsContainer"]', {
             y: "0",
@@ -993,25 +1005,17 @@ function homePageAnimation() {
                 projectsAnimation()
             },
         }, ">");
-    
-        mainTimeline.fromTo('[data-js="mProjectsContainer"]', {
-            opacity: "1",
+
+        mainTimeline.fromTo('[data-js="animContainerHome2"]', {
+            y: "-100%",
         }, {
-            opacity: "0",
-            duration: 2.2,
+            y: "-200%",
+            duration: 1.8,
             ease: "none",
-            onStart: () => {
+            onUpdate: () => {
                 projectsAnimation()
             },
         }, ">");
-    
-        mainTimeline.fromTo('[data-js="mProjectsControls"]', {
-            opacity: "1",
-        }, {
-            opacity: "0",
-            duration: 2,
-            ease: "none",
-        }, "<");
     
         //как мы работаем
         mainTimeline.fromTo('[data-js="homeAbout"] [data-js="titleAnimInternal"]', {
@@ -1035,17 +1039,25 @@ function homePageAnimation() {
         mainTimeline.fromTo('[data-js="animContainerHome3"]', {
             y: "0",
         }, {
-            y: "-100%",
-            duration: 2,
+            y: "-100vh",
+            duration: 1.1,
             ease: "none",
         }, "< -0.8");
     
     
         mainTimeline.fromTo('[data-js="animContainerHome3"]', {
+            y: "-100vh",
+        }, {
+            y: "-100%",
+            duration: 0.5,
+            ease: "none",
+        }, ">");
+
+        mainTimeline.fromTo('[data-js="animContainerHome3"]', {
             y: "-100%",
         }, {
             y: "-200%",
-            duration: 3,
+            duration: 1.5,
             ease: "none",
         }, ">");
     
@@ -1054,7 +1066,7 @@ function homePageAnimation() {
             y: "0",
         }, {
             y: "-100vh",
-            duration: 1.5,
+            duration: 1,
             ease: "none",
         }, "<");
     
@@ -1082,7 +1094,7 @@ function homePageAnimation() {
             y: "-100%",
             duration: 3,
             ease: "none",
-        }, "> +1");
+        }, "> +0.5");
     
         mainTimeline.fromTo('[data-js="mContacts"] .m-contacts__title [data-js="titleAnimInternal"]', {
             marginTop: "1em"
