@@ -4,7 +4,7 @@
         type: 'big',
         title: 'Кантале',
         location: 'Россия, Москва',
-        bgImage: 'project-1.jpg',
+        bgImage: 'project-1.webp',
     }
 
 mixin project-card(props = defaultProjectCardProps)
@@ -26,5 +26,5 @@ mixin project-card(props = defaultProjectCardProps)
             .project-card__award
                 if(checkProps.type == 'big')
                     != 'ADD Awards'
-                img(src='./img/award_logo.png' alt='award logo')
+                img(src='./img/award_logo.webp' alt='award logo')
 
