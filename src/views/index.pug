@@ -1,16 +1,18 @@
 extends layouts/default
 
 block variables
-	- const title = "Разводящая"
+    - const title = "Разводящая"
 
 block content
-	.page
-		section.pages-list
-			.container
-				+title({
-					classes: 'pages-list__title',
-					tag: 'h1',
-					text: 'Страницы'
-				})
-				.pages-list__links
-					a.pages-list__link(href="home.html") Главная
+    .page
+        section.pages-list
+            .container
+                +title({
+                    classes: 'pages-list__title',
+                    tag: 'h1',
+                    text: 'Страницы'
+                })
+                .pages-list__links
+                    a.pages-list__link(href="home.html") Главная
+                .pages-list__links
+                    a.pages-list__link(href="projects.html") Проекты

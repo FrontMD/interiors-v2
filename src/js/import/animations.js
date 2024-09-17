@@ -29,6 +29,12 @@ if(preloader !== null ) {
             homeIntroAnim();
             startPageAnimation();
             cursorRunAway();
+        } else if(currentPageName === "projects") {
+            $('body').removeClass('no-scroll')
+            titlesMarkup();
+            heightAnimMarkup();
+            homeIntroAnim();
+            startPageAnimation();
         } else {
             $('body').removeClass('no-scroll')
             cookieInit()
@@ -40,6 +46,8 @@ if(preloader !== null ) {
 function startPageAnimation() {
     if(currentPageName === "home") {
         homePageAnimation()
+    }else if(currentPageName === "projects") { 
+        projectsPageAnimation()
     } else {
         return
     }
@@ -1140,6 +1148,220 @@ function homePageAnimation() {
 
 }
 
+/** Общая анимация страницы проектов */
+function projectsPageAnimation() {
+
+    currentPage.style.height = "100vh"
+
+    const footer = document.querySelector('[data-js="footer"]')
+    footer.style.bottom = "0"
+    footer.style.position = 'relative'
+
+    //показываем контент
+    if(document.querySelector('[data-js="projectsIntro"]')) {
+        let tl = gsap.timeline();
+
+        tl.to('[data-js="siteHeader"]', 
+        {
+            opacity: '1',
+            duration: 0.5,
+            delay: 0.5
+        }, '0')
+    
+        
+        tl.to('[data-js="projectsIntroTitle"] [data-js="titleAnimInternal"]', 
+        {
+            marginTop: 0,
+            duration: 0.3,
+            delay: 0.2
+        }, '<')
+    
+        tl.to('[data-js="projectsIntroContent"]', 
+        {
+            opacity: '1',
+            duration: 0.3,
+            onComplete: () => {
+                cookieInit()
+            }
+        }, '<')
+    }
+
+    addTime = 600
+
+    if(windowWidth > 1024) {
+        scrollTriggerObject = ScrollTrigger.create({
+            trigger: currentPage,
+            pin: true,
+            start: "top top",
+            end: () => "+=" + addTime + "%",
+            scrub: 1.5,
+            animation: mainTimeline,
+        })
+    }
+
+
+    if(windowWidth > 1024) {
+        mainTimeline.fromTo('[data-js="projectsIntroBg"]', 
+            {
+                top: "0",
+            }, 
+            {
+                top: () => {
+                    let projectsIntroBgHeight = document.querySelector('[data-js="projectsIntroBg"]').offsetHeight;
+                    return -(projectsIntroBgHeight - window.innerHeight) + "px"
+                },      
+                duration: 0.7
+            }, '0')
+
+        mainTimeline.fromTo('[data-js="projectsIntroContent"]',
+            {
+                opacity: "1",
+            }, 
+            {
+                opacity: "0",      
+                duration: 0.4
+            }, '<')
+
+        mainTimeline.fromTo('[data-js="projectsDesc"]',
+            {
+                bottom: "-100%",
+            }, 
+            {
+                bottom: "0",      
+                duration: 0.5
+            }, "< +0.2")
+        mainTimeline.fromTo('[data-js="animContainerProjects1"]',
+            {
+                top: "0",
+            }, 
+            {
+                top: "-100vh",
+                duration: 1.5
+            }, '>')
+        mainTimeline.fromTo('[data-js="animContainerProjects2"]',
+            {
+                top: "100%",
+            }, 
+            {
+                top: "0",  
+                duration: 1.5,
+                onUpdate: () => {
+                    projectsAnimation("projects")
+                },
+            }, '<')
+        mainTimeline.fromTo('[data-js="pProjectsContainer"]', {
+                y: "0",
+            }, {
+                y: "-100%",
+                duration: 3.5,
+                ease: "none",
+                onUpdate: () => {
+                    projectsAnimation("projects")
+                },
+            }, "> -0.2");
+
+    } else if(windowWidth > 500) {
+
+       /* mainTimeline.fromTo('[data-js="animContainerProjects1"]',
+            {
+                top: "0",
+            }, 
+            {
+                top: "-100vh",
+                duration: 1
+            }, '0')
+        mainTimeline.fromTo('[data-js="animContainerProjects1"]',
+            {
+                top: "0",
+            }, 
+            {
+                top: "-100vh",
+                duration: 0.5
+            }, '0')
+        mainTimeline.fromTo('[data-js="animContainerProjects2"]',
+            {
+                top: "100%",
+            }, 
+            {
+                top: "0",  
+                duration: 1.5,
+                onUpdate: () => {
+                    projectsAnimation("projects")
+                },
+            }, '<')
+        mainTimeline.fromTo('[data-js="pProjectsContainer"]', {
+                y: "0",
+            }, {
+                y: "-100%",
+                duration: 3.5,
+                ease: "none",
+                onUpdate: () => {
+                    projectsAnimation("projects")
+                },
+            }, "> -0.2");*/
+    } else {
+        mainTimeline.fromTo('[data-js="projectsIntroBg"]', 
+            {
+                top: "0",
+            }, 
+            {
+                top: () => {
+                    let projectsIntroBgHeight = document.querySelector('[data-js="projectsIntroBg"]').offsetHeight;
+                    return -(projectsIntroBgHeight - window.innerHeight) + "px"
+                },      
+                duration: 0.7
+            }, '0')
+
+        mainTimeline.fromTo('[data-js="projectsIntroContent"]',
+            {
+                opacity: "1",
+            }, 
+            {
+                opacity: "0",      
+                duration: 0.4
+            }, '<')
+
+        mainTimeline.fromTo('[data-js="projectsDesc"]',
+            {
+                bottom: "-100%",
+            }, 
+            {
+                bottom: "0",      
+                duration: 0.5
+            }, "< +0.2")
+        mainTimeline.fromTo('[data-js="animContainerProjects1"]',
+            {
+                top: "0",
+            }, 
+            {
+                top: "-100vh",
+                duration: 1.5
+            }, '>')
+        mainTimeline.fromTo('[data-js="animContainerProjects2"]',
+            {
+                top: "100%",
+            }, 
+            {
+                top: "0",  
+                duration: 1.5,
+                onUpdate: () => {
+                    projectsAnimation("projects")
+                },
+            }, '<')
+        mainTimeline.fromTo('[data-js="pProjectsContainer"]', {
+                y: "0",
+            }, {
+                y: "-100%",
+                duration: 3.5,
+                ease: "none",
+                onUpdate: () => {
+                    projectsAnimation("projects")
+                },
+            }, "> -0.2");
+    }
+
+}
+
 
 /* разметка заголовков */
 function titlesMarkup() {
@@ -1194,10 +1416,18 @@ function heightAnimMarkup() {
 }
 
 /* анимация проектов */
-function projectsAnimation() {
-    const projectsAnim = windowWidth > 1024 
-            ? document.querySelectorAll('[data-js="mProjectsSlides"] .swiper-slide-active [data-anim="projectAnim"]')
-            : document.querySelectorAll('[data-anim="projectAnim"]')
+function projectsAnimation(page = "home") {
+
+    let projectsAnim = ""
+
+    if(page == "home") {
+        projectsAnim = windowWidth > 1024 
+                ? document.querySelectorAll('[data-js="mProjectsSlides"] .swiper-slide-active [data-anim="projectAnim"]')
+                : document.querySelectorAll('[data-anim="projectAnim"]')
+    } else if(page == "projects") {
+        projectsAnim = document.querySelectorAll('[data-anim="projectAnim"]')
+    }
+
     const showPosition = windowWidth > 500 ? 200 : 200
 
     if(projectsAnim.length < 1) return

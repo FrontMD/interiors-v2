@@ -39,4 +39,13 @@ document.addEventListener('DOMContentLoaded', () => {
         })
       })
     }
+
+    /* селекты */
+    $("[data-js='projectsSelect']").select2({
+      allowClear: true
+    });
+  
+    $("[data-js='projectsSelect']").on('select2:open', () => {
+      $(".select2-dropdown").addClass("select2-dropdown--projects")
+    })
 })
