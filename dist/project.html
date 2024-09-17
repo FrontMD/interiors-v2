@@ -70,10 +70,10 @@
                   <div class="project-intro__area">Площадь 72.9 м²</div>
                   <div class="project-intro__gamma"> Гамма
                     <ul class="project-intro__colors">
-                      <li></li>
-                      <li></li>
-                      <li></li>
-                      <li></li>
+                      <li style="background-color: #636464;"></li>
+                      <li style="background-color: #797978;"></li>
+                      <li style="background-color: #22170E;"></li>
+                      <li style="background-color: #3D1E23;"></li>
                     </ul>
                   </div>
                 </div>
@@ -91,7 +91,7 @@
                       <h2 data-anim="title">О проекте</h2>
                     </div>
                 <div class="project-about__text">Квартира метражом 72,9&nbsp;м² создана для семейной пары, приезжающей периодически в&nbsp;Санкт-Петербург, чтобы навестить своих детей. Важным стилистическим заданием для проектирования было использование цветовой гаммы, сходной с&nbsp;Петербургом, при этом более женственной и&nbsp;более благородной, использование мотивов города в&nbsp;интерьере. Таким образом в&nbsp;квартире появились: барельеф Петра Великого, барельеф кролика на&nbsp;фальшфрамуге проемов, символизирующий начало строительства города на&nbsp;Заячьем острове. Обязательным элементом декора стала антикварная подставка для зонтов, намекающая на&nbsp;стабильно дождливую погоду в&nbsp;Петербурге. Все художественные элементы, картины, развешенные по&nbsp;стенам, связаны с&nbsp;теми или иными местами малой столицы: набережная реки Мойки, Летний Сад, Инженерный Замок. В&nbsp;качестве отделочного материала был использован не&nbsp;гранит, а&nbsp;мрамор со&nbsp;схожей цветовой гаммой&nbsp;— коричнево-черно-бордовых оттенков&nbsp;— напоминающий набережные города. Обязательным было и&nbsp;использование в&nbsp;современном исполнении гипсовой лепнины, профили, выполненные по&nbsp;индивидуальным размерам и&nbsp;эскизам дизайнера. </div>
-                    <button class="btn btn--btn btn--beige project-about__btn" type="button" data-hystmodal="#discussProject"><span class="btn__text">Обсудить свой проект</span>
+                    <button class="btn btn--btn btn--beige2 project-about__btn" type="button" data-hystmodal="#discussProject"><span class="btn__text">Обсудить свой проект</span>
                     </button>
               </div>
             </div>
@@ -222,43 +222,55 @@
           </div>
         </section>
         <section class="project-drawings" data-js="projectDrawings">
-          <div class="container project-drawings__container">
-            <div class="project-drawings__slider" data-js="projectDrawingsSlider">
-              <div class="project-drawings__controls"><a class="btn btn--slider btn--transparent slider-control slider-control--prev" href="javascript:void(0);" data-js="sliderControlPrev"><span class="btn__icon">
-                        <svg>
-                          <use xlink:href="./img/sprites/sprite.svg#slider_arrow"></use>
-                        </svg></span></a><a class="btn btn--slider btn--transparent slider-control slider-control--next" href="javascript:void(0);" data-js="sliderControlNext"><span class="btn__icon">
-                        <svg>
-                          <use xlink:href="./img/sprites/sprite.svg#slider_arrow"></use>
-                        </svg></span></a>
+          <div class="container">
+                <div class="title title__h2 project-drawings__title title__h2--small">
+                  <h2>Чертежи и планы</h2>
+                </div>
+          </div>
+          <div class="project-drawings__slider" data-js="projectDrawingsSlider">
+            <div class="project-drawings__controls"><a class="btn btn--slider btn--transparent slider-control slider-control--prev" href="javascript:void(0);" data-js="sliderControlPrev"><span class="btn__icon">
+                      <svg>
+                        <use xlink:href="./img/sprites/sprite.svg#slider_arrow"></use>
+                      </svg></span></a><a class="btn btn--slider btn--transparent slider-control slider-control--next" href="javascript:void(0);" data-js="sliderControlNext"><span class="btn__icon">
+                      <svg>
+                        <use xlink:href="./img/sprites/sprite.svg#slider_arrow"></use>
+                      </svg></span></a>
+            </div>
+            <div class="swiper-wrapper">
+              <div class="swiper-slide project-drawings__slide" data-js="projectDrawingsSlide">
+                <div class="project-drawings__left"><a class="project-drawings__fancybox" href="./img/projects/project_drawings_img.webp" data-fancybox data-thumb="./img/projects/project_drawings_img.webp">
+                    <svg> 
+                      <use xlink:href="./img/sprites/sprite.svg#fancybox"></use>
+                    </svg></a>
+                  <div class="project-drawings__img"><img src="./img/projects/project_drawings_img.webp" alt=""></div>
+                </div>
+                <div class="project-drawings__right">
+                  <div class="project-drawings__img project-drawings__img--small"><img src="./img/projects/project_drawings_img_small.webp" alt=""></div>
+                  <div class="project-drawings__text">Уверена, что облик дома формируют арт-объекты, придающие ему интеллектуальность</div>
+                </div>
               </div>
-              <div class="swiper-wrapper">
-                <div class="swiper-slide project-drawings__slide" data-js="projectDrawingsSlide">
-                  <div class="project-drawings__left">
-                    <div class="project-drawings__img"><img src="./img/projects/project_drawings_img.webp" alt=""></div>
-                  </div>
-                  <div class="project-drawings__right">
-                    <div class="project-drawings__img project-drawings__img--small"><img src="./img/projects/project_drawings_img_small.webp" alt=""></div>
-                    <div class="project-drawings__text">Уверена, что облик дома формируют арт-объекты, придающие ему интеллектуальность</div>
-                  </div>
+              <div class="swiper-slide project-drawings__slide" data-js="projectDrawingsSlide">
+                <div class="project-drawings__left"><a class="project-drawings__fancybox" href="./img/projects/project_drawings_img.webp" data-fancybox data-thumb="./img/projects/project_drawings_img.webp">
+                    <svg> 
+                      <use xlink:href="./img/sprites/sprite.svg#fancybox"></use>
+                    </svg></a>
+                  <div class="project-drawings__img"><img src="./img/projects/project_drawings_img.webp" alt=""></div>
                 </div>
-                <div class="swiper-slide project-drawings__slide" data-js="projectDrawingsSlide">
-                  <div class="project-drawings__left">
-                    <div class="project-drawings__img"><img src="./img/projects/project_drawings_img.webp" alt=""></div>
-                  </div>
-                  <div class="project-drawings__right">
-                    <div class="project-drawings__img project-drawings__img--small"><img src="./img/projects/project_drawings_img_small.webp" alt=""></div>
-                    <div class="project-drawings__text">Уверена, что облик дома формируют арт-объекты, придающие ему интеллектуальность</div>
-                  </div>
+                <div class="project-drawings__right">
+                  <div class="project-drawings__img project-drawings__img--small"><img src="./img/projects/project_drawings_img_small.webp" alt=""></div>
+                  <div class="project-drawings__text">Уверена, что облик дома формируют арт-объекты, придающие ему интеллектуальность</div>
                 </div>
-                <div class="swiper-slide project-drawings__slide" data-js="projectDrawingsSlide">
-                  <div class="project-drawings__left">
-                    <div class="project-drawings__img"><img src="./img/projects/project_drawings_img.webp" alt=""></div>
-                  </div>
-                  <div class="project-drawings__right">
-                    <div class="project-drawings__img project-drawings__img--small"><img src="./img/projects/project_drawings_img_small.webp" alt=""></div>
-                    <div class="project-drawings__text">Уверена, что облик дома формируют арт-объекты, придающие ему интеллектуальность</div>
-                  </div>
+              </div>
+              <div class="swiper-slide project-drawings__slide" data-js="projectDrawingsSlide">
+                <div class="project-drawings__left"><a class="project-drawings__fancybox" href="./img/projects/project_drawings_img.webp" data-fancybox data-thumb="./img/projects/project_drawings_img.webp">
+                    <svg> 
+                      <use xlink:href="./img/sprites/sprite.svg#fancybox"></use>
+                    </svg></a>
+                  <div class="project-drawings__img"><img src="./img/projects/project_drawings_img.webp" alt=""></div>
+                </div>
+                <div class="project-drawings__right">
+                  <div class="project-drawings__img project-drawings__img--small"><img src="./img/projects/project_drawings_img_small.webp" alt=""></div>
+                  <div class="project-drawings__text">Уверена, что облик дома формируют арт-объекты, придающие ему интеллектуальность</div>
                 </div>
               </div>
             </div>
@@ -268,7 +280,7 @@
               <div class="container m-callback__container">
                     <form class="form m-callback__form" action="#" data-validate novalidate>
                       <div class="form__content" data-js="form-content">
-                        <div class="form__title" data-anim="title">Обсудить свой проект</div>
+                        <div class="form__title">Обсудить свой проект</div>
                         <div class="form__fields">
                               <label class="field   " data-js="formField">
                                 <input class="field__input" type="text" placeholder="Ваше имя*" required=""><span class="field__error field-error"><span class="field-error__icon">

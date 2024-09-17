@@ -2,6 +2,7 @@
     const defaultFormProps = {
         classes: '',
         title: '',
+        titleAnim: 'true',
         text: '',
         btnText: '',
     }
@@ -13,11 +14,15 @@ mixin form(props = defaultFormProps)
             title: props.title ? props.title : defaultFormProps.title,
             text: props.text ? props.text : defaultFormProps.text,
             btnText: props.btnText ? props.btnText : defaultFormProps.btnText,
+            titleAnim: props.titleAnim ? props.titleAnim : defaultFormProps.titleAnim,
         }
 
     form.form(action="#" class= checkProps.classes data-validate novalidate)&attributes(attributes)
         .form__content(data-js='form-content')
-            .form__title(data-anim="title")!= checkProps.title
+            - if(checkProps.titleAnim === "true")
+                .form__title(data-anim="title")!= checkProps.title
+            - else
+                .form__title!= checkProps.title
             - if(checkProps.text.length > 0)
                 .form__text!= checkProps.text
             .form__fields

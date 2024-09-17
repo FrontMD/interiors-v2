@@ -21,35 +21,47 @@ let currentWindowWidth = windowWidth
 if(preloader !== null ) {
 	setTimeout(() => {
 		$(preloader).fadeOut("slow")
+        $('body').removeClass('no-scroll')
 
-        if(currentPageName === "home") {
-            $('body').removeClass('no-scroll')
-            titlesMarkup();
-            heightAnimMarkup();
-            homeIntroAnim();
-            startPageAnimation();
-            cursorRunAway();
-        } else if(currentPageName === "projects") {
-            $('body').removeClass('no-scroll')
-            titlesMarkup();
-            heightAnimMarkup();
-            homeIntroAnim();
-            startPageAnimation();
-        } else {
-            $('body').removeClass('no-scroll')
-            cookieInit()
+        switch(currentPageName) {
+            case "home":
+                titlesMarkup();
+                heightAnimMarkup();
+                homeIntroAnim();
+                startPageAnimation();
+                cursorRunAway();
+                break;
+            case "projects":
+                titlesMarkup();
+                heightAnimMarkup();
+                startPageAnimation();
+                break;
+            case "project":
+                titlesMarkup();
+                heightAnimMarkup();
+                //startPageAnimation();
+                break;
+            default:
+                cookieInit()
+                break
         }
 
 	}, 1600)
 }
 
 function startPageAnimation() {
-    if(currentPageName === "home") {
-        homePageAnimation()
-    }else if(currentPageName === "projects") { 
-        projectsPageAnimation()
-    } else {
-        return
+    switch(currentPageName) {
+        case "home":
+            homePageAnimation()
+            break;
+        case "projects":
+            projectsPageAnimation()
+            break;
+        case "project":
+            projectPageAnimation()
+            break;
+        default:
+            break
     }
 }
 
@@ -1357,6 +1369,64 @@ function projectsPageAnimation() {
                 },
             }, "> -0.2");
     }
+
+}
+
+/** Общая анимация детальной страницы проекта */
+function projectPageAnimation() {
+
+    currentPage.style.height = "100vh"
+
+    const footer = document.querySelector('[data-js="footer"]')
+    footer.style.bottom = "0"
+    footer.style.position = 'relative'
+
+    //показываем контент
+    if(document.querySelector('[data-js="projectsIntro"]')) {
+        let tl = gsap.timeline();
+
+        tl.to('[data-js="siteHeader"]', 
+        {
+            opacity: '1',
+            duration: 0.5,
+            delay: 0.5
+        }, '0')
+    
+        
+        tl.to('[data-js="projectIntroTitle"] [data-js="titleAnimInternal"]', 
+        {
+            marginTop: 0,
+            duration: 0.3,
+            delay: 0.2
+        }, '<')
+    
+        tl.to('[data-js="projectIntroContent"]', 
+        {
+            opacity: '1',
+            duration: 0.3,
+            onComplete: () => {
+                cookieInit()
+            }
+        }, '<')
+    }
+
+    addTime = 1200
+
+    /*scrollTriggerObject = ScrollTrigger.create({
+        trigger: currentPage,
+        pin: true,
+        start: "top top",
+        end: () => "+=" + addTime + "%",
+        scrub: 1.5,
+        animation: mainTimeline,
+    })*/
+
+
+    if(windowWidth > 1024) {
+
+    } else if(windowWidth > 500) {
+
+    } else {}
 
 }
 

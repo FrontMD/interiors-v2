@@ -1,18 +1,18 @@
 function projectDrawings() {
         // Инициализируем слайдер
-        const projectDrawingsSlider = document.querySelector('[data-js="projectDrawings"]');
+        const projectDrawingsSlider = document.querySelector('[data-js="projectDrawingsSlider"]');
     
         if(!projectDrawingsSlider) return
 
-        const prevBtn = projectQuoteSlider.querySelector('[data-js="sliderControlPrev"]')
-        const nextBtn = projectQuoteSlider.querySelector('[data-js="sliderControlNext"]')
-        const pagination = projectQuoteSlider.querySelector('[data-js="sliderPagination"]')
+        const prevBtn = projectDrawingsSlider.querySelector('[data-js="sliderControlPrev"]')
+        const nextBtn = projectDrawingsSlider.querySelector('[data-js="sliderControlNext"]')
+        const pagination = projectDrawingsSlider.querySelector('[data-js="sliderPagination"]')
     
         let projectDrawingsSliderEx = new Swiper(projectDrawingsSlider, {
             slidesPerView: 1,
-            effect: 'fade',
+            effect: 'slide',
             speed: 1000,
-            loop: true,
+            spaceBetween: 6,
             navigation: {
                 nextEl: nextBtn,
                 prevEl: prevBtn,
@@ -21,7 +21,8 @@ function projectDrawings() {
                 el: pagination,
                 type: 'bullets',
                 clickable: true
-              },
+            },
 
         })
+
 }

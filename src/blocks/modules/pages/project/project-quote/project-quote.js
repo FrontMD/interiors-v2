@@ -1,6 +1,6 @@
 function projectQuote() {
         // Инициализируем слайдер
-        const projectQuoteSlider = document.querySelector('[data-js="projectQuote"]');
+        const projectQuoteSlider = document.querySelector('[data-js="projectQuoteSlider"]');
     
         if(!projectQuoteSlider) return
 

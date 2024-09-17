@@ -144,5 +144,9 @@
             height: 48px;
             border-radius: 100%;
         }
+
+        li:not(:first-child) {
+            margin-left: -12px;
+        }
     }
 }

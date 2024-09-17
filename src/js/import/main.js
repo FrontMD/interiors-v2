@@ -48,4 +48,33 @@ document.addEventListener('DOMContentLoaded', () => {
     $("[data-js='projectsSelect']").on('select2:open', () => {
       $(".select2-dropdown").addClass("select2-dropdown--projects")
     })
+
+    //Инициализация фансибокса
+    Fancybox.bind("[data-fancybox]", {
+        placeFocusBack: false,
+        mainClass: 'my-fancybox',
+        idle: false,
+        Carousel: {
+            transition: "crossfade",
+            Navigation: {
+                prevTpl: '<svg><use xlink:href=img/sprites/sprite.svg#card_arrow></use></svg>',
+                nextTpl: '<svg><use xlink:href=img/sprites/sprite.svg#card_arrow></use></svg>',
+              },
+        },
+        Thumbs: {
+            type: "classic",
+        },
+        Toolbar: {
+            enabled: true,
+            display: {
+                left: [],
+                middle: [],
+                right: [
+                  "close",
+                ],
+            },
+        }
+
+    });
+  
 })

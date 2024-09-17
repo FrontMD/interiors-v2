@@ -1,44 +1,58 @@
 section.project-drawings(data-js="projectDrawings")
-    .container.project-drawings__container
-        .project-drawings__slider(data-js="projectDrawingsSlider")
-            .project-drawings__controls
-                +btn({
-                    classes: 'slider-control slider-control--prev',
-                    vMode: 'slider',
-                    icon: true,
-                    iconName: 'slider_arrow',
-                })(data-js="sliderControlPrev")
-                +btn({
-                    classes: 'slider-control slider-control--next',
-                    vMode: 'slider',
-                    icon: true,
-                    iconName: 'slider_arrow',
-                })(data-js="sliderControlNext")
-            .swiper-wrapper
-                .swiper-slide.project-drawings__slide(data-js="projectDrawingsSlide")
-                    .project-drawings__left
-                        .project-drawings__img
-                            img(src="./img/projects/project_drawings_img.webp" alt="")
-                    .project-drawings__right
-                        .project-drawings__img.project-drawings__img--small
-                            img(src="./img/projects/project_drawings_img_small.webp" alt="")
-                        .project-drawings__text Уверена, что облик дома формируют арт-объекты, придающие ему интеллектуальность
+    .container
+        +title({
+            classes: 'project-drawings__title title__h2--small',
+            text: 'Чертежи и планы',
+            animated: "false"
+        })
+    .project-drawings__slider(data-js="projectDrawingsSlider")
+        .project-drawings__controls
+            +btn({
+                classes: 'slider-control slider-control--prev',
+                vMode: 'slider',
+                icon: true,
+                iconName: 'slider_arrow',
+            })(data-js="sliderControlPrev")
+            +btn({
+                classes: 'slider-control slider-control--next',
+                vMode: 'slider',
+                icon: true,
+                iconName: 'slider_arrow',
+            })(data-js="sliderControlNext")
+        .swiper-wrapper
+            .swiper-slide.project-drawings__slide(data-js="projectDrawingsSlide")
+                .project-drawings__left
+                    a.project-drawings__fancybox(href="./img/projects/project_drawings_img.webp" data-fancybox data-thumb="./img/projects/project_drawings_img.webp")
+                        svg 
+                            use(xlink:href=`./img/sprites/sprite.svg#fancybox`)
+                    .project-drawings__img
+                        img(src="./img/projects/project_drawings_img.webp" alt="")
+                .project-drawings__right
+                    .project-drawings__img.project-drawings__img--small
+                        img(src="./img/projects/project_drawings_img_small.webp" alt="")
+                    .project-drawings__text Уверена, что облик дома формируют арт-объекты, придающие ему интеллектуальность
 
-                .swiper-slide.project-drawings__slide(data-js="projectDrawingsSlide")
-                    .project-drawings__left
-                        .project-drawings__img
-                            img(src="./img/projects/project_drawings_img.webp" alt="")
-                    .project-drawings__right
-                        .project-drawings__img.project-drawings__img--small
-                            img(src="./img/projects/project_drawings_img_small.webp" alt="")
-                        .project-drawings__text Уверена, что облик дома формируют арт-объекты, придающие ему интеллектуальность
+            .swiper-slide.project-drawings__slide(data-js="projectDrawingsSlide")
+                .project-drawings__left
+                    a.project-drawings__fancybox(href="./img/projects/project_drawings_img.webp" data-fancybox data-thumb="./img/projects/project_drawings_img.webp")
+                        svg 
+                            use(xlink:href=`./img/sprites/sprite.svg#fancybox`)
+                    .project-drawings__img
+                        img(src="./img/projects/project_drawings_img.webp" alt="")
+                .project-drawings__right
+                    .project-drawings__img.project-drawings__img--small
+                        img(src="./img/projects/project_drawings_img_small.webp" alt="")
+                    .project-drawings__text Уверена, что облик дома формируют арт-объекты, придающие ему интеллектуальность
 
-                .swiper-slide.project-drawings__slide(data-js="projectDrawingsSlide")
-                    .project-drawings__left
-                        .project-drawings__img
-                            img(src="./img/projects/project_drawings_img.webp" alt="")
-                    .project-drawings__right
-                        .project-drawings__img.project-drawings__img--small
-                            img(src="./img/projects/project_drawings_img_small.webp" alt="")
-                        .project-drawings__text Уверена, что облик дома формируют арт-объекты, придающие ему интеллектуальность
+            .swiper-slide.project-drawings__slide(data-js="projectDrawingsSlide")
+                .project-drawings__left
+                    a.project-drawings__fancybox(href="./img/projects/project_drawings_img.webp" data-fancybox data-thumb="./img/projects/project_drawings_img.webp")
+                        svg 
+                            use(xlink:href=`./img/sprites/sprite.svg#fancybox`)
+                    .project-drawings__img
+                        img(src="./img/projects/project_drawings_img.webp" alt="")
+                .project-drawings__right
+                    .project-drawings__img.project-drawings__img--small
+                        img(src="./img/projects/project_drawings_img_small.webp" alt="")
+                    .project-drawings__text Уверена, что облик дома формируют арт-объекты, придающие ему интеллектуальность
 
