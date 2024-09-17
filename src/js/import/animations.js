@@ -1188,7 +1188,6 @@ function projectsPageAnimation() {
 
     addTime = 600
 
-    if(windowWidth > 1024) {
         scrollTriggerObject = ScrollTrigger.create({
             trigger: currentPage,
             pin: true,
@@ -1197,7 +1196,6 @@ function projectsPageAnimation() {
             scrub: 1.5,
             animation: mainTimeline,
         })
-    }
 
 
     if(windowWidth > 1024) {

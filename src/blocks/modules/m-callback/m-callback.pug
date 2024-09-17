@@ -1,0 +1,40 @@
+-
+    const defaultMCallbackProps = {
+        title: 'Обсудить свой проект',
+        classes: '',
+    }
+
+mixin m-callback(props = defaultMCallbackProps)
+    -
+        const checkProps = {
+            title: props.title ? props.title : defaultMCallbackProps.title,
+            classes: props.classes ? props.classes : defaultMCallbackProps.classes,
+
+        }
+
+    section.m-callback(data-js="mCallback")
+        .container.m-callback__container
+            +form({
+                classes: 'm-callback__form',
+                title: checkProps.title,
+                btnText: 'Отправить заявку',
+            })
+                +field({
+                    classes: '',
+                    placeholder: 'Ваше имя*',
+                    inputAttr: {
+                        "required": ""
+                    },
+                    isRequired: true
+                })
+                +field({
+                    classes: '',
+                    type: 'tel',
+                    placeholder: '+7 (___)___-__-__*',
+                    inputAttr: {
+                        "data-type": "phoneNumber",
+                        "data-v-name": "phone",
+                        "required": ""
+                    },
+                    isRequired: true
+                })

@@ -5,6 +5,7 @@
 @import "preloader/preloader.scss";
 @import "m-contacts/m-contacts.scss";
 @import "m-projects/m-projects.scss";
+@import "m-callback/m-callback.scss";
 @import "mobile-menu/mobile-menu";
 @import "modals/modals";
 
@@ -19,3 +20,9 @@
 @import "pages/projects/projects-intro/projects-intro.scss";
 @import "pages/projects/projects-desc/projects-desc.scss";
 @import "pages/projects/projects-projects/projects-projects.scss";
+
+//Проект
+@import "pages/project/project-intro/project-intro.scss";
+@import "pages/project/project-about/project-about.scss";
+@import "pages/project/project-quote/project-quote.scss";
+@import "pages/project/project-drawings/project-drawings.scss";

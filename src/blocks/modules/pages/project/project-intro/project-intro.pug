@@ -1,0 +1,36 @@
+section.project-intro(data-js="projectIntro")
+    .project-intro__bg(data-js="projectIntroBg")
+        <picture>
+            <source srcset="./img/projects/project_intro.webp" media="(max-width: 500px)">
+            <source srcset="./img/projects/project_intro_1024.webp" media="(max-width: 1024px)">
+            <img src="./img/projects/project_intro.webp" alt="">
+        </picture>
+    .project-intro__content(data-js="projectIntroContent")
+        .container
+            +btn({
+                classes: 'project-intro__back',
+                vMode: 'btn',
+                link: 'javascript:void(0)',
+                text: 'Назад к проектам',
+                cMode: 'transparent',
+                icon: true,
+                iconName: 'back_arrow',
+            })
+            +title({
+                classes: 'project-intro__title',
+                tag: 'h1',
+                text: 'Квартира <br>в NevaHaus'
+            })(data-js="projectIntroTitle")
+
+            .project-intro__desc
+                .project-intro__top
+                    .project-intro__city Санкт-Петербург
+                    .project-intro__area Площадь 72.9 м²
+                    .project-intro__gamma 
+                        != "Гамма"
+                        ul.project-intro__colors
+                            li
+                            li
+                            li
+                            li
+                .project-intro__text Квартира метражом 72,9 м² создана для семейной пары, приезжающей периодически в Санкт-Петербург, чтобы навестить своих детей. Важным стилистическим заданием для проектирования было использование цветовой гаммы, сходной с Петербургом, при этом более женственной и более благородной, использование мотивов города в интерьере.

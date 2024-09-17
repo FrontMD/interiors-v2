@@ -1,0 +1,27 @@
+.project-about {
+    width: 100%;
+    padding: 120px 0;
+    z-index: 10;
+
+    &__content {
+        padding: 56px;
+        background-color: rgba(86, 63, 59, 0.1);
+        backdrop-filter: blur(10px);
+    }
+
+    &__title {
+        text-align: center;
+        font-size: 56px;
+    }
+
+    &__text {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        margin-top: 16px;
+        text-align: center;
+        font-size: 16px;
+        line-height: 1.5em;
+        color: $c-white;
+    }
+}

@@ -257,7 +257,7 @@ html {
 .anim-container {
     position: absolute;
 
-    @include max(11024) {
+    @include max(1024) {
         position: relative;
     }
 
