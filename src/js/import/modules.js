@@ -4,6 +4,7 @@
 @@include("../../blocks/modules/pages/projects/projects-projects/projects-projects.js")
 @@include("../../blocks/modules/pages/project/project-quote/project-quote.js")
 @@include("../../blocks/modules/pages/project/project-drawings/project-drawings.js")
+@@include("../../blocks/modules/pages/project/project-details/project-details.js")
 @@include("../../blocks/modules/modals/modals.js")
 
 
@@ -14,4 +15,5 @@ document.addEventListener('DOMContentLoaded', () => {
     pProjects();
     projectQuote();
     projectDrawings();
+    projectDetails();
 })

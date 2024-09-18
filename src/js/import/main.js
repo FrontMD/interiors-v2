@@ -57,8 +57,8 @@ document.addEventListener('DOMContentLoaded', () => {
         Carousel: {
             transition: "crossfade",
             Navigation: {
-                prevTpl: '<svg><use xlink:href=img/sprites/sprite.svg#card_arrow></use></svg>',
-                nextTpl: '<svg><use xlink:href=img/sprites/sprite.svg#card_arrow></use></svg>',
+                prevTpl: '<svg><use xlink:href=img/sprites/sprite.svg#fancybox_arrow></use></svg>',
+                nextTpl: '<svg><use xlink:href=img/sprites/sprite.svg#fancybox_arrow></use></svg>',
               },
         },
         Thumbs: {

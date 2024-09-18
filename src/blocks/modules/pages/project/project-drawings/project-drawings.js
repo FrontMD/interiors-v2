@@ -9,10 +9,10 @@ function projectDrawings() {
         const pagination = projectDrawingsSlider.querySelector('[data-js="sliderPagination"]')
     
         let projectDrawingsSliderEx = new Swiper(projectDrawingsSlider, {
-            slidesPerView: 1,
-            effect: 'slide',
-            speed: 1000,
-            spaceBetween: 6,
+            slidesPerView: 'auto',
+            speed: 400,
+            spaceBetween: 64,
+            //loop: true,
             navigation: {
                 nextEl: nextBtn,
                 prevEl: prevBtn,
