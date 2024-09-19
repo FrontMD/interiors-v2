@@ -1,0 +1,68 @@
+section.services-projects(data-js="servicesProjects")
+    .container
+
+        .services-projects__slider(data-js="servicesProjectsSlider")
+            .services-projects__header
+                +title({
+                    classes: 'title__h2--small',
+                    text: 'Наши проекты',
+                    animated: 'false'
+                })
+                .services-projects__controls
+                    +btn({
+                        classes: 'slider-control slider-control--prev',
+                        vMode: 'slider',
+                        icon: true,
+                        iconName: 'slider_arrow',
+                    })(data-js="sliderControlPrev")
+                    +btn({
+                        classes: 'slider-control slider-control--next',
+                        vMode: 'slider',
+                        icon: true,
+                        iconName: 'slider_arrow',
+                    })(data-js="sliderControlNext")
+            .swiper-wrapper
+                .swiper-slide.services-projects__slide
+                    +project-card({
+                        type: 'small',
+                    })
+                .swiper-slide.services-projects__slide
+                    +project-card({
+                        type: 'small',
+                        title: 'Монблан',
+                        location: 'Россия, Москва',
+                        bgImage: 'project-2.webp',
+                    })
+                .swiper-slide.services-projects__slide
+                    +project-card({
+                        type: 'small',
+                        title: 'Галерная 12',
+                        location: 'Россия, Санкт-Петербург',
+                        bgImage: 'project-3.webp',
+                    })
+                .swiper-slide.services-projects__slide
+                    +project-card({
+                        type: 'small',
+                        title: 'Neva House',
+                        location: 'Россия, Санкт-Петербург',
+                        bgImage: 'project-4.webp',
+                    })
+
+                .swiper-slide.services-projects__slide
+                    +project-card({
+                        type: 'small',
+                        title: 'Бассейная 45',
+                        location: 'Россия, Москва',
+                        bgImage: 'project-5.webp',
+                    }) 
+
+                .swiper-slide.services-projects__slide
+                    +project-card({
+                        type: 'small',
+                        title: 'Маленькая Франция',
+                        location: 'Россия, Санкт-Петербург',
+                        bgImage: 'project-6.webp',
+                    }) 
+
+
+

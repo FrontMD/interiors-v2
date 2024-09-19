@@ -6,6 +6,7 @@
 @import "m-contacts/m-contacts.scss";
 @import "m-projects/m-projects.scss";
 @import "m-callback/m-callback.scss";
+@import "m-intro/m-intro.scss";
 @import "mobile-menu/mobile-menu";
 @import "modals/modals";
 
@@ -27,3 +28,8 @@
 @import "pages/project/project-details/project-details.scss";
 @import "pages/project/project-quote/project-quote.scss";
 @import "pages/project/project-drawings/project-drawings.scss";
+
+//Услуги
+@import "pages/services/services-list/services-list.scss";
+@import "pages/services/services-process/services-process.scss";
+@import "pages/services/services-process/services-process.scss";

@@ -3,7 +3,8 @@
     const defaultMIntroProps = {
         classes: '',
         image: './img/services/services_intro.webp',
-        title: 'Услуги'
+        title: 'Услуги',
+        subtitle: 'Интерьеры с характером'
     }
 
 mixin m-intro(props = defaultMIntroProps)
@@ -12,6 +13,7 @@ mixin m-intro(props = defaultMIntroProps)
             classes: props.classes ? props.classes : defaultMIntroProps.classes,
             image: props.image ? props.image : defaultMIntroProps.image,
             title: props.title ? props.title : defaultMIntroProps.title,
+            subtitle: props.subtitle ? props.subtitle : defaultMIntroProps.subtitle,
         }
 
     section.m-intro(data-js="mIntro")
@@ -24,3 +26,5 @@ mixin m-intro(props = defaultMIntroProps)
                 text: checkProps.title,
                 animated: 'false'
             })(data-js="mIntroTitle")
+            if(checkProps.subtitle)
+                .m-intro__subtitle!= checkProps.subtitle

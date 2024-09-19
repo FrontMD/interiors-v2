@@ -1,0 +1,42 @@
+section.services-process(data-js="servicesProcess")
+    .container
+
+        .services-process__slider(data-js="servicesProcessSlider")
+            .services-process__header
+                +title({
+                    classes: 'title__h2--small',
+                    text: 'Как мы работаем',
+                    animated: 'false'
+                })
+                .services-process__controls
+                    +btn({
+                        classes: 'slider-control slider-control--prev',
+                        vMode: 'slider',
+                        icon: true,
+                        iconName: 'slider_arrow',
+                    })(data-js="sliderControlPrev")
+                    +btn({
+                        classes: 'slider-control slider-control--next',
+                        vMode: 'slider',
+                        icon: true,
+                        iconName: 'slider_arrow',
+                    })(data-js="sliderControlNext")
+            .swiper-wrapper
+                .swiper-slide.services-process__slide
+                    .services-process__number 01
+                    .services-process__title Начало работы 
+                    .services-process__text 
+                        p Мы встречаемся в&nbsp;нашем офисе или на&nbsp;объекте для знакомства и&nbsp;обсуждения будущего интерьер. После этого заполняем Техническое Задание со&nbsp;всеми вашими пожеланиями и&nbsp;подписываем Договор.
+                .swiper-slide.services-process__slide
+                    .services-process__number 02
+                    .services-process__title Планировка
+                    .services-process__text 
+                        p Мы выезжаем на&nbsp;обмер помещения, фиксируем все размеры объекта, составляем обмерный план. Далее разрабатываем до&nbsp;трех вариантов планировочных решений по&nbsp;вашим пожеланиям. 
+                        p Как только мы&nbsp;утвердили планировку, можно делать визуализации.
+                .swiper-slide.services-process__slide
+                    .services-process__number 03
+                    .services-process__title Визуализация
+                    .services-process__text
+                        p До визуализаций, мы&nbsp;собираем подборку похожих интерьеров и&nbsp;обсуждаем&nbsp;ее. Далее мы&nbsp;начинаем выстраивать ваш будущий интерьер в&nbsp;3д. Этот сложный процесс занимает 3-4 дня на&nbsp;каждое помещение. По&nbsp;каждому помещению можно внести до&nbsp;трех больших блоков корректировок. 
+                        p Утверждаем дизайн всех помещений, собираем все визуализации в&nbsp;одну папку, и&nbsp;присылаем их&nbsp;вам.                
+
