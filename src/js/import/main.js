@@ -55,6 +55,7 @@ document.addEventListener('DOMContentLoaded', () => {
         mainClass: 'my-fancybox',
         idle: false,
         Carousel: {
+            loop: false,
             transition: "crossfade",
             Navigation: {
                 prevTpl: '<svg><use xlink:href=img/sprites/sprite.svg#fancybox_arrow></use></svg>',

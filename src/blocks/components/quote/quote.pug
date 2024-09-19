@@ -3,7 +3,8 @@
         classes: '',
         text: '',
         author: '',
-        position: ''
+        position: '',
+        animated: 'true'
     }
 
 mixin quote(props = defaultQuoteProps)
@@ -12,7 +13,8 @@ mixin quote(props = defaultQuoteProps)
             classes: props.classes ? props.classes : defaultQuoteProps.classes,
             text: props.text ? props.text : defaultQuoteProps.text,
             author: props.author ? props.author : defaultQuoteProps.author,
-            position: props.position ? props.position : defaultQuoteProps.position
+            position: props.position ? props.position : defaultQuoteProps.position,
+            animated: props.animated ? props.animated : defaultQuoteProps.animated
 
         }
 
@@ -22,17 +24,27 @@ mixin quote(props = defaultQuoteProps)
                 use(xlink:href=`./img/sprites/sprite.svg#quotes`)
         .quote__content
             if(checkProps.text)
-                .height-anim-wrap(data-anim="heightWrap")
-                    .height-anim-el(data-anim="heightEl")
-                        .quote__text.height-anim-content(data-anim="heightContent")
-                            != checkProps.text
+                if(checkProps.animated === 'true')
+                    .height-anim-wrap(data-anim="heightWrap")
+                        .height-anim-el(data-anim="heightEl")
+                            .quote__text.height-anim-content(data-anim="heightContent")
+                                != checkProps.text
+                else
+                    .quote__text
+                        != checkProps.text
             if(checkProps.author)
-                .quote__author.height-anim-wrap(data-anim="heightWrap")
-                    .height-anim-el(data-anim="heightEl")
-                        .height-anim-content(data-anim="heightContent")
-                            != checkProps.author
+                if(checkProps.animated === 'true')
+                    .quote__author.height-anim-wrap(data-anim="heightWrap")
+                        .height-anim-el(data-anim="heightEl")
+                            .height-anim-content(data-anim="heightContent")
+                                != checkProps.author
+                else
+                    .quote__author!= checkProps.author
             if(checkProps.position)
-                .height-anim-wrap(data-anim="heightWrap")
-                    .height-anim-el(data-anim="heightEl")
-                        .quote__position.height-anim-content(data-anim="heightContent")
-                            != checkProps.position
+                if(checkProps.animated === 'true')
+                    .height-anim-wrap(data-anim="heightWrap")
+                        .height-anim-el(data-anim="heightEl")
+                            .quote__position.height-anim-content(data-anim="heightContent")
+                                != checkProps.position
+                else
+                    .quote__position!= checkProps.position

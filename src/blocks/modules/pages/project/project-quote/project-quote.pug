@@ -6,6 +6,7 @@ section.section.project-quote(data-js="projectQuote")
                 +title({
                     classes: 'title__h2--small',
                     text: 'От идеи до реализации',
+                    animated: 'false'
                 })
                 .project-quote__controls
                     +btn({
@@ -23,40 +24,49 @@ section.section.project-quote(data-js="projectQuote")
             .swiper-wrapper
 
                 .swiper-slide.project-quote__slide(data-js="projectQuoteSlide")
-                    +quote({
-                        classes: 'project-quote__quote',
-                        text: 'Уверена, что облик дома формируют арт-объекты, придающие ему интеллектуальность. И с опытом я все больше убеждаюсь в том, что концепцию жилья надо начинать именно с искусства и лишь потом углубляться в технические моменты',
-                        author: 'Волкова Арина Владимировна',
-                        position: 'Руководитель студии VI interiors'
-                    })
-                    .project-quote__img.height-anim-wrap(data-anim="heightWrap")
-                        .height-anim-el(data-anim="heightEl")
-                            .height-anim-content(data-anim="heightContent")
-                                img(src="./img/projects/project_quote.webp" alt="")
+                    .project-quote__info
+                        +quote({
+                            classes: 'project-quote__quote',
+                            text: 'Уверена, что облик дома формируют арт-объекты, придающие ему интеллектуальность. И с опытом я все больше убеждаюсь в том, что концепцию жилья надо начинать именно с искусства и лишь потом углубляться в технические моменты',
+                            author: 'Волкова Арина Владимировна',
+                            position: 'Руководитель студии VI interiors',
+                            animated: 'false'
+                        })
+                    .project-quote__img.result-photo(data-js="resultPhoto")
+                        .result-photo__overlay
+                            .result-photo__slider
+                                svg
+                                    use(xlink:href=`./img/sprites/sprite.svg#result_slider`)
+                            .result-photo__tooltip 
+                                != "Потяните, чтобы увидеть, что получилось"
+                                svg
+                                    use(xlink:href=`./img/sprites/sprite.svg#angle_arrow`)
+
+                        img(src="./img/projects/project_quote.webp" alt="")
 
                 .swiper-slide.project-quote__slide(data-js="projectQuoteSlide")
-                    +quote({
-                        classes: 'project-quote__quote',
-                        text: 'Уверена, что облик дома формируют арт-объекты, придающие ему интеллектуальность. И с опытом я все больше убеждаюсь в том, что концепцию жилья надо начинать именно с искусства и лишь потом углубляться в технические моменты',
-                        author: 'Волкова Арина Владимировна',
-                        position: 'Руководитель студии VI interiors'
-                    })
-                    .project-quote__img.height-anim-wrap(data-anim="heightWrap")
-                        .height-anim-el(data-anim="heightEl")
-                            .height-anim-content(data-anim="heightContent")
-                                img(src="./img/projects/project_quote.webp" alt="")
+                    .project-quote__info
+                        +quote({
+                            classes: 'project-quote__quote',
+                            text: 'Уверена, что облик дома формируют арт-объекты, придающие ему интеллектуальность. И с опытом я все больше убеждаюсь в том, что концепцию жилья надо начинать именно с искусства и лишь потом углубляться в технические моменты',
+                            author: 'Волкова Арина Владимировна',
+                            position: 'Руководитель студии VI interiors',
+                            animated: 'false'
+                        })
+                    .project-quote__img
+                        img(src="./img/projects/project_quote.webp" alt="")
 
                 .swiper-slide.project-quote__slide(data-js="projectQuoteSlide")
-                    +quote({
-                        classes: 'project-quote__quote',
-                        text: 'Уверена, что облик дома формируют арт-объекты, придающие ему интеллектуальность. И с опытом я все больше убеждаюсь в том, что концепцию жилья надо начинать именно с искусства и лишь потом углубляться в технические моменты',
-                        author: 'Волкова Арина Владимировна',
-                        position: 'Руководитель студии VI interiors'
-                    })
-                    .project-quote__img.height-anim-wrap(data-anim="heightWrap")
-                        .height-anim-el(data-anim="heightEl")
-                            .height-anim-content(data-anim="heightContent")
-                                img(src="./img/projects/project_quote.webp" alt="")
+                    .project-quote__info
+                        +quote({
+                            classes: 'project-quote__quote',
+                            text: 'Уверена, что облик дома формируют арт-объекты, придающие ему интеллектуальность. И с опытом я все больше убеждаюсь в том, что концепцию жилья надо начинать именно с искусства и лишь потом углубляться в технические моменты',
+                            author: 'Волкова Арина Владимировна',
+                            position: 'Руководитель студии VI interiors',
+                            animated: 'false'
+                        })
+                    .project-quote__img
+                        img(src="./img/projects/project_quote.webp" alt="")
 
-            .project-quote__pagination(data-js="sliderPagination")
+            //-.project-quote__pagination(data-js="sliderPagination")
 

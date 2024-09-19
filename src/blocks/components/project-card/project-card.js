@@ -7,6 +7,7 @@ function projectCardCursor() {
     projectCards.forEach(card => {
         card.addEventListener('mouseenter', (e) => {
             cursorIcon.style.opacity = 1;
+            cursorIcon.style.visibility = 'visible';
             $(cursorIcon).css({
                 left:  e.clientX,
                 top:   e.clientY
@@ -15,6 +16,7 @@ function projectCardCursor() {
 
         card.addEventListener('mouseleave', (e) => {
             cursorIcon.style.opacity = 0;
+            cursorIcon.style.visibility = 'hidden';
         })
 
 

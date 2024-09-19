@@ -1,0 +1,26 @@
+
+-
+    const defaultMIntroProps = {
+        classes: '',
+        image: './img/services/services_intro.webp',
+        title: 'Услуги'
+    }
+
+mixin m-intro(props = defaultMIntroProps)
+    -
+        const checkProps = {
+            classes: props.classes ? props.classes : defaultMIntroProps.classes,
+            image: props.image ? props.image : defaultMIntroProps.image,
+            title: props.title ? props.title : defaultMIntroProps.title,
+        }
+
+    section.m-intro(data-js="mIntro")
+        .container
+            .m-intro__bg(data-js="mIntroBg")
+                img(src= checkProps.image alt="")
+            +title({
+                classes: 'm-intro__title',
+                tag: 'h1',
+                text: checkProps.title,
+                animated: 'false'
+            })(data-js="mIntroTitle")
