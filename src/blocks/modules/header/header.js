@@ -19,6 +19,12 @@ function headerControllInit() {
             coeff2 = 0.5
             coeff3 = 0.3
         }
+
+        if(pageName == "services") {
+            coeff1 = 0.3
+            coeff2 = 0.4
+            coeff3 = 0.4
+        }
     }
     
     const initScroll = $(window).scrollTop();

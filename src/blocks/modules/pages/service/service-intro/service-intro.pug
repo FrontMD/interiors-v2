@@ -1,0 +1,32 @@
+section.service-intro(data-js="serviceIntro")
+    .service-intro__bg(data-js="serviceIntroBg")
+        <picture>
+            <source srcset="./img/services/service_intro.webp" media="(max-width: 500px)">
+            <source srcset="./img/services/service_intro.webp" media="(max-width: 1024px)">
+            <img src="./img/services/service_intro.webp" alt="">
+        </picture>
+    .service-intro__content(data-js="serviceIntroContent")
+        .container
+            +btn({
+                classes: 'service-intro__back',
+                vMode: 'btn',
+                link: 'javascript:void(0)',
+                text: 'Назад к проектам',
+                cMode: 'transparent',
+                icon: true,
+                iconName: 'back_arrow',
+            })
+            +title({
+                classes: 'service-intro__title',
+                tag: 'h1',
+                text: 'Проекты'
+            })(data-js="serviceIntroTitle")
+            +btn({
+                classes: 'service-intro__btn',
+                vMode: 'btn',
+                link: '#projectsProjects',
+                text: 'Скролл',
+                cMode: 'transparent',
+                icon: true,
+                iconName: 'scroll',
+            })

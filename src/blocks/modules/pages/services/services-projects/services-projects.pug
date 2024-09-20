@@ -13,34 +13,43 @@ section.services-projects(data-js="servicesProjects")
                 cMode: "beige2"
             })
         .services-projects__cards
-            +project-card({
-                classes: 'services-projects__card',
-                type: 'small',
-            })
-
-            +project-card({
-                classes: 'services-projects__card',
-                type: 'small',
-                title: 'Монблан',
-                location: 'Россия, Москва',
-                bgImage: 'project-2.webp',
-            })
-
-            +project-card({
-                classes: 'services-projects__card',
-                type: 'small',
-                title: 'Галерная 12',
-                location: 'Россия, Санкт-Петербург',
-                bgImage: 'project-3.webp',
-            })
-
-            +project-card({
-                classes: 'services-projects__card',
-                type: 'small',
-                title: 'Neva House',
-                location: 'Россия, Санкт-Петербург',
-                bgImage: 'project-4.webp',
-            })
+            .project-anim(data-anim="projectAnim")
+                .project-anim__wrap(data-anim="projectAnimWrap")
+                    .project-anim__content
+                        +project-card({
+                            classes: 'services-projects__card',
+                            type: 'small',
+                            title: 'Neva House',
+                            location: 'Россия, Санкт-Петербург',
+                            bgImage: 'project-4.webp',
+                        })
+            .project-anim(data-anim="projectAnim")
+                .project-anim__wrap(data-anim="projectAnimWrap")
+                    .project-anim__content            
+                        +project-card({
+                            type: 'small',
+                            title: 'Бассейная 45',
+                            location: 'Россия, Москва',
+                            bgImage: 'project-5.webp',
+                        }) 
+            .project-anim(data-anim="projectAnim")
+                .project-anim__wrap(data-anim="projectAnimWrap")
+                    .project-anim__content            
+                        +project-card({
+                            type: 'small',
+                            title: 'Старый Арбат II',
+                            location: 'Россия, Москва',
+                            bgImage: 'project-8.webp',
+                        })
+            .project-anim(data-anim="projectAnim")
+                .project-anim__wrap(data-anim="projectAnimWrap")
+                    .project-anim__content            
+                        +project-card({
+                            type: 'small',
+                            title: 'Старый Арбат',
+                            location: 'Россия, Москва',
+                            bgImage: 'project-9.webp',
+                        })                 
 
 
 

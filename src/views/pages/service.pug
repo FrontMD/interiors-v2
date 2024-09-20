@@ -5,4 +5,10 @@ block variables
 
 block content
     .page(data-js="pageAnimWrap" data-page="service")
+        include ../../blocks/modules/pages/service/service-intro/service-intro.pug
+        include ../../blocks/modules/pages/service/service-photos/service-photos.pug
         include ../../blocks/modules/pages/services/services-projects/services-projects.pug
+        +m-callback({
+            title: 'Заказать услугу',
+            classes: '',
+        })

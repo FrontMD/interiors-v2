@@ -279,6 +279,16 @@ html {
 
 }
 
+// контейнеры анимации Проектов
+.anim-container {
+    position: absolute;
+
+    &--services {
+        z-index: 10;
+        top: 0;
+    }
+}
+
 /* анимированные заголовки */
 .title-anim-external {
     display: inline-block;

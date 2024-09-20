@@ -5,7 +5,8 @@ block variables
 
 block content
     .page(data-js="pageAnimWrap" data-page="services")
-        +m-intro
-        include ../../blocks/modules/pages/services/services-list/services-list.pug
-        include ../../blocks/modules/pages/services/services-process/services-process.pug
-        include ../../blocks/modules/pages/services/services-projects/services-projects.pug
+        .anim-container.anim-container--services(style="" data-js="animContainerServices")
+            +m-intro
+            include ../../blocks/modules/pages/services/services-list/services-list.pug
+            include ../../blocks/modules/pages/services/services-process/services-process.pug
+            include ../../blocks/modules/pages/services/services-projects/services-projects.pug
