@@ -9,8 +9,8 @@ function servicesProcess() {
 
     let servicesProcessSliderEx = new Swiper(servicesProcessSlider, {
         slidesPerView: 'auto',
-        effect: 'fade',
         speed: 400,
+        spaceBetween: 40,
         navigation: {
             nextEl: nextBtn,
             prevEl: prevBtn,

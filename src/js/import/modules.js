@@ -5,6 +5,8 @@
 @@include("../../blocks/modules/pages/project/project-quote/project-quote.js")
 @@include("../../blocks/modules/pages/project/project-drawings/project-drawings.js")
 @@include("../../blocks/modules/pages/project/project-details/project-details.js")
+@@include("../../blocks/modules/pages/services/services-list/services-list.js")
+@@include("../../blocks/modules/pages/services/services-process/services-process.js")
 @@include("../../blocks/modules/modals/modals.js")
 
 
@@ -16,4 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
     projectQuote();
     projectDrawings();
     projectDetails();
+    servicesList();
+    servicesProcess();
+
 })
