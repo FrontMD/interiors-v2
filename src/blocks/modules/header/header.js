@@ -14,7 +14,7 @@ function headerControllInit() {
     if(page){
         let pageName = page.getAttribute("data-page")
 
-        if(pageName == "projects") {
+        if(pageName == "projects" || pageName == "service") {
             coeff1 = 0.85
             coeff2 = 0.5
             coeff3 = 0.3

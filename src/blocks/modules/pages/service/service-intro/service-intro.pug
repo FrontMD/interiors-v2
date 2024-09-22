@@ -19,12 +19,19 @@ section.service-intro(data-js="serviceIntro")
             +title({
                 classes: 'service-intro__title',
                 tag: 'h1',
-                text: 'Проекты'
+                text: 'Дизайн-проект'
             })(data-js="serviceIntroTitle")
             +btn({
                 classes: 'service-intro__btn',
                 vMode: 'btn',
-                link: '#projectsProjects',
+                link: '#mCallback',
+                text: 'Заказать услугу',
+                cMode: 'beige',
+            })
+            +btn({
+                classes: 'service-intro__scroll',
+                vMode: 'btn',
+                link: '#servicePhotos',
                 text: 'Скролл',
                 cMode: 'transparent',
                 icon: true,

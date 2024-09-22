@@ -45,7 +45,11 @@ if(preloader !== null ) {
             case "services":
                 projectsAnimationMarkup()
                 startPageAnimation();
-                break;                
+                break;
+            case "service":
+                projectsAnimationMarkup()
+                startPageAnimation();
+                break;
             default:
                 cookieInit()
                 break
@@ -67,7 +71,10 @@ function startPageAnimation() {
             break;
         case "services":
             servicesPageAnimation()
-            break;            
+            break;
+        case "service":
+            servicePageAnimation()
+            break;
         default:
             break
     }
@@ -1494,6 +1501,68 @@ function servicesPageAnimation() {
 
 }
 
+/** Общая анимация страницы услуг */
+function servicePageAnimation() {
+
+    currentPage.style.height = "100vh"
+
+    const footer = document.querySelector('[data-js="footer"]')
+    footer.style.bottom = "0"
+    footer.style.position = 'relative'
+
+    //показываем контент
+    let tl = gsap.timeline();
+
+    tl.to('[data-js="siteHeader"]', 
+    {
+        opacity: '1',
+        duration: 0.5,
+        delay: 0.5,
+    }, '0')
+    tl.to('[data-js="serviceIntroContent"]', 
+    {
+        opacity: '1',
+        duration: 0.5,
+        delay: 0.5,
+        onComplete: () => {
+            cookieInit()
+        }
+    }, '<')
+
+    addTime = 450
+
+    scrollTriggerObject = ScrollTrigger.create({
+        trigger: currentPage,
+        pin: true,
+        start: "top top",
+        end: () => "+=" + addTime + "%",
+        scrub: 1,
+        animation: mainTimeline,
+    })
+
+
+    if(windowWidth > 1024) {
+        mainTimeline.fromTo('[data-js="animContainerService"]', 
+            {
+                top: "0",
+            }, 
+            {
+                top: () => {
+                    let animContainerServicesHeight = document.querySelector('[data-js="animContainerService"]').offsetHeight;
+                    return -(animContainerServicesHeight - window.innerHeight) + "px"
+                },      
+                duration: 2,
+                onUpdate: () => {
+                    projectsAnimation("service")
+                },
+            }, '0')
+
+    } else if(windowWidth > 500) {
+
+    } else {}
+
+}
+
 
 /* разметка заголовков */
 function titlesMarkup() {
@@ -1556,7 +1625,7 @@ function projectsAnimation(page = "home") {
         projectsAnim = windowWidth > 1024 
                 ? document.querySelectorAll('[data-js="mProjectsSlides"] .swiper-slide-active [data-anim="projectAnim"]')
                 : document.querySelectorAll('[data-anim="projectAnim"]')
-    } else if(page == "projects" || page == "services") {
+    } else {
         projectsAnim = document.querySelectorAll('[data-anim="projectAnim"]')
     }
 

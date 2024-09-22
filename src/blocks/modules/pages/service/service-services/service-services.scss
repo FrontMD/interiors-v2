@@ -1,0 +1,70 @@
+.service-services {
+    overflow: hidden;
+
+    &__title {
+        text-align: center;
+    }
+
+    &__cards {
+        width: 100%;
+        display: flex;
+        align-items: stretch;
+        justify-content: space-between;
+        gap: 40px;
+        margin-top: 40px;
+    }
+
+    &__card {
+        flex: 0 1 50%;
+    }
+
+    .service-card {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        padding: 40px;
+        background-color: $c-grey;
+
+        &__link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            right: 40px;
+            top: 40px;
+            width: 32px;
+            height: 32px;
+            color: $c-beige;
+
+            svg {
+                width: 100%;
+                height: auto;
+            }
+        }
+
+        &__title {
+            font-family: $titleFont;
+            font-weight: 400;
+            line-height: 1.08em;
+            font-size: 24px;
+            text-align: center;
+            color: $c-white;
+        }
+
+        &__img {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 30px;
+            padding: 56px;
+            border: 1px solid rgba(218, 197, 177, 0.2);
+            border-width: 1px 0 1px 0;
+
+            img {
+                width: 400px;
+                height: 400px;
+                object-fit: cover;
+            }
+        }
+    }
+}

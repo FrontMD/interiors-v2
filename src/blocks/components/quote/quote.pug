@@ -1,6 +1,7 @@
 -
     const defaultQuoteProps = {
         classes: '',
+        title: '',
         text: '',
         author: '',
         position: '',
@@ -11,6 +12,7 @@ mixin quote(props = defaultQuoteProps)
     -
         const checkProps = {
             classes: props.classes ? props.classes : defaultQuoteProps.classes,
+            title: props.title ? props.title : defaultQuoteProps.title,
             text: props.text ? props.text : defaultQuoteProps.text,
             author: props.author ? props.author : defaultQuoteProps.author,
             position: props.position ? props.position : defaultQuoteProps.position,
@@ -23,6 +25,8 @@ mixin quote(props = defaultQuoteProps)
             svg 
                 use(xlink:href=`./img/sprites/sprite.svg#quotes`)
         .quote__content
+            if(checkProps.title)
+                .quote__title!= checkProps.title
             if(checkProps.text)
                 if(checkProps.animated === 'true')
                     .height-anim-wrap(data-anim="heightWrap")

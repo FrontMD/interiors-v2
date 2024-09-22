@@ -1,4 +1,4 @@
-.projects-intro {
+.service-intro {
     position: relative;
     overflow: hidden;
 
@@ -7,7 +7,7 @@
         left: 0;
         top: 0;
         width: 100%;
-        aspect-ratio: 1 / 0.854;
+        height: 100%;
         z-index: 5;
 
         @include max(1024) {
@@ -51,7 +51,7 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: space-between;
+            justify-content: flex-start;
             height: 100vh;
             padding: 125px 0 40px;
 
@@ -65,9 +65,24 @@
         }
     }
 
+    &__back {
+        padding: 0;
+        color: $c-white;
+        flex-direction: row-reverse;
+        align-self: flex-start;
+
+        .btn__icon,
+        .btn__icon svg {
+            width: 24px;
+            height: 24px;
+
+        }
+    }
+
     &__title {
         text-align: center;
-        font-size: 260px;
+        font-size: 56px;
+        margin-top: 130px;
 
         @include max(1300) {
             font-size: 210px;
@@ -87,11 +102,10 @@
     }
 
     &__btn {
-        padding: 4px 0;
-        color: $c-white;
+        margin-top: 40px;
+    }
 
-        @include max(500) {
-            padding: 0;
-        }
+    &__scroll {
+        margin-top: auto;
     }
 }

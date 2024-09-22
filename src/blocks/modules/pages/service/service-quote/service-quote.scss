@@ -1,0 +1,21 @@
+.service-quote {
+    padding-top: 120px;
+
+    &__quote {
+        gap: 88px;
+        padding: 56px 64px;
+        border-width: 1px 0px 1px 0px;
+        border-style: solid;
+        border-color: rgba(255, 255, 255, 0.15);
+    }
+
+    .quote__position {
+        margin-top: 4px;
+    }
+
+    .quote__icon svg {
+        width: 122px;
+        height: 85px;
+        opacity: 0.05;
+    }
+}

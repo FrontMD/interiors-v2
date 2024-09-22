@@ -279,11 +279,21 @@ html {
 
 }
 
-// контейнеры анимации Проектов
+// контейнеры анимации Услуг
 .anim-container {
     position: absolute;
 
     &--services {
+        z-index: 10;
+        top: 0;
+    }
+}
+
+// контейнеры анимации Услуги
+.anim-container {
+    position: absolute;
+
+    &--service {
         z-index: 10;
         top: 0;
     }

@@ -1,0 +1,26 @@
+section.service-services(data-js="serviceServices")
+    .container
+        +title({
+            classes: 'service-services__title title__h2--small',
+            text: 'Другие услуги',
+            animated: 'false'
+        })
+        .service-services__cards
+            .service-services__card.service-card
+                a.service-card__link(href="javascript:void(0)")
+                    svg
+                        use(xlink:href=`./img/sprites/sprite.svg#slider_arrow`)
+                .service-card__title Чертежи
+                .service-card__img
+                    img(src="./img/services/services_2.webp" alt="")
+            .service-services__card.service-card
+                a.service-card__link(href="javascript:void(0)")
+                    svg
+                        use(xlink:href=`./img/sprites/sprite.svg#slider_arrow`)
+                .service-card__title Авторский надзор стройки
+                .service-card__img
+                    img(src="./img/services/services_3.webp" alt="")
+
+
+
+
