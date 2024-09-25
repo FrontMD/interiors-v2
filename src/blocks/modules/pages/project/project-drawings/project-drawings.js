@@ -1,27 +1,38 @@
 function projectDrawings() {
         // Инициализируем слайдер
         const projectDrawingsSlider = document.querySelector('[data-js="projectDrawingsSlider"]');
+        const projectDrawingsThumbs = document.querySelector('[data-js="projectDrawingsThumbs"]');
     
-        if(!projectDrawingsSlider) return
+        if(!projectDrawingsSlider || !projectDrawingsThumbs) return
 
-        const prevBtn = projectDrawingsSlider.querySelector('[data-js="sliderControlPrev"]')
-        const nextBtn = projectDrawingsSlider.querySelector('[data-js="sliderControlNext"]')
-        const pagination = projectDrawingsSlider.querySelector('[data-js="sliderPagination"]')
+        const prevBtn = projectDrawingsThumbs.querySelector('[data-js="sliderControlPrev"]')
+        const nextBtn = projectDrawingsThumbs.querySelector('[data-js="sliderControlNext"]')
     
-        let projectDrawingsSliderEx = new Swiper(projectDrawingsSlider, {
-            slidesPerView: 'auto',
+        let projectDrawingsThumbsEx = new Swiper(projectDrawingsThumbs, {
+            slidesPerView: 1,
             speed: 400,
             spaceBetween: 64,
-            //loop: true,
+            allowTouchMove: false,
+    
             navigation: {
                 nextEl: nextBtn,
                 prevEl: prevBtn,
             },
-            pagination: {
-                el: pagination,
-                type: 'bullets',
-                clickable: true
+
+        })
+
+        let projectDrawingsSliderEx = new Swiper(projectDrawingsSlider, {
+            slidesPerView: 1,
+            speed: 400,
+            effect: 'fade',
+            allowTouchMove: false,
+            navigation: {
+                nextEl: nextBtn,
+                prevEl: prevBtn,
             },
+            thumbs: {
+                swiper: projectDrawingsThumbsEx
+            }
 
         })
 

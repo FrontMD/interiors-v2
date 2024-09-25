@@ -53,7 +53,16 @@ section.section.project-quote(data-js="projectQuote")
                             position: 'Руководитель студии VI interiors',
                             animated: 'false'
                         })
-                    .project-quote__img
+                    .project-quote__img.result-photo(data-js="resultPhoto")
+                        .result-photo__overlay
+                            .result-photo__slider
+                                svg
+                                    use(xlink:href=`./img/sprites/sprite.svg#result_slider`)
+                            .result-photo__tooltip 
+                                != "Потяните, чтобы увидеть, что получилось"
+                                svg
+                                    use(xlink:href=`./img/sprites/sprite.svg#angle_arrow`)
+
                         img(src="./img/projects/project_quote.webp" alt="")
 
                 .swiper-slide.project-quote__slide(data-js="projectQuoteSlide")
@@ -65,8 +74,15 @@ section.section.project-quote(data-js="projectQuote")
                             position: 'Руководитель студии VI interiors',
                             animated: 'false'
                         })
-                    .project-quote__img
-                        img(src="./img/projects/project_quote.webp" alt="")
+                    .project-quote__img.result-photo(data-js="resultPhoto")
+                        .result-photo__overlay
+                            .result-photo__slider
+                                svg
+                                    use(xlink:href=`./img/sprites/sprite.svg#result_slider`)
+                            .result-photo__tooltip 
+                                != "Потяните, чтобы увидеть, что получилось"
+                                svg
+                                    use(xlink:href=`./img/sprites/sprite.svg#angle_arrow`)
 
-            //-.project-quote__pagination(data-js="sliderPagination")
+                        img(src="./img/projects/project_quote.webp" alt="")
 

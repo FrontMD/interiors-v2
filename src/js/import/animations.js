@@ -25,7 +25,7 @@ if(preloader !== null ) {
 
         switch(currentPageName) {
             case "home":
-                document.querySelector('[data-js="siteHeaderLogoFull"]').setAttribute('src', './img/logo_full.png')
+                document.querySelector('[data-js="siteHeaderLogoFull"] img').setAttribute('src', './img/logo_full.png')
                 titlesMarkup();
                 heightAnimMarkup();
                 homeIntroAnim();
@@ -40,7 +40,7 @@ if(preloader !== null ) {
             case "project":
                 titlesMarkup();
                 heightAnimMarkup();
-                //startPageAnimation();
+                startPageAnimation();
                 break;
             case "services":
                 projectsAnimationMarkup()
@@ -1397,7 +1397,7 @@ function projectPageAnimation() {
     footer.style.position = 'relative'
 
     //показываем контент
-    if(document.querySelector('[data-js="projectsIntro"]')) {
+    if(document.querySelector('[data-js="projectIntro"]')) {
         let tl = gsap.timeline();
 
         tl.to('[data-js="siteHeader"]', 
@@ -1406,14 +1406,6 @@ function projectPageAnimation() {
             duration: 0.5,
             delay: 0.5
         }, '0')
-    
-        
-        tl.to('[data-js="projectIntroTitle"] [data-js="titleAnimInternal"]', 
-        {
-            marginTop: 0,
-            duration: 0.3,
-            delay: 0.2
-        }, '<')
     
         tl.to('[data-js="projectIntroContent"]', 
         {
@@ -1425,20 +1417,33 @@ function projectPageAnimation() {
         }, '<')
     }
 
-    addTime = 1200
+    addTime = 800
 
-    /*scrollTriggerObject = ScrollTrigger.create({
+    scrollTriggerObject = ScrollTrigger.create({
         trigger: currentPage,
         pin: true,
         start: "top top",
         end: () => "+=" + addTime + "%",
         scrub: 1.5,
         animation: mainTimeline,
-    })*/
+    })
 
 
     if(windowWidth > 1024) {
-
+        mainTimeline.fromTo('[data-js="animContainerProject"]', 
+            {
+                top: "0",
+            }, 
+            {
+                top: () => {
+                    let animContainerProjectHeight = document.querySelector('[data-js="animContainerProject"]').offsetHeight;
+                    return -(animContainerProjectHeight - window.innerHeight) + "px"
+                },      
+                duration: 1.5,
+                onUpdate: () => {
+                    detailedAnimation()
+                },
+            }, '0')
     } else if(windowWidth > 500) {
 
     } else {}
@@ -1647,6 +1652,30 @@ function projectsAnimation(page = "home") {
                 projectAnimWrap.style.height = "0%"
             }
         })
+    
+    })
+}
+
+/* анимация проектов */
+function detailedAnimation() {
+    
+    detailedsAnim = document.querySelectorAll('[data-js="projectDetailsSlider"]')
+
+    const showPosition = windowWidth > 500 ? 200 : 200
+
+    if(detailedsAnim.length < 1) return
+
+    detailedsAnim.forEach(detailedAnim => {
+        
+        let detailedAnimPosition = detailedAnim.getBoundingClientRect().top
+      
+        if(windowHeight - detailedAnimPosition > showPosition) {
+            detailedAnim.style.opacity = "1"
+            detailedAnim.style.top = "0"
+        } else {
+            detailedAnim.style.opacity = "0"
+            detailedAnim.style.top = "50px"
+        }
     
     })
 }

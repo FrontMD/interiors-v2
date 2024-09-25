@@ -10,7 +10,6 @@ function projectQuote() {
 
         const prevBtn = projectQuoteSlider.querySelector('[data-js="sliderControlPrev"]')
         const nextBtn = projectQuoteSlider.querySelector('[data-js="sliderControlNext"]')
-        //const pagination = projectQuoteSlider.querySelector('[data-js="sliderPagination"]')
     
         let projectQuoteSliderEx = new Swiper(projectQuoteSlider, {
             slidesPerView: 1,
@@ -21,12 +20,6 @@ function projectQuote() {
                 nextEl: nextBtn,
                 prevEl: prevBtn,
             },
-            /*pagination: {
-                el: pagination,
-                type: 'bullets',
-                clickable: true
-                },*/
-
         })
     }
 
@@ -35,6 +28,48 @@ function projectQuote() {
         const resultPhotos = document.querySelectorAll('[data-js="resultPhoto"]')
 
         if(resultPhotos.length === 0) return
+
+        resultPhotos.forEach(item => {
+            const resultPhotoSlider = item.querySelector('.result-photo__slider')
+            const resultPhotoOverlay = item.querySelector('.result-photo__overlay')
+            const resultPhotoTooltip = item.querySelector('.result-photo__tooltip')
+
+            resultPhotoSlider.onmousedown = function(event) {
+              event.preventDefault();
+        
+              let shiftX = event.clientX - resultPhotoSlider.getBoundingClientRect().left;
+        
+              document.addEventListener('mousemove', onMouseMove);
+              document.addEventListener('mouseup', onMouseUp);
+        
+              function onMouseMove(event) {
+                resultPhotoTooltip.style.opacity = '0';
+                let newLeft = event.clientX - shiftX - item.getBoundingClientRect().left;
+                let rightEdge = item.offsetWidth - resultPhotoSlider.offsetWidth;
+        
+                if (newLeft < 0) {
+                  newLeft = 0;
+                }
+
+                if (newLeft > rightEdge) {
+                  newLeft = rightEdge;
+                }
+
+                resultPhotoOverlay.style.width = parseInt((rightEdge - newLeft) / rightEdge * 100) + '%'
+
+              }
+        
+              function onMouseUp() {
+                document.removeEventListener('mouseup', onMouseUp);
+                document.removeEventListener('mousemove', onMouseMove);
+              }
+        
+            };
+        
+            resultPhotoSlider.ondragstart = function() {
+              return false;
+            };
+        })
     }
 
 }

@@ -5,9 +5,10 @@ block variables
 
 block content
     .page(data-js="pageAnimWrap" data-page="project")
-        include ../../blocks/modules/pages/project/project-intro/project-intro.pug
-        include ../../blocks/modules/pages/project/project-about/project-about.pug
-        include ../../blocks/modules/pages/project/project-details/project-details.pug
-        include ../../blocks/modules/pages/project/project-quote/project-quote.pug
-        include ../../blocks/modules/pages/project/project-drawings/project-drawings.pug
-        +m-callback()
+        .anim-container.anim-container--project(style="" data-js="animContainerProject")
+            include ../../blocks/modules/pages/project/project-intro/project-intro.pug
+            include ../../blocks/modules/pages/project/project-about/project-about.pug
+            include ../../blocks/modules/pages/project/project-details/project-details.pug
+            include ../../blocks/modules/pages/project/project-quote/project-quote.pug
+            include ../../blocks/modules/pages/project/project-drawings/project-drawings.pug
+            +m-callback()

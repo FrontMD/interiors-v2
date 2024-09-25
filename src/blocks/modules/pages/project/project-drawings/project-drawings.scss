@@ -1,47 +1,47 @@
 .project-drawings {
     padding-top: 120px;
 
-    &__slider {
+    &__content {
+        display: flex;
+        align-items: flex-start;
         overflow: hidden;
-        position: relative;
-        padding: 0 calc((100% - 1312px) / 2);
-        max-width: 100%;
+        gap: 64px;
         margin-top: 48px;
-
-        @include max(1440) {
-            padding: 0 64px;
-        }
-
-        @include max(1024) {
-            padding: 0;
-        }
+        margin-right: calc((100vw - 1312px) / -2);
     }
 
+    &__slider {
+        position: relative;
+        width: 840px;
+        height: 650px;
+        z-index: 10;
+    }
+
+
     &__slide {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 650px;
+        width: 840px;
+    }
+
+    &__thumbs {
+        position: relative;
+        z-index: 5;
+        width: 350px;
+        height: 650px;
+    }
+
+    &__thumb {
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: flex-start;
-        height: 650px;
-        width: fit-content;
 
         .project-drawings__img {
             width: 350px;
             height: 342px;
-            transition: width 0.2s linear, height 0.2s linear;
-        }
-    }
-
-    &__slide.swiper-slide-active {
-
-        .project-drawings__img {
-            width: 840px;
-            height: 100%;
-        }
-
-        .project-drawings__text {
-            margin-top: 0;
-            max-height: 0;
         }
     }
 
@@ -78,7 +78,7 @@
 
     &__controls {
         position: absolute;
-        left: calc(1190px * 0.706 + 64px + (100% - 1312px) / 2);
+        left: 0;
         bottom: 0;
         display: flex;
         gap: 20px;
