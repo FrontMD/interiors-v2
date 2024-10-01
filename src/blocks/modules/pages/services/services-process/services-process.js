@@ -10,11 +10,17 @@ function servicesProcess() {
     let servicesProcessSliderEx = new Swiper(servicesProcessSlider, {
         slidesPerView: 'auto',
         speed: 400,
-        spaceBetween: 40,
+        spaceBetween: 24,
         navigation: {
             nextEl: nextBtn,
             prevEl: prevBtn,
         },
+
+        breakpoints: {
+            1025: {
+                spaceBetween: 40
+            }
+        }
     })
 
 }

@@ -1485,7 +1485,7 @@ function servicesPageAnimation() {
         }
     }, '0')
 
-    addTime = 150
+    addTime = 300
 
     scrollTriggerObject = ScrollTrigger.create({
         trigger: currentPage,
@@ -1507,13 +1507,28 @@ function servicesPageAnimation() {
                     let animContainerServicesHeight = document.querySelector('[data-js="animContainerServices"]').offsetHeight;
                     return -(animContainerServicesHeight - window.innerHeight) + "px"
                 },      
-                duration: 1.5,
+                duration: 2.5,
                 onUpdate: () => {
                     projectsAnimation("services")
                 },
             }, '0')
 
-    } else if(windowWidth > 500) {
+    } else if(windowWidth > 300) {
+
+        mainTimeline.fromTo('[data-js="animContainerServices"]', 
+            {
+                top: "0",
+            }, 
+            {
+                top: () => {
+                    let animContainerServicesHeight = document.querySelector('[data-js="animContainerServices"]').offsetHeight;
+                    return -(animContainerServicesHeight - window.innerHeight) + "px"
+                },      
+                duration: 2.5,
+                onUpdate: () => {
+                    projectsAnimation("services")
+                },
+            }, '0')
 
     } else {}
 

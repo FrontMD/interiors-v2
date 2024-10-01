@@ -2,9 +2,17 @@
     padding-top: 120px;
     overflow: hidden;
 
+    @include max(1024) {
+        padding-top: 80px;
+    }
+
     &__slider {
         position: relative;
         width: 100%;
+
+        .swiper-wrapper {
+            align-items: flex-start;
+        }
     }
 
     &__slide {
@@ -20,6 +28,14 @@
         background-repeat: no-repeat;
         background-position: right center;
         background-size: 294px 449px;
+
+        @include max(730) {
+            width: 287px;
+            min-height: 462px;
+            background-size: 204.6px 313.49px;
+            background-position: right top 16.76px;
+            padding: 24px;
+        }
     }
 
     &__header {
@@ -29,6 +45,10 @@
         width: 100%;
         margin-bottom: 48px;
         gap: 32px;
+
+        @include max(1024) {
+            margin-bottom: 24px;
+        }
 
         .title {
             flex: 1 1 auto;
@@ -71,6 +91,10 @@
         line-height: 1.08em;
         font-weight: 400;
         color: $c-white;
+
+        @include max(1024) {
+            font-size: 20px;
+        }
     }
 
     &__text {

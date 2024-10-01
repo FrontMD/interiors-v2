@@ -3,6 +3,14 @@
     overflow: hidden;
     padding-top: 120px;
 
+    @include max(1024) {
+        padding-top: 120px;
+    }
+
+    @include max(730) {
+        padding-top: 64px;
+    }
+
     &__container {
         display: flex;
         align-items: stretch;
@@ -13,6 +21,10 @@
         flex: 0 0 50%;
         max-width: 624px;
         overflow: hidden;
+
+        @include max(1199) {
+            display: none;
+        }
     }
 
     &__slide {
@@ -21,6 +33,10 @@
         align-items: center;
         background-color: $c-grey;
         padding: 28px 56px 56px;
+
+        @include max(1300) {
+            padding: 24px;
+        }
     }
 
     &__img {
@@ -31,6 +47,16 @@
         border: 1px solid rgba(218, 197, 177, 0.2);
         border-left-width: 0;
         border-right-width: 0;
+
+        @include max(1300) {
+            padding: 24px 0;
+        }
+
+        @include max(1199) {
+            padding: 0;
+            margin: 0;
+            border: none;
+        }
 
         img {
             width: 100%;
@@ -48,8 +74,17 @@
     }
 
     &__thumbs {
-        flex: 0 0 50%;
+        flex: 0 1 50%;
         max-width: 624px;
+
+        @include max(1199) {
+            flex-basis: 100%;
+            max-width: 100%;
+
+            .swiper-wrapper {
+                display: contents;
+            }
+        }
     }
 
     &__thumb {
@@ -61,6 +96,20 @@
         border-top: 1px solid $c-beige;
         cursor: pointer;
         opacity: 0.3;
+
+        @include max(1199) {
+            position: relative;
+            opacity: 1;
+            flex-direction: column;
+        }
+
+        .services-list__img {
+            display: none;
+
+            @include max(1199) {
+                display: block;
+            }
+        }
 
         &.swiper-slide-thumb-active {
             opacity: 1;
@@ -76,9 +125,23 @@
         }
     }
 
+    &__content {
+        display: contents;
+
+        @include max(1199) {
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+        }
+    }
+
     &__number--thumb {
         flex: 0 0 21px;
         opacity: 1;
+
+        @include max(1199) {
+            opacity: 0.7;
+        }
     }
 
     &__center {
@@ -92,6 +155,24 @@
         line-height: 1.08em;
         text-align: left;
         color: $c-white;
+
+
+        @include max(1300) {
+            font-size: 24px;
+        }
+
+        @include max(1199) {
+            font-size: 24px;
+        }
+
+        @include max(1024) {
+            font-size: 24px;
+        }
+
+        @include max(730) {
+            font-size: 20px;
+        }
+
     }
 
     &__text {
@@ -101,6 +182,10 @@
         line-height: 1.5em;
         color: $c-white;
         opacity: 0.7;
+
+        @include max(730) {
+            margin-top: 8px;
+        }
     }
 
     &__link {
@@ -115,6 +200,16 @@
         }
 
         svg {
+            width: 100%;
+            height: 100%;
+        }
+
+        @include max(1199) {
+            opacity: 0;
+            position: absolute;
+            left: 0;
+            top: 0;
+            display: block;
             width: 100%;
             height: 100%;
         }

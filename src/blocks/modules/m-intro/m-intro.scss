@@ -3,16 +3,19 @@
     overflow: hidden;
     padding-top: 125px;
 
+    @include max(1024) {
+        padding-top: 140px;
+    }
+
+    @include max(730) {
+        padding-top: 95px;
+    }
+
     &__bg {
         position: relative;
         width: 100%;
         aspect-ratio: 1 / 0.22;
         z-index: 5;
-
-        @include max(1024) {
-            aspect-ratio: auto;
-            height: 100%;
-        }
 
         img {
             width: 100%;
@@ -52,9 +55,18 @@
 
         @include max(1024) {
             font-size: 132px;
+            margin-top: -35px;
+        }
+
+        @include max(768) {
+            font-size: 132px;
         }
 
         @include max(730) {
+            font-size: 64px;
+        }
+
+        @include max(500) {
             font-size: 64px;
         }
     }
@@ -67,6 +79,14 @@
         line-height: 1.08em;
         text-align: center;
         color: $c-white;
+
+        @include max(1024) {
+            font-size: 48px;
+        }
+
+        @include max(730) {
+            font-size: 40px;
+        }
     }
 
 }

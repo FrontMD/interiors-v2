@@ -2,7 +2,9 @@ function servicesList() {
     const servicesListSlider = document.querySelector('[data-js="servicesListSlider"]')
     const servicesListThumbs = document.querySelector('[data-js="servicesListThumbs"]')
 
-    if(!servicesListSlider || !servicesListThumbs) return
+    const windowWidth = window.innerWidth
+
+    if(!servicesListSlider || !servicesListThumbs || windowWidth < 1200) return
 
     let servicesListThumbsEx = new Swiper(servicesListThumbs, {
         slidesPerView: 'auto',

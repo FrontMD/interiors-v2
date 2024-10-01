@@ -7,7 +7,7 @@ section.services-projects(data-js="servicesProjects")
                 animated: 'false'
             })
             +btn({
-                classes: '.services-projects__btn',
+                classes: 'services-projects__btn',
                 vMode: 'btn',
                 text: 'Все проекты',
                 cMode: "beige2"
@@ -27,6 +27,7 @@ section.services-projects(data-js="servicesProjects")
                 .project-anim__wrap(data-anim="projectAnimWrap")
                     .project-anim__content            
                         +project-card({
+                            classes: 'services-projects__card',
                             type: 'small',
                             title: 'Бассейная 45',
                             location: 'Россия, Москва',
@@ -36,6 +37,7 @@ section.services-projects(data-js="servicesProjects")
                 .project-anim__wrap(data-anim="projectAnimWrap")
                     .project-anim__content            
                         +project-card({
+                            classes: 'services-projects__card',
                             type: 'small',
                             title: 'Старый Арбат II',
                             location: 'Россия, Москва',
@@ -45,6 +47,7 @@ section.services-projects(data-js="servicesProjects")
                 .project-anim__wrap(data-anim="projectAnimWrap")
                     .project-anim__content            
                         +project-card({
+                            classes: 'services-projects__card',
                             type: 'small',
                             title: 'Старый Арбат',
                             location: 'Россия, Москва',
