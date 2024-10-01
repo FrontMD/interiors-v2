@@ -5,6 +5,10 @@
         padding-top: 80px;
     }
 
+    @include max(1024) {
+        padding-top: 64px;
+    }
+
     &__content {
         display: flex;
         align-items: flex-start;
@@ -19,6 +23,10 @@
 
         @include max(1024) {
             margin-right: -48px;
+        }
+
+        @include max(730) {
+            margin-right: -16px;
         }
     }
 
@@ -67,6 +75,11 @@
             width: 597px;
             height: auto;
         }
+
+        @include max(730) {
+            width: 308px;
+            height: auto;
+        }
     }
 
     &__thumb {
@@ -98,6 +111,11 @@
                 align-items: flex-start;
                 width: 597px;
                 height: 462px;
+            }
+
+            @include max(730) {
+                width: 308px;
+                height: 238px;
             }
         }
     }
@@ -173,6 +191,10 @@
         @include max(1024) {
             min-width: 100%;
             min-height: auto;
+        }
+
+        @include max(730) {
+            margin-top: 24px;
         }
     }
 

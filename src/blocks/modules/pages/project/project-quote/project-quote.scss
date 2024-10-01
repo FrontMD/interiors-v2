@@ -81,6 +81,10 @@
             @include max(1024) {
                 max-width: calc(100% - 85px);
             }
+
+            @include max(500) {
+                max-width: 100%;
+            }
         }
     }
 
@@ -131,6 +135,11 @@
             flex-basis: auto;
             padding: 24px 48px 48px;
         }
+
+        @include max(500) {
+            flex-basis: auto;
+            padding: 40px 16px 24px;
+        }
     }
 
     &__quote.quote {
@@ -144,6 +153,10 @@
             @include max(1024) {
                 font-size: 20px;
                 margin-top: 16px;
+            }
+
+            @include max(500) {
+                font-size: 16px;
             }
         }
 
@@ -206,10 +219,20 @@
             background-color: $c-beige;
             cursor: grab;
 
+            @include max(730) {
+                width: 48px;
+                height: 48px;
+                left: -24px;
+            }
+
             svg {
                 width: 48px;
                 height: 16px;
                 color: $c-brown;
+
+                @include max(730) {
+                    width: 40px;
+                }
             }
         }
 
@@ -230,7 +253,14 @@
             line-height: 1.5em;
             color: $c-beige;
 
+            @include max(730) {
+                padding: 14px 16px;
+                left: 29px;
+                max-width: 81%;
+            }
+
             svg {
+                flex: 0 0 16px;
                 width: 16px;
                 height: 16px;
                 color: inherit;
