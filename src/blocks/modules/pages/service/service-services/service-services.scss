@@ -12,6 +12,12 @@
         justify-content: space-between;
         gap: 40px;
         margin-top: 40px;
+
+        @include max(1024) {
+            flex-direction: column;
+            margin-top: 24px;
+            gap: 24px;
+        }
     }
 
     &__card {
@@ -25,6 +31,10 @@
         padding: 40px;
         background-color: $c-grey;
 
+        @include max(730) {
+            padding: 24px;
+        }
+
         &__link {
             display: flex;
             align-items: center;
@@ -35,6 +45,11 @@
             width: 32px;
             height: 32px;
             color: $c-beige;
+
+            @include max(730) {
+                right: 24px;
+                top: 16px;
+            }
 
             svg {
                 width: 100%;
@@ -49,6 +64,12 @@
             font-size: 24px;
             text-align: center;
             color: $c-white;
+            max-width: calc(100% - 107px);
+            margin: 0 auto;
+
+            @include max(730) {
+                font-size: 16px;
+            }
         }
 
         &__img {
@@ -60,10 +81,23 @@
             border: 1px solid rgba(218, 197, 177, 0.2);
             border-width: 1px 0 1px 0;
 
+            @include max(1199) {
+                padding: 24px 0;
+            }
+
+            @include max(730) {
+                margin-top: 24px;
+            }
+
             img {
                 width: 400px;
                 height: 400px;
                 object-fit: cover;
+
+                @include max(730) {
+                    width: 248px;
+                    height: 251px;
+                }
             }
         }
     }

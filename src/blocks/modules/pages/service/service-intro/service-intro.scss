@@ -54,14 +54,6 @@
             justify-content: flex-start;
             height: 100vh;
             padding: 125px 0 40px;
-
-            @include max(768) {
-                padding: 72px 0 40px;
-            }
-
-            @include max(500) {
-                padding: 45px 0 24px;
-            }
         }
     }
 
@@ -85,19 +77,19 @@
         margin-top: 130px;
 
         @include max(1300) {
-            font-size: 210px;
+            font-size: 56px;
         }
 
         @include max(1199) {
-            font-size: 175px;
+            font-size: 56px;
         }
 
         @include max(1024) {
-            font-size: 132px;
+            font-size: 56px;
         }
 
-        @include max(730) {
-            font-size: 64px;
+        @include max(768) {
+            font-size: 56px;
         }
     }
 

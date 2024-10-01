@@ -6,6 +6,12 @@ function servicePhotos() {
     let servicePhotosSliderEx = new Swiper(servicePhotosSlider, {
         slidesPerView: 'auto',
         speed: 400,
-        spaceBetween: 64,
+        spaceBetween: 24,
+        breakpoints: {
+            1025: {
+                spaceBetween: 64
+            }
+        }
+
     })
 }

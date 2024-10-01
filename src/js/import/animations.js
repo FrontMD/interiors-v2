@@ -1459,7 +1459,7 @@ function projectPageAnimation() {
                 },
             }, '0')
 
-    } else {}
+    }
 
 }
 
@@ -1530,7 +1530,7 @@ function servicesPageAnimation() {
                 },
             }, '0')
 
-    } else {}
+    }
 
 }
 
@@ -1590,9 +1590,22 @@ function servicePageAnimation() {
                 },
             }, '0')
 
-    } else if(windowWidth > 500) {
-
-    } else {}
+    } else if(windowWidth > 300) {
+        mainTimeline.fromTo('[data-js="animContainerService"]', 
+            {
+                top: "0",
+            }, 
+            {
+                top: () => {
+                    let animContainerServicesHeight = document.querySelector('[data-js="animContainerService"]').offsetHeight;
+                    return -(animContainerServicesHeight - window.innerHeight) + "px"
+                },      
+                duration: 2,
+                onUpdate: () => {
+                    projectsAnimation("service")
+                },
+            }, '0')
+    }
 
 }
 
