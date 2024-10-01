@@ -8,17 +8,36 @@
     @include max(1024) {
         position: relative;
         bottom: 0;
+        padding: 48px 0 0;
+    }
+
+    @include max(500) {
+        padding: 16px 0 0;
     }
 
     &__content {
         padding: 56px;
         background-color: rgba(86, 63, 59, 0.1);
         backdrop-filter: blur(10px);
+
+        @include max(1024) {
+            padding: 24px;
+            backdrop-filter: none;
+        }
+
+        @include max(500) {
+            padding: 16px;
+            backdrop-filter: none;
+        }
     }
 
     &__title {
         text-align: center;
         font-size: 56px;
+
+        @include max(500) {
+            font-size: 40px;
+        }
     }
 
     &__text {
@@ -30,5 +49,57 @@
         font-size: 16px;
         line-height: 1.5em;
         color: $c-white;
+
+        @include max(500) {
+            gap: 12px;
+        }
+
+        p {
+            opacity: 0.7;
+        }
     }
+
+    /*.text-spoiler {
+        &__btn {
+            display: none;
+            color: $c-white;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 1.3em;
+            padding: 0;
+            background-color: transparent;
+            transform: color $tr-time-and-type;
+            margin: 0 auto;
+
+            svg {
+                width: 24px;
+                height: 24px;
+            }
+
+            &:hover {
+                color: $c-beige-hover;
+            }
+
+        }
+
+        @include max(500) {
+            &__content {
+                display: none;
+            }
+
+            &__btn {
+                display: flex;
+                align-items: center;
+                gap: 8px;
+            }
+
+            &__show {
+                display: block;
+            }
+
+            &__hide {
+                display: none;
+            }
+        }
+    }*/
 }

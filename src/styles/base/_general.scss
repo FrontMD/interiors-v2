@@ -257,10 +257,6 @@ html {
 .anim-container {
     position: absolute;
 
-    @include max(1024) {
-        position: relative;
-    }
-
     &--projects1 {
         z-index: 10;
         top: 0;

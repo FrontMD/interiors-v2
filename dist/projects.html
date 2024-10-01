@@ -61,21 +61,21 @@
               <div class="container">
                     <div class="title title__h1 projects-intro__title" data-js="projectsIntroTitle">
                       <h1 data-anim="title">Проекты</h1>
-                    </div><a class="btn btn--btn btn--transparent projects-intro__btn" href="#projectsProjects"><span class="btn__text">Скролл</span><span class="btn__icon">
+                    </div><a class="btn btn--btn btn--transparent projects-intro__btn" href="#projectsDesc"><span class="btn__text">Скролл</span><span class="btn__icon">
                         <svg>
                           <use xlink:href="./img/sprites/sprite.svg#scroll"></use>
                         </svg></span></a>
               </div>
             </div>
           </section>
-          <section class="projects-desc" data-js="projectsDesc">
+          <section class="projects-desc" data-js="projectsDesc" id="projectsDesc">
             <div class="container">
               <div class="projects-desc__content" data-js="projectsDescContent">
                     <div class="title title__h2 title__h2--small projects-desc__title" data-js="projectsDescTitle">
-                      <h2>Интерьеры с характером</h2>
+                      <h2>Интерьеры с&nbsp;характером</h2>
                     </div>
                 <div class="projects-desc__text">
-                  <p> «Я хотела воссоздать в этом проекте атмосферу семейного быта моих предков, и это мне удалось. Я никогда не бывала в нашей старой квартире на Моховой, но рассказы о семейных традициях, отдельные детали декора, старинные вещи помогли создать убедительный образ дома, где за большим столом собиралась вся семья» </p>
+                  <p> «Я хотела воссоздать в этом проекте атмосферу семейного быта моих предков, и это мне удалось. Я никогда не бывала в нашей старой квартире на Моховой, но рассказы о семейных традициях, отдельные детали декора, старинные вещи помогли создать убедительный образ дома, где за большим столом собиралась вся семья»</p>
                   <p>Главный акцент в гостиной-столовой — ширма с репродукцией картины Пабло Пикассо «Любительница абсента». Ширма размером 2х3 метра выполнена автором проекта совместно с архитектором Еленой Шируновой. </p>
                 </div>
               </div>
@@ -97,18 +97,20 @@
                     <input type="radio" name="projectsGroup" value="Апартаменты"><span>Апартаменты</span>
                   </label>
                 </div>
-                <select class="projects-filter__select" data-js="projectsSelect">
-                  <option>Все годы</option>
-                  <option>2024</option>
-                  <option>2023</option>
-                  <option>2022</option>
-                  <option>2021</option>
-                </select>
-                <select class="projects-filter__select" data-js="projectsSelect">
-                  <option>Все города</option>
-                  <option>Москва</option>
-                  <option>Санкт-Петербург              </option>
-                </select>
+                <div class="projects-filter__selects">       
+                  <select class="projects-filter__select" data-js="projectsSelect">
+                    <option>Все годы</option>
+                    <option>2024</option>
+                    <option>2023</option>
+                    <option>2022</option>
+                    <option>2021</option>
+                  </select>
+                  <select class="projects-filter__select" data-js="projectsSelect">
+                    <option>Все города</option>
+                    <option>Москва</option>
+                    <option>Санкт-Петербург              </option>
+                  </select>
+                </div>
               </form>
             </div>
             <div class="container" data-js="pProjectsContainer">

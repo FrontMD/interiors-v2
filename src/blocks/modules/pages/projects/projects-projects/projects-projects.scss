@@ -14,7 +14,9 @@
         @include max(1199) {
             display: flex;
             flex-wrap: wrap;
+            justify-content: center;
             gap: 16px;
+            margin-top: calc(30vh);
         }
     }
 
@@ -31,6 +33,11 @@
         align-items: center;
         justify-content: center;
         gap: 32px;
+
+        @include max(730) {
+            flex-direction: column;
+            gap: 16px;
+        }
 
         &__radios {
             display: flex;
@@ -73,6 +80,18 @@
             }
 
         }
+
+        &__selects {
+            display: flex;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 32px;
+
+            @include max(730) {
+                gap: 16px;
+            }
+        }
     }
 
     .projects-group {
@@ -84,12 +103,27 @@
             display: contents;
             margin-top: 24px;
 
-            .project-card {
-                flex-basis: calc(100% - 8px);
-            }
-
             &>div {
                 display: contents;
+            }
+        }
+
+        @include max(1024) {
+            .project-card {
+                width: calc((100vw - 16px - 97px) / 2);
+            }
+        }
+
+        @include max(730) {
+            .project-card {
+                width: calc((100vw - 16px - 64px) / 2);
+            }
+        }
+
+        @include max(600) {
+            .project-card {
+                width: calc(100vw - 64px);
+                max-width: 360px;
             }
         }
 

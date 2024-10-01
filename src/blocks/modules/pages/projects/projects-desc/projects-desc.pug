@@ -1,12 +1,24 @@
-section.projects-desc(data-js="projectsDesc")
+section.projects-desc(data-js="projectsDesc" id="projectsDesc")
     .container
         .projects-desc__content(data-js="projectsDescContent")
             +title({
                 classes: 'title__h2--small projects-desc__title',
                 tag: 'h2',
-                text: 'Интерьеры с характером',
+                text: 'Интерьеры с&nbsp;характером',
                 animated: 'false'
             })(data-js="projectsDescTitle")
             .projects-desc__text
-                p  «Я хотела воссоздать в этом проекте атмосферу семейного быта моих предков, и это мне удалось. Я никогда не бывала в нашей старой квартире на Моховой, но рассказы о семейных традициях, отдельные детали декора, старинные вещи помогли создать убедительный образ дома, где за большим столом собиралась вся семья» 
+                p  «Я хотела воссоздать в этом проекте атмосферу семейного быта моих предков, и это мне удалось. Я никогда не бывала в нашей старой квартире на Моховой, но рассказы о семейных традициях, отдельные детали декора, старинные вещи помогли создать убедительный образ дома, где за большим столом собиралась вся семья»
+
                 p Главный акцент в гостиной-столовой — ширма с репродукцией картины Пабло Пикассо «Любительница абсента». Ширма размером 2х3 метра выполнена автором проекта совместно с архитектором Еленой Шируновой. 
+
+                //-.projects-desc__spiler.text-spoiler(data-js="textSpoiler")
+                    .text-spoiler__content(data-js="textSpoilerContent")
+                        p Главный акцент в гостиной-столовой — ширма с репродукцией картины Пабло Пикассо «Любительница абсента». Ширма размером 2х3 метра выполнена автором проекта совместно с архитектором Еленой Шируновой. 
+                    button.text-spoiler__btn(data-js="textSpoilerBtn")
+                        span.text-spoiler__show(data-js="textSpoilerShow") Развернуть
+                        span.text-spoiler__hide(data-js="textSpoilerHide") Свернуть
+                        svg
+                            use(xlink:href=`./img/sprites/sprite.svg#spoiler_arrow`)
+
+

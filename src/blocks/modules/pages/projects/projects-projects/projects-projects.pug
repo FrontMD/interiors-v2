@@ -11,16 +11,17 @@ section.p-projects(data-js="pProjects" id="pProjects")
                 label.projects-filter__radio 
                     input(type="radio" name="projectsGroup" value="Апартаменты")
                     <span>Апартаменты</span>
-            select.projects-filter__select(data-js='projectsSelect')
-                option Все годы
-                option 2024
-                option 2023
-                option 2022
-                option 2021
-            select.projects-filter__select(data-js='projectsSelect')
-                option Все города
-                option Москва
-                option Санкт-Петербург              
+            .projects-filter__selects        
+                select.projects-filter__select(data-js='projectsSelect')
+                    option Все годы
+                    option 2024
+                    option 2023
+                    option 2022
+                    option 2021
+                select.projects-filter__select(data-js='projectsSelect')
+                    option Все города
+                    option Москва
+                    option Санкт-Петербург              
 
     .container(data-js="pProjectsContainer")
         .p-projects__list(data-js="pProjectsList")

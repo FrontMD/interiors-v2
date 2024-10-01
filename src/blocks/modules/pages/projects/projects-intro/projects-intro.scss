@@ -55,8 +55,8 @@
             height: 100vh;
             padding: 125px 0 40px;
 
-            @include max(768) {
-                padding: 72px 0 40px;
+            @include max(1024) {
+                padding: 192px 0 40px;
             }
 
             @include max(500) {
@@ -81,7 +81,16 @@
             font-size: 132px;
         }
 
+        @include max(768) {
+            font-size: 132px;
+        }
+
         @include max(730) {
+            font-size: 64px;
+            margin: auto 0;
+        }
+
+        @include max(500) {
             font-size: 64px;
         }
     }
