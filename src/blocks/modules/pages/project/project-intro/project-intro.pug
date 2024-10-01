@@ -1,27 +1,28 @@
 section.project-intro(data-js="projectIntro")
     .project-intro__bg(data-js="projectIntroBg")
         <picture>
-            <source srcset="./img/projects/project_intro.webp" media="(max-width: 500px)">
+            <source srcset="./img/projects/project_intro_500.webp" media="(max-width: 500px)">
             <source srcset="./img/projects/project_intro_1024.webp" media="(max-width: 1024px)">
             <img src="./img/projects/project_intro.webp" alt="">
         </picture>
     .project-intro__content(data-js="projectIntroContent")
         .container
-            +btn({
-                classes: 'project-intro__back',
-                vMode: 'btn',
-                link: 'javascript:void(0)',
-                text: 'Назад к проектам',
-                cMode: 'transparent',
-                icon: true,
-                iconName: 'back_arrow',
-            })
-            +title({
-                classes: 'project-intro__title',
-                tag: 'h1',
-                text: 'Квартира <br>в NevaHaus',
-                animated: 'flase'
-            })(data-js="projectIntroTitle")
+            .project-intro__header
+                +btn({
+                    classes: 'project-intro__back',
+                    vMode: 'btn',
+                    link: 'javascript:void(0)',
+                    text: 'Назад к проектам',
+                    cMode: 'transparent',
+                    icon: true,
+                    iconName: 'back_arrow',
+                })
+                +title({
+                    classes: 'project-intro__title',
+                    tag: 'h1',
+                    text: 'Квартира <br>в NevaHaus',
+                    animated: 'flase'
+                })(data-js="projectIntroTitle")
 
             .project-intro__desc
                 .project-intro__top

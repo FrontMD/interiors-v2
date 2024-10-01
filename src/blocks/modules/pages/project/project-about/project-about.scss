@@ -3,14 +3,34 @@
     padding: 120px 0;
     z-index: 10;
 
+    @include max(1024) {
+        padding: 80px 0;
+    }
+
+    @include max(730) {
+        padding: 64px 0;
+    }
+
     &__content {
         display: flex;
         align-items: stretch;
         gap: 64px;
+
+        @include max(1024) {
+            flex-direction: column;
+            gap: 32px;
+        }
+
     }
 
     &__image {
         flex: 1 1 52.6%;
+
+        @include max(1024) {
+            flex-basis: auto;
+            width: 100%;
+            aspect-ratio: 1 / 1.0357;
+        }
 
         img {
             width: 100%;
@@ -23,6 +43,10 @@
         display: flex;
         flex-direction: column;
         flex: 1 1 47.4%;
+
+        @include max(1024) {
+            flex-basis: auto;
+        }
     }
 
     &__text {

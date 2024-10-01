@@ -1443,7 +1443,21 @@ function projectPageAnimation() {
                     detailedAnimation()
                 },
             }, '0')
-    } else if(windowWidth > 500) {
+    } else if(windowWidth > 300) {
+        mainTimeline.fromTo('[data-js="animContainerProject"]', 
+            {
+                top: "0",
+            }, 
+            {
+                top: () => {
+                    let animContainerProjectHeight = document.querySelector('[data-js="animContainerProject"]').offsetHeight;
+                    return -(animContainerProjectHeight - window.innerHeight) + "px"
+                },      
+                duration: 1.5,
+                onUpdate: () => {
+                    detailedAnimation()
+                },
+            }, '0')
 
     } else {}
 

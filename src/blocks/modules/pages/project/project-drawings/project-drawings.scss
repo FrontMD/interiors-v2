@@ -1,6 +1,10 @@
 .project-drawings {
     padding-top: 120px;
 
+    @include max(1024) {
+        padding-top: 80px;
+    }
+
     &__content {
         display: flex;
         align-items: flex-start;
@@ -8,6 +12,14 @@
         gap: 64px;
         margin-top: 48px;
         margin-right: calc((100vw - 1312px) / -2);
+
+        @include max(1439) {
+            margin-right: -64px;
+        }
+
+        @include max(1024) {
+            margin-right: -48px;
+        }
     }
 
     &__slider {
@@ -15,6 +27,15 @@
         width: 840px;
         height: 650px;
         z-index: 10;
+
+        @include max(1360) {
+            width: 597px;
+            height: 462px;
+        }
+
+        @include max(1024) {
+            display: none;
+        }
     }
 
 
@@ -24,6 +45,11 @@
         justify-content: center;
         height: 650px;
         width: 840px;
+
+        @include max(1360) {
+            width: 597px;
+            height: 462px;
+        }
     }
 
     &__thumbs {
@@ -31,6 +57,16 @@
         z-index: 5;
         width: 350px;
         height: 650px;
+
+        @include max(1360) {
+            width: 260px;
+            height: 462px;
+        }
+
+        @include max(1024) {
+            width: 597px;
+            height: auto;
+        }
     }
 
     &__thumb {
@@ -39,9 +75,30 @@
         align-items: center;
         justify-content: flex-start;
 
+        .project-drawings__fancybox {
+            opacity: 0;
+            visibility: hidden;
+
+            @include max(1024) {
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+
         .project-drawings__img {
             width: 350px;
             height: 342px;
+
+            @include max(1360) {
+                width: 260px;
+                height: 254px;
+            }
+
+            @include max(1024) {
+                align-items: flex-start;
+                width: 597px;
+                height: 462px;
+            }
         }
     }
 
@@ -94,6 +151,10 @@
             }
         }
 
+        @include max(1024) {
+            display: none;
+        }
+
     }
 
     &__text {
@@ -108,6 +169,11 @@
         max-height: 228px;
         overflow: hidden;
         transition: max-height 0.4s linear, margin-top 0.4s linear;
+
+        @include max(1024) {
+            min-width: 100%;
+            min-height: auto;
+        }
     }
 
 }

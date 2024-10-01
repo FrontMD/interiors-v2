@@ -9,7 +9,12 @@ function projectDetails() {
                 slidesPerView: 'auto',
                 effect: 'slide',
                 speed: 400,
-                spaceBetween: 64,
+                spaceBetween: 24,
+                breakpoints: {
+                    1025: {
+                        spaceBetween: 64
+                    }
+                }
             })
         })
 

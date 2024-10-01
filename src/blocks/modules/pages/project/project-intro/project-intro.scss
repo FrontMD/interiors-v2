@@ -10,6 +10,10 @@
         height: 100%;
         z-index: 5;
 
+        @include max(1024) {
+            height: 100vh;
+        }
+
         >picture img {
             width: 100%;
             height: 100%;
@@ -51,13 +55,19 @@
             height: 100vh;
             padding: 125px 0 50px;
 
-            @include max(768) {
-                padding: 72px 0 40px;
+            @include max(1024) {
+                padding: 0;
+                height: auto;
             }
 
-            @include max(500) {
-                padding: 45px 0 24px;
-            }
+            @include max(500) {}
+        }
+    }
+
+    &__header {
+        @include max(1024) {
+            height: 100vh;
+            padding-top: 176px;
         }
     }
 
@@ -75,11 +85,11 @@
         }
 
         @include max(1024) {
-            font-size: 56px;
+            font-size: 48px;
         }
 
-        @include max(730) {
-            font-size: 56px;
+        @include max(500) {
+            margin-top: 12px;
         }
     }
 
@@ -94,6 +104,10 @@
             height: 24px;
 
         }
+
+        @include max(500) {
+            padding: 0;
+        }
     }
 
     &__desc {
@@ -102,6 +116,15 @@
         background-color: rgba(86, 63, 59, 0.1);
         backdrop-filter: blur(10px);
         color: $c-white;
+
+        @include max(1024) {
+            margin-top: 48px;
+            padding: 24px;
+        }
+
+        @include max(730) {
+            margin-top: 16px;
+        }
     }
 
     &__top {
@@ -117,6 +140,17 @@
         border-style: solid;
         border-color: rgba(255, 255, 255, 0.15);
 
+        @include max(1024) {
+            font-size: 18px;
+        }
+
+        @include max(730) {
+            flex-wrap: wrap;
+            gap: 16.5px 12px;
+            padding: 16px 12px;
+            font-size: 14px;
+        }
+
     }
 
     &__text {
@@ -124,12 +158,17 @@
         font-weight: 400;
         line-height: 1.5em;
         margin-top: 16px;
+        opacity: 0.7;
     }
 
     &__gamma {
         display: flex;
         align-items: center;
         gap: 16px;
+
+        @include max(1024) {
+            gap: 12px;
+        }
     }
 
     &__colors {
@@ -140,6 +179,16 @@
             width: 48px;
             height: 48px;
             border-radius: 100%;
+
+            @include max(1024) {
+                width: 40px;
+                height: 40px;
+            }
+
+            @include max(730) {
+                width: 24px;
+                height: 24px;
+            }
         }
 
         li:not(:first-child) {

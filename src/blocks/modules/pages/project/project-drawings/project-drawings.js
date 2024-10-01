@@ -11,13 +11,20 @@ function projectDrawings() {
         let projectDrawingsThumbsEx = new Swiper(projectDrawingsThumbs, {
             slidesPerView: 1,
             speed: 400,
-            spaceBetween: 64,
-            allowTouchMove: false,
+            spaceBetween: 24,
+            allowTouchMove: true,
     
             navigation: {
                 nextEl: nextBtn,
                 prevEl: prevBtn,
             },
+
+            breakpoints: {
+                1025: {
+                    spaceBetween: 64,
+                    allowTouchMove: false,
+                }
+            }
 
         })
 
@@ -32,7 +39,8 @@ function projectDrawings() {
             },
             thumbs: {
                 swiper: projectDrawingsThumbsEx
-            }
+            },
+
 
         })
 

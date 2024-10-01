@@ -126,6 +126,11 @@
         flex-direction: column;
         align-items: flex-start;
         justify-content: flex-end;
+
+        @include max(1024) {
+            flex-basis: auto;
+            padding: 24px 48px 48px;
+        }
     }
 
     &__quote.quote {
@@ -133,6 +138,19 @@
 
         .quote__position {
             margin-top: 4px;
+        }
+
+        .quote__author {
+            @include max(1024) {
+                font-size: 20px;
+                margin-top: 16px;
+            }
+        }
+
+        @include max(1024) {
+            flex-direction: row;
+            max-width: 620px;
+            gap: 12px;
         }
     }
 
