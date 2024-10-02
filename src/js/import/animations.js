@@ -1213,10 +1213,6 @@ function projectsPageAnimation() {
         }, '<')
     }
 
-    /*if(windowWidth < 501) {
-        textSpoilerControl()
-    }*/
-
     addTime = 600
 
     scrollTriggerObject = ScrollTrigger.create({
@@ -1778,35 +1774,3 @@ function cursorRunAway() {
     })
 
 }
-
-/* текстовый спойлер */
-/*function textSpoilerControl() {
-    const textSpoilers = document.querySelectorAll('[data-js="textSpoiler"]')
-
-    if(textSpoilers.length < 1) return
-
-    textSpoilers.forEach(textSpoiler => {
-        const btn = textSpoiler.querySelector('[data-js="textSpoilerBtn"]')
-        const show = textSpoiler.querySelector('[data-js="textSpoilerShow"]')
-        const hide = textSpoiler.querySelector('[data-js="textSpoilerHide"]')
-        const content = textSpoiler.querySelector('[data-js="textSpoilerContent"]')
-
-        btn.addEventListener('click', (e) => {
-            e.preventDefault()
-            e.stopPropagation()
-            if(textSpoiler.classList.contains('text-spoiler--expanded')) {
-                textSpoiler.classList.remove('text-spoiler--expanded')
-                $(content).hide(400)
-                $(hide).hide()
-                $(show).show()
-                refreshPageAnimation()
-            } else {
-                textSpoiler.classList.add('text-spoiler--expanded')
-                $(content).show(400)
-                $(hide).show()
-                $(show).hide()
-                refreshPageAnimation()
-            }
-        })
-    })
-}*/
