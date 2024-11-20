@@ -85,33 +85,40 @@
         <div class="anim-container anim-container--projects2" data-js="animContainerProjects2">
           <section class="p-projects" data-js="pProjects" id="pProjects">
             <div class="container p-projects__container">
-              <form class="p-projects__filter projects-filter" data-js="mProjectsFilter">
-                <div class="projects-filter__radios"> 
-                  <label class="projects-filter__radio">
-                    <input type="radio" name="projectsGroup" value="Квартиры" checked><span>Квартиры</span>
-                  </label>
-                  <label class="projects-filter__radio"> 
-                    <input type="radio" name="projectsGroup" value="Дома"><span>Дома</span>
-                  </label>
-                  <label class="projects-filter__radio"> 
-                    <input type="radio" name="projectsGroup" value="Апартаменты"><span>Апартаменты</span>
-                  </label>
-                </div>
-                <div class="projects-filter__selects">       
-                  <select class="projects-filter__select" data-js="projectsSelect">
-                    <option>Все годы</option>
-                    <option>2024</option>
-                    <option>2023</option>
-                    <option>2022</option>
-                    <option>2021</option>
-                  </select>
-                  <select class="projects-filter__select" data-js="projectsSelect">
-                    <option>Все города</option>
-                    <option>Москва</option>
-                    <option>Санкт-Петербург              </option>
-                  </select>
-                </div>
-              </form>
+              <div class="projects-filter-wrapper active" data-js="mProjectsFilterWrap">
+                    <button class="btn btn--icon btn--beige2 projects-filter__toggle" type="button" data-js="mProjectsFilterToggle"><span class="btn__icon"> 
+                        <svg> 
+                          <use xlink:href="./img/sprites/sprite.svg#filter"></use>
+                        </svg></span>
+                    </button>
+                <form class="p-projects__filter projects-filter" data-js="mProjectsFilter">
+                  <div class="projects-filter__radios"> 
+                    <label class="projects-filter__radio">
+                      <input type="radio" name="projectsGroup" value="Квартиры" checked><span>Квартиры</span>
+                    </label>
+                    <label class="projects-filter__radio"> 
+                      <input type="radio" name="projectsGroup" value="Дома"><span>Дома</span>
+                    </label>
+                    <label class="projects-filter__radio"> 
+                      <input type="radio" name="projectsGroup" value="Апартаменты"><span>Апартаменты</span>
+                    </label>
+                  </div>
+                  <div class="projects-filter__selects">       
+                    <select class="projects-filter__select" data-js="projectsSelect">
+                      <option>Все годы</option>
+                      <option>2024</option>
+                      <option>2023</option>
+                      <option>2022</option>
+                      <option>2021</option>
+                    </select>
+                    <select class="projects-filter__select" data-js="projectsSelect">
+                      <option>Все города</option>
+                      <option>Москва</option>
+                      <option>Санкт-Петербург              </option>
+                    </select>
+                  </div>
+                </form>
+              </div>
             </div>
             <div class="container" data-js="pProjectsContainer">
               <div class="p-projects__list" data-js="pProjectsList">

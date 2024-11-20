@@ -1,27 +1,37 @@
 section.p-projects(data-js="pProjects" id="pProjects")
     .container.p-projects__container
-        form.p-projects__filter.projects-filter(data-js="mProjectsFilter")
-            .projects-filter__radios 
-                label.projects-filter__radio
-                    input(type="radio" name="projectsGroup" value="Квартиры" checked)
-                    <span>Квартиры</span>
-                label.projects-filter__radio 
-                    input(type="radio" name="projectsGroup" value="Дома")
-                    <span>Дома</span>
-                label.projects-filter__radio 
-                    input(type="radio" name="projectsGroup" value="Апартаменты")
-                    <span>Апартаменты</span>
-            .projects-filter__selects        
-                select.projects-filter__select(data-js='projectsSelect')
-                    option Все годы
-                    option 2024
-                    option 2023
-                    option 2022
-                    option 2021
-                select.projects-filter__select(data-js='projectsSelect')
-                    option Все города
-                    option Москва
-                    option Санкт-Петербург              
+        .projects-filter-wrapper.active(data-js="mProjectsFilterWrap")
+            +btn({
+                classes: 'projects-filter__toggle',
+                tag: 'button',
+                vMode: 'icon',
+                text: '',
+                cMode: 'beige2',
+                icon: true,
+                iconName: 'filter',
+            })(data-js="mProjectsFilterToggle")
+            form.p-projects__filter.projects-filter(data-js="mProjectsFilter")
+                .projects-filter__radios 
+                    label.projects-filter__radio
+                        input(type="radio" name="projectsGroup" value="Квартиры" checked)
+                        <span>Квартиры</span>
+                    label.projects-filter__radio 
+                        input(type="radio" name="projectsGroup" value="Дома")
+                        <span>Дома</span>
+                    label.projects-filter__radio 
+                        input(type="radio" name="projectsGroup" value="Апартаменты")
+                        <span>Апартаменты</span>
+                .projects-filter__selects        
+                    select.projects-filter__select(data-js='projectsSelect')
+                        option Все годы
+                        option 2024
+                        option 2023
+                        option 2022
+                        option 2021
+                    select.projects-filter__select(data-js='projectsSelect')
+                        option Все города
+                        option Москва
+                        option Санкт-Петербург              
 
     .container(data-js="pProjectsContainer")
         .p-projects__list(data-js="pProjectsList")

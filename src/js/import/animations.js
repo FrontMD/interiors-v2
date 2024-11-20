@@ -1220,9 +1220,24 @@ function projectsPageAnimation() {
         pin: true,
         start: "top top",
         end: () => "+=" + addTime + "%",
-        scrub: 1.5,
+        scrub: 2,
         animation: mainTimeline,
     })
+
+    const projectsWrapper = document.querySelector('[data-js="mProjectsFilterWrap"]')
+
+    if(projectsWrapper) {
+        const projectsFiltersToggle = projectsWrapper.querySelector('[data-js="mProjectsFilterToggle"]')
+
+        projectsFiltersToggle.addEventListener('click', () => {
+            if(projectsWrapper.classList.contains('active')) {
+                projectsWrapper.classList.remove('active')
+            } else {
+                projectsWrapper.classList.add('active')
+            }
+        })
+    }
+
 
     if(windowWidth > 1024) {
         mainTimeline.fromTo('[data-js="projectsIntroBg"]', 
@@ -1272,12 +1287,15 @@ function projectsPageAnimation() {
                 onUpdate: () => {
                     projectsAnimation("projects")
                 },
+                onComplete: () => {
+                    projectsWrapper.classList.remove('active')
+                },
             }, '<')
         mainTimeline.fromTo('[data-js="pProjectsContainer"]', {
                 y: "0",
             }, {
                 y: "-100%",
-                duration: 2.5,
+                duration: 2,
                 ease: "none",
                 onUpdate: () => {
                     projectsAnimation("projects")
@@ -1320,12 +1338,15 @@ function projectsPageAnimation() {
                 onUpdate: () => {
                     projectsAnimation("projects")
                 },
+                onComplete: () => {
+                    projectsWrapper.classList.remove('active')
+                },
             }, '<')
         mainTimeline.fromTo('[data-js="pProjectsContainer"]', {
                 y: "0",
             }, {
                 y: "-100%",
-                duration: 2.5,
+                duration: 2,
                 ease: "none",
                 onUpdate: () => {
                     projectsAnimation("projects")
@@ -1367,6 +1388,9 @@ function projectsPageAnimation() {
                 duration: 1,
                 onUpdate: () => {
                     projectsAnimation("projects")
+                },
+                onComplete: () => {
+                    projectsWrapper.classList.remove('active')
                 },
             }, '<')
         mainTimeline.fromTo('[data-js="pProjectsContainer"]', {
@@ -1420,7 +1444,7 @@ function projectPageAnimation() {
         pin: true,
         start: "top top",
         end: () => "+=" + addTime + "%",
-        scrub: 1.5,
+        scrub: 2,
         animation: mainTimeline,
     })
 
@@ -1489,7 +1513,7 @@ function servicesPageAnimation() {
         pin: true,
         start: "top top",
         end: () => "+=" + addTime + "%",
-        scrub: 1,
+        scrub: 2,
         animation: mainTimeline,
     })
 
@@ -1568,7 +1592,7 @@ function servicePageAnimation() {
         pin: true,
         start: "top top",
         end: () => "+=" + addTime + "%",
-        scrub: 1,
+        scrub: 2,
         animation: mainTimeline,
     })
 
