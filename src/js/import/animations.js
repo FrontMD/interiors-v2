@@ -1213,7 +1213,7 @@ function projectsPageAnimation() {
         }, '<')
     }
 
-    addTime = 600
+    addTime = 650
 
     scrollTriggerObject = ScrollTrigger.create({
         trigger: currentPage,
@@ -1223,9 +1223,6 @@ function projectsPageAnimation() {
         scrub: 1.5,
         animation: mainTimeline,
     })
-
-    ScrollTrigger.normalizeScroll(true);
-
 
     if(windowWidth > 1024) {
         mainTimeline.fromTo('[data-js="projectsIntroBg"]', 
@@ -1335,6 +1332,8 @@ function projectsPageAnimation() {
                 },
             }, "> -0.2");
     } else {
+        ScrollTrigger.normalizeScroll(true);
+
         let animContainerProjects1Height = document.querySelector('[data-js="animContainerProjects1"]').offsetHeight;
 
         mainTimeline.fromTo('[data-js="animContainerProjects1"]',
@@ -1345,13 +1344,13 @@ function projectsPageAnimation() {
                 top: () => {
                     return -(animContainerProjects1Height - window.innerHeight) + "px"
                 },  
-                duration: 1
+                duration: 0.5
             }, '0')
         mainTimeline.fromTo('[data-js="animContainerProjects1"]',
             {
                 top: () => {
                     return -(animContainerProjects1Height - window.innerHeight) + "px"
-                }, 
+                },
             }, 
             {
                 top: () => {
@@ -1421,7 +1420,7 @@ function projectPageAnimation() {
         pin: true,
         start: "top top",
         end: () => "+=" + addTime + "%",
-        scrub: 1,
+        scrub: 1.5,
         animation: mainTimeline,
     })
 
@@ -1441,6 +1440,7 @@ function projectPageAnimation() {
                 },
             }, '0')
     } else if(windowWidth > 300) {
+        ScrollTrigger.normalizeScroll(true);
         mainTimeline.fromTo('[data-js="animContainerProject"]', 
             {
                 top: "0",
@@ -1482,14 +1482,14 @@ function servicesPageAnimation() {
         }
     }, '0')
 
-    addTime = 300
+    addTime = 370
 
     scrollTriggerObject = ScrollTrigger.create({
         trigger: currentPage,
         pin: true,
         start: "top top",
         end: () => "+=" + addTime + "%",
-        scrub: 0,
+        scrub: 1,
         animation: mainTimeline,
     })
 
@@ -1511,6 +1511,8 @@ function servicesPageAnimation() {
             }, '0')
 
     } else if(windowWidth > 300) {
+
+        ScrollTrigger.normalizeScroll(true);
 
         mainTimeline.fromTo('[data-js="animContainerServices"]', 
             {
@@ -1559,7 +1561,7 @@ function servicePageAnimation() {
         }
     }, '<')
 
-    addTime = 450
+    addTime = 500
 
     scrollTriggerObject = ScrollTrigger.create({
         trigger: currentPage,
@@ -1588,6 +1590,7 @@ function servicePageAnimation() {
             }, '0')
 
     } else if(windowWidth > 300) {
+        ScrollTrigger.normalizeScroll(true);
         mainTimeline.fromTo('[data-js="animContainerService"]', 
             {
                 top: "0",
