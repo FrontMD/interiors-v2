@@ -1224,6 +1224,8 @@ function projectsPageAnimation() {
         animation: mainTimeline,
     })
 
+    ScrollTrigger.normalizeScroll(true);
+
 
     if(windowWidth > 1024) {
         mainTimeline.fromTo('[data-js="projectsIntroBg"]', 
