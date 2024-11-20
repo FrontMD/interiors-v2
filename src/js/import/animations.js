@@ -1412,17 +1412,16 @@ function projectPageAnimation() {
         }, '<')
     }
 
-    addTime = 800
+    addTime = 850
 
     scrollTriggerObject = ScrollTrigger.create({
         trigger: currentPage,
         pin: true,
         start: "top top",
         end: () => "+=" + addTime + "%",
-        scrub: 1.5,
+        scrub: 1,
         animation: mainTimeline,
     })
-
 
     if(windowWidth > 1024) {
         mainTimeline.fromTo('[data-js="animContainerProject"]', 
@@ -1488,7 +1487,7 @@ function servicesPageAnimation() {
         pin: true,
         start: "top top",
         end: () => "+=" + addTime + "%",
-        scrub: 1,
+        scrub: 0,
         animation: mainTimeline,
     })
 
