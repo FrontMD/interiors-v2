@@ -1,13 +1,13 @@
 .projects-desc {
     width: 100%;
-    bottom: -100%;
+    top: 100%;
     position: absolute;
     padding: 64px 0;
     z-index: 10;
 
     @include max(1024) {
         position: relative;
-        bottom: 0;
+        top: 0;
         padding: 48px 0 0;
     }
 

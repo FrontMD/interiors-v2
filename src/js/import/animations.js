@@ -1240,6 +1240,8 @@ function projectsPageAnimation() {
 
 
     if(windowWidth > 1024) {
+        let rojectsDescHeight = document.querySelector('[data-js="projectsDesc"]').offsetHeight;
+
         mainTimeline.fromTo('[data-js="projectsIntroBg"]', 
             {
                 top: "0",
@@ -1249,7 +1251,7 @@ function projectsPageAnimation() {
                     let projectsIntroBgHeight = document.querySelector('[data-js="projectsIntroBg"]').offsetHeight;
                     return -(projectsIntroBgHeight - window.innerHeight) + "px"
                 },      
-                duration: 0.7
+                duration: 0.5
             }, '0')
 
         mainTimeline.fromTo('[data-js="projectsIntroContent"]',
@@ -1258,15 +1260,17 @@ function projectsPageAnimation() {
             }, 
             {
                 opacity: "0",      
-                duration: 0.4
+                duration: 0.4,
             }, '<')
 
         mainTimeline.fromTo('[data-js="projectsDesc"]',
             {
-                bottom: "-100%",
+                top: "100vh",
             }, 
             {
-                bottom: "0",      
+                top: () => {
+                    return (windowHeight - rojectsDescHeight) + 'px'
+                },
                 duration: 0.5
             }, "< +0.2")
         mainTimeline.fromTo('[data-js="animContainerProjects1"]',
@@ -1275,22 +1279,14 @@ function projectsPageAnimation() {
             }, 
             {
                 top: "-100vh",
-                duration: 1.5
-            }, '>')
-        mainTimeline.fromTo('[data-js="animContainerProjects2"]',
-            {
-                top: "100%",
-            }, 
-            {
-                top: "0",  
-                duration: 1.5,
+                duration: 2,
                 onUpdate: () => {
                     projectsAnimation("projects")
                 },
                 onComplete: () => {
                     projectsWrapper.classList.remove('active')
                 },
-            }, '<')
+            }, '> -0.25')
         mainTimeline.fromTo('[data-js="pProjectsContainer"]', {
                 y: "0",
             }, {
@@ -1305,35 +1301,14 @@ function projectsPageAnimation() {
     } else if(windowWidth > 600) {
 
         let animContainerProjects1Height = document.querySelector('[data-js="animContainerProjects1"]').offsetHeight;
+        let animContainerProjects1HeightTop = -(animContainerProjects1Height - window.innerHeight);
 
         mainTimeline.fromTo('[data-js="animContainerProjects1"]',
             {
                 top: "0",
             }, 
             {
-                top: () => {
-                    return -(animContainerProjects1Height - window.innerHeight) + "px"
-                },  
-                duration: 1
-            }, '0')
-        mainTimeline.fromTo('[data-js="animContainerProjects1"]',
-            {
-                top: () => {
-                    return -(animContainerProjects1Height - window.innerHeight) + "px"
-                }, 
-            }, 
-            {
-                top: () => {
-                    return -animContainerProjects1Height + "px"
-                }, 
-                duration: 1
-            }, '>')
-        mainTimeline.fromTo('[data-js="animContainerProjects2"]',
-            {
-                top: "100%",
-            }, 
-            {
-                top: "0",
+                top: animContainerProjects1HeightTop,
                 duration: 1,
                 onUpdate: () => {
                     projectsAnimation("projects")
@@ -1341,7 +1316,7 @@ function projectsPageAnimation() {
                 onComplete: () => {
                     projectsWrapper.classList.remove('active')
                 },
-            }, '<')
+            }, '0')
         mainTimeline.fromTo('[data-js="pProjectsContainer"]', {
                 y: "0",
             }, {
@@ -1356,35 +1331,15 @@ function projectsPageAnimation() {
         ScrollTrigger.normalizeScroll(true);
 
         let animContainerProjects1Height = document.querySelector('[data-js="animContainerProjects1"]').offsetHeight;
+        let animContainerProjects1HeightTop = -(animContainerProjects1Height - window.innerHeight);
+
 
         mainTimeline.fromTo('[data-js="animContainerProjects1"]',
             {
                 top: "0",
             }, 
             {
-                top: () => {
-                    return -(animContainerProjects1Height - window.innerHeight) + "px"
-                },  
-                duration: 0.5
-            }, '0')
-        mainTimeline.fromTo('[data-js="animContainerProjects1"]',
-            {
-                top: () => {
-                    return -(animContainerProjects1Height - window.innerHeight) + "px"
-                },
-            }, 
-            {
-                top: () => {
-                    return -animContainerProjects1Height + "px"
-                }, 
-                duration: 1
-            }, '>')
-        mainTimeline.fromTo('[data-js="animContainerProjects2"]',
-            {
-                top: "100%",
-            }, 
-            {
-                top: "0",
+                top: animContainerProjects1HeightTop,  
                 duration: 1,
                 onUpdate: () => {
                     projectsAnimation("projects")
@@ -1392,12 +1347,13 @@ function projectsPageAnimation() {
                 onComplete: () => {
                     projectsWrapper.classList.remove('active')
                 },
-            }, '<')
+            }, '0')
+
         mainTimeline.fromTo('[data-js="pProjectsContainer"]', {
                 y: "0",
             }, {
                 y: "-100%",
-                duration: 4.5,
+                duration: 3,
                 ease: "none",
                 onUpdate: () => {
                     projectsAnimation("projects")
