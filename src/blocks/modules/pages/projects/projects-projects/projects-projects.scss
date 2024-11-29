@@ -61,8 +61,7 @@
         }
 
         &__toggle {
-
-            padding: 6px 16px;
+            padding: 9px 24px;
 
             &.active {
                 background-color: $c-beige;
@@ -76,6 +75,10 @@
             .btn__icon svg {
                 width: 20px;
                 height: 20px;
+            }
+
+            @include max(1024) {
+                padding: 6px 16px;
             }
         }
 
