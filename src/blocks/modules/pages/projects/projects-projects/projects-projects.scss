@@ -2,6 +2,7 @@
     position: relative;
     padding-top: 72px;
     height: 100vh;
+    overflow: hidden;
 
     &__container {
         position: relative;
@@ -9,14 +10,14 @@
     }
 
     &__list {
-        margin-top: calc(50vh);
+        margin-top: 50vh;
 
         @include max(1199) {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
             gap: 16px;
-            margin-top: calc(30vh);
+            margin-top: 5vh;
         }
     }
 
