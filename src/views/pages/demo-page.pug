@@ -1,0 +1,17 @@
+extends ../layouts/default
+
+block variables
+    - const title = "Страница" // <== тут meta title страницы
+
+block content
+    .page
+        .anim-container(style="position: relative")
+            //- вся страница должна быть внутри этого элемента (.anim-container)
+            //- тут каждый раздел - это <section></section>
+            //- если контент ограничен по ширине, то обернуть в container. <section><div class="container"></div></section> 
+            //- Пример в файле src/blocks/modules/pages/service/service-intro/service-intro.pug Там как раз есть фоновый элемент без контейнера, а контент в контейнере.
+            //- В идеале создавать каждую секцию отдельным модулем со своим пространством классов и сюда просто импортировать. пример в файле src/views/pages/service.pug
+            //- Прошу максимально переиспользовать уже готовые компоненты (src/blocks/components) и модули (src/blocks/modules)
+            //- Минимально использовать фоны через css, лучше вообще не использовать. Пример создания фона также в этом файле src/blocks/modules/pages/service/service-intro/service-intro.pug
+            //- Если редактируются готовые компоненты и модули, то обязательно проверять, чтобы они не сломались там где уже используются.
+            //- Некоторые служебные классы (section, desktop, mobile, has-scroll и т.д.), есть в файле src/styles/base/general.scss
