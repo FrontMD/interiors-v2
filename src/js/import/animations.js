@@ -76,8 +76,11 @@ function startPageAnimation() {
         case "service":
             servicePageAnimation()
             break;
-        default:
+        case "common":
             commonPageAnimation()
+            break;
+        default:
+            defaultHeaderAnim()
             break
     }
 }
@@ -1820,4 +1823,15 @@ function cursorRunAway() {
         }
     })
 
+}
+
+function defaultHeaderAnim() {
+    //показываем контент
+    let tl = gsap.timeline();
+    tl.to('[data-js="siteHeader"]',
+    {
+        opacity: '1',
+        duration: 0.5,
+        delay: 0.5,
+    }, '0')
 }

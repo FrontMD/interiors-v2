@@ -4,7 +4,7 @@ block variables
     - const title = "Страница сотрудника" // <== тут meta title страницы
 
 block content
-    .page(data-js="pageAnimWrap")
+    .page(data-js="pageAnimWrap" data-page="common")
         .anim-container.anim-container--common(style="" data-js="animContainerCommon")
             include ../../blocks/modules/pages/employee/employee-intro/employee-intro.pug
             include ../../blocks/modules/pages/employee/employee-history/employee-history.pug
