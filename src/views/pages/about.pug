@@ -4,8 +4,8 @@ block variables
     - const title = "О нас" // <== тут meta title страницы
 
 block content
-    .page
-        .anim-container.anim-container--service(style="position:relative;" data-js="animContainerAbout")
+    .page(data-js="pageAnimWrap")
+        .anim-container.anim-container--common(style="" data-js="animContainerCommon")
             include ../../blocks/modules/pages/about/about-intro/about-intro.pug
             include ../../blocks/modules/pages/about/about-whoWe/about-whoWe.pug
             include ../../blocks/modules/pages/about/about-team/about-team.pug

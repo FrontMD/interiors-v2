@@ -77,7 +77,7 @@ function startPageAnimation() {
             servicePageAnimation()
             break;
         default:
-            demoPageHeader()
+            commonPageAnimation()
             break
     }
 }
@@ -1591,8 +1591,8 @@ function servicePageAnimation() {
 
 }
 
-/** Общая анимация страницы услуг */
-function servicePageAnimation() {
+/** Общая анимация внутренней страницы */
+function commonPageAnimation() {
 
     currentPage.style.height = "100vh"
 
@@ -1609,17 +1609,8 @@ function servicePageAnimation() {
         duration: 0.5,
         delay: 0.5,
     }, '0')
-    tl.to('[data-js="serviceIntroContent"]',
-    {
-        opacity: '1',
-        duration: 0.5,
-        delay: 0.5,
-        onComplete: () => {
-            cookieInit()
-        }
-    }, '<')
 
-    addTime = 500
+    addTime = Math.round(document.querySelector('[data-js="animContainerCommon"]').offsetHeight * 0.176)
 
     scrollTriggerObject = ScrollTrigger.create({
         trigger: currentPage,
@@ -1632,53 +1623,35 @@ function servicePageAnimation() {
 
 
     if(windowWidth > 1024) {
-        mainTimeline.fromTo('[data-js="animContainerService"]', 
+        mainTimeline.fromTo('[data-js="animContainerCommon"]', 
             {
                 top: "0",
             }, 
             {
                 top: () => {
-                    let animContainerServicesHeight = document.querySelector('[data-js="animContainerService"]').offsetHeight;
+                    let animContainerServicesHeight = document.querySelector('[data-js="animContainerCommon"]').offsetHeight;
                     return -(animContainerServicesHeight - window.innerHeight) + "px"
                 },      
                 duration: 2,
-                onUpdate: () => {
-                    projectsAnimation("service")
-                },
             }, '0')
 
     } else if(windowWidth > 300) {
+        addTime = Math.round(addTime * 0.5)
         ScrollTrigger.normalizeScroll(true);
-        mainTimeline.fromTo('[data-js="animContainerService"]', 
+        mainTimeline.fromTo('[data-js="animContainerCommon"]', 
             {
                 top: "0",
             }, 
             {
                 top: () => {
-                    let animContainerServicesHeight = document.querySelector('[data-js="animContainerService"]').offsetHeight;
+                    let animContainerServicesHeight = document.querySelector('[data-js="animContainerCommon"]').offsetHeight;
                     return -(animContainerServicesHeight - window.innerHeight) + "px"
                 },      
                 duration: 2,
-                onUpdate: () => {
-                    projectsAnimation("service")
-                },
             }, '0')
     }
 
 }
-
-function demoPageHeader() {
-    //показываем контент
-    let tl = gsap.timeline();
-
-    tl.to('[data-js="siteHeader"]',
-    {
-        opacity: '1',
-        duration: 0.5,
-        delay: 0.5,
-    }, '0')
-}
-
 
 /* разметка заголовков */
 function titlesMarkup() {

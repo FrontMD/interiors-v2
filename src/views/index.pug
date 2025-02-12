@@ -4,36 +4,37 @@ block variables
     - const title = "Разводящая"
 
 block content
-    .page
-        section.pages-list
-            .container
-                +title({
-                    classes: 'pages-list__title',
-                    tag: 'h1',
-                    text: 'Страницы'
-                })
-                .pages-list__links
-                    a.pages-list__link(href="home.html") Главная
-                .pages-list__links
-                    a.pages-list__link(href="projects.html") Проекты
-                .pages-list__links
-                    a.pages-list__link(href="project.html") Проект (детальная)
-                .pages-list__links
-                    a.pages-list__link(href="services.html") Услуги                   
-                .pages-list__links
-                    a.pages-list__link(href="service.html") Услуга (детальная)
-                .pages-list__links
-                    a.pages-list__link(href="about.html") О нас
-                .pages-list__links
-                    a.pages-list__link(href="employee.html") Страница сотрудника
-                .pages-list__links
-                    a.pages-list__link(href="awards.html") Наградны
-                .pages-list__links
-                    a.pages-list__link(href="blog.html") Блог
-                .pages-list__links
-                    a.pages-list__link(href="article.html") Страница статьи
-                .pages-list__links
-                    a.pages-list__link(href="contacts.html") Контакты
-                .pages-list__links
-                    a.pages-list__link(href="404.html") 404
-                    
+    .page(data-js="pageAnimWrap")
+        .anim-container.anim-container--common(style="" data-js="animContainerCommon")
+            section.pages-list
+                .container
+                    +title({
+                        classes: 'pages-list__title',
+                        tag: 'h1',
+                        text: 'Страницы'
+                    })
+                    .pages-list__links
+                        a.pages-list__link(href="home.html") Главная
+                    .pages-list__links
+                        a.pages-list__link(href="projects.html") Проекты
+                    .pages-list__links
+                        a.pages-list__link(href="project.html") Проект (детальная)
+                    .pages-list__links
+                        a.pages-list__link(href="services.html") Услуги                   
+                    .pages-list__links
+                        a.pages-list__link(href="service.html") Услуга (детальная)
+                    .pages-list__links
+                        a.pages-list__link(href="about.html") О нас
+                    .pages-list__links
+                        a.pages-list__link(href="employee.html") Страница сотрудника
+                    .pages-list__links
+                        a.pages-list__link(href="awards.html") Наградны
+                    .pages-list__links
+                        a.pages-list__link(href="blog.html") Блог
+                    .pages-list__links
+                        a.pages-list__link(href="article.html") Страница статьи
+                    .pages-list__links
+                        a.pages-list__link(href="contacts.html") Контакты
+                    .pages-list__links
+                        a.pages-list__link(href="404.html") 404
+

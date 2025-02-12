@@ -4,8 +4,8 @@ block variables
     - const title = "Награды" // <== тут meta title страницы
 
 block content
-    .page
-        .anim-container.anim-container--service(style="position:relative;" data-js="animContainerAbout")
+    .page(data-js="pageAnimWrap")
+        .anim-container.anim-container--common(style="" data-js="animContainerCommon")
             include ../../blocks/modules/pages/awards/awards-intro/awards-intro.pug
             include ../../blocks/modules/pages/awards/awards-honors/awards-honors.pug
             include ../../blocks/modules/pages/awards/awards-about/awards-about.pug
