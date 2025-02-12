@@ -1,0 +1,243 @@
+.about-whoWe {
+    padding-bottom: 120px;
+
+    &__content {
+        margin: auto;
+        margin-bottom: 72px;
+        padding: 56px 156px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+        border-top: 1px solid rgba(255, 255, 255, 0.15);
+
+        & .icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 31px;
+        }
+
+        &-title {
+            margin-bottom: 24px;
+            font-family: 'Vertino';
+            font-weight: 400; 
+            font-size: 56px;
+            line-height: 108%;
+            text-align: center;
+            color: #fff;
+
+            @include max(1300) {
+                font-size: 56px;
+            }
+    
+            @include max(1199) {
+                font-size: 56px;
+            }
+    
+            @include max(1024) {
+                font-size: 48px;
+            }
+    
+            @include max(500) {
+                margin-bottom: 14px;
+                font-size: 40px;
+            }
+        }
+
+        &-text {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 7px;
+            transition: all 0.5s ease;
+
+            & p {
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 150%;
+                text-align: center;
+                color: rgba(255, 255, 255, 0.7);
+
+                @include max(500) {
+                    line-height: 135%;
+                }
+            }
+
+            & .info {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin-top: 20px;
+
+                & p {
+                    font-family: 'Vertino';
+                    font-weight: 400;
+                    font-size: 24px;
+                    line-height: 108%;
+                    text-align: center;
+                    color: #fff;
+
+                    @include max(1024) {
+                        font-size: 20px;
+    
+                        & .post {
+                            font-size: 15px;
+                            line-height: 248%;
+                        }
+                    }
+                }
+    
+                & .post {
+                    text-align: center;
+                    font-family: inherit;
+                    font-weight: 400;
+                    font-size: 16px;
+                    line-height: 150%;
+                    text-align: center;
+                    color: rgba(255, 255, 255, 0.3);
+
+                    @include max(1024) {
+                        font-size: 15px;
+                        line-height: 248%;
+                    }
+                }
+
+                
+
+                @include max(500) {
+                    font-size: 16px;
+                }
+                
+
+            }
+
+            @include max(500) {
+                overflow: hidden;
+                max-height: 220px;
+                margin-bottom: 16px;
+            }
+        }
+
+        & .about-whoWe__show-btn {
+            display: none;
+            align-items: center;
+            gap: 8px;
+            margin: auto;
+
+            & span {
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 130%;
+                color: #fff;
+            }
+
+            & img {
+                transition: all 0.5s ease;
+            }
+        }
+
+        @include max(1024) {
+            padding: 40px 0 31px 0;
+            margin-bottom: 48px;
+        }
+
+        @include max(500) {
+            padding: 32px 0;
+            margin-bottom: 64px;
+        }
+    }
+
+    &__cards {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+
+        &-card {
+            display: flex;
+            flex-direction: column;
+            min-height: 497px;
+            padding: 40px;
+            background-color: #292929;
+            background-image: url(../img/about/about-whoWe-card_bg.svg);
+            background-repeat: no-repeat;
+            background-size: 90%;
+            background-position: 61px center;
+
+            & .number {
+                margin-bottom: 16px;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 150%;
+                color: rgba(255, 255, 255, 0.7);
+            }
+
+            &__title {
+                font-family: 'Vertino';
+                font-weight: 400;
+                font-size: 56px;
+                line-height: 108%;
+                color: #fff;
+
+                @include max(1300) {
+                    font-size: 56px;
+                }
+        
+                @include max(1199) {
+                    font-size: 56px;
+                }
+        
+                @include max(1024) {
+                    margin-bottom: 24px;
+                    font-size: 48px;
+                }
+        
+                @include max(768) {
+                    font-size: 48px !important;
+                }
+        
+                @include max(670) {
+                    font-size: 40px !important;
+                }
+
+                @include max(500) {
+                    margin-bottom: 46px;
+                }
+            }
+
+            & p {
+                max-width: 331px;
+                margin-top: auto;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 150%;
+                color: rgba(255, 255, 255, 0.7);
+
+                @include max(500) {
+                    line-height: 133%;
+                }
+            }
+
+            @include max(1024) {
+                padding: 32px;
+                min-height: auto;
+                background-size: 169%;
+                background-position: -84px center;
+            }
+        }
+
+        @include max(1024) {
+            gap: 24px;
+        }
+
+        @include max(730) {
+            grid-template-columns: 1fr;
+            gap: 16px;
+        }
+    }
+
+    @include max(1024) {
+        padding-bottom: 80px;
+    }
+
+    @include max(500) {
+        padding-bottom: 64px;
+    }
+}

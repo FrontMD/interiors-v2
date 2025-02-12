@@ -1,0 +1,23 @@
+section.about-intro(data-js="aboutIntro")
+    .about-intro__bg(data-js="aboutIntroBg")
+        <picture>
+            <source srcset="./img/about/about_intro_360.webp" media="(max-width: 500px)">
+            <source srcset="./img/about/about_intro_768.webp" media="(max-width: 768px)">
+            <img src="./img/about/about_intro_1440.webp" alt="">
+        </picture> 
+    .about-intro__content(style="opacity: 1;" data-js="aboutIntroContent")
+        .container
+            +title({
+                classes: 'about-intro__title',
+                tag: 'h1',
+                text: 'О нас'
+            })(data-js="serviceIntroTitle") 
+            +btn({
+                classes: 'about-intro__scroll',
+                vMode: 'btn',
+                link: '#servicePhotos',
+                text: 'Скролл',
+                cMode: 'transparent',
+                icon: true,
+                iconName: 'scroll',
+            })

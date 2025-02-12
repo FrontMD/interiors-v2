@@ -1,0 +1,60 @@
+section.section.about-awards(data-js="aboutAwards")
+    .container.about-awards__container
+        .about-awards__content 
+            .about-awards__content-top 
+                +title({
+                    text: 'Награды студии',
+                    classes: 'about-awards__content-top__title'
+                })
+                .about-awards__content-top__btns
+                    button(class="about-awards__content-top__btns-btn about-awards__prev-btn" type="button")
+                        img(src="./img/svg/slider-arrow.svg", alt="arrow")
+                    button(class="about-awards__content-top__btns-btn about-awards__next-btn" type="button")
+                        img(src="./img/svg/slider-arrow.svg", alt="arrow")
+            .about-awards__content-cards.swiper
+                .swiper-wrapper
+                    .swiper-slide.about-awards__content-cards__card
+                        .about-awards__content-cards__card-img
+                            img(src="./img/about/about-awards__cards-img1.webp", alt="award")
+                        +title({
+                            tag: 'h3',
+                            text: 'ADD Awards',
+                            classes: 'awards__card-title'
+                        })
+                    .swiper-slide.about-awards__content-cards__card
+                        .about-awards__content-cards__card-img
+                            img(src="./img/about/about-awards__cards-img2.webp", alt="award")
+                        +title({
+                            tag: 'h3',
+                            text: 'Premium living award',
+                            classes: 'awards__card-title'
+                        })
+                    .swiper-slide.about-awards__content-cards__card
+                        .about-awards__content-cards__card-img
+                            img(src="./img/about/about-awards__cards-img3.webp", alt="award")
+                        +title({
+                            tag: 'h3',
+                            text: 'Modern home award',
+                            classes: 'awards__card-title'
+                        })
+                    .swiper-slide.about-awards__content-cards__card
+                        .about-awards__content-cards__card-img
+                            img(src="./img/about/about-awards__cards-img4.webp", alt="award")
+                        +title({
+                            tag: 'h3',
+                            text: 'Public space award',
+                            classes: 'awards__card-title'
+                        })
+                    .swiper-slide.about-awards__content-cards__card
+                        .about-awards__content-cards__card-img
+                            img(src="./img/about/about-awards__cards-img1.webp", alt="award")
+                        +title({
+                            tag: 'h3',
+                            text: 'ADD Awards',
+                            classes: 'awards__card-title'
+                        })
+            +btn({
+                text: 'Все награды',
+                cMode: 'rgba(218, 197, 177, 0.1)',
+                classes: 'about-awards__content-link'
+            })

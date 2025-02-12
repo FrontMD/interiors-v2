@@ -1,0 +1,74 @@
+.contacts-hero {
+    
+    & .section {
+        padding-top: 110px;
+
+        @include max(1024) {
+            padding-top: 136px;
+        }
+
+        @include max(500) {
+            padding-top: 110px;
+        }
+    }
+
+    & .m-contacts {
+
+        &__container {
+
+            & .height-anim-content {
+                position: relative;
+                top: inherit;
+            }
+
+            & .m-contacts__title {
+                top: 129px;
+                font-weight: 400;
+                font-size: 260px;
+                line-height: 108%;
+                text-align: center;
+                color: #fff;
+    
+                @include max(1300) {
+                    font-size: 200px;
+                }
+        
+                @include max(1199) {
+                    font-size: 180px;
+                }
+        
+                @include max(1024) {
+                    font-size: 132px;
+                }
+    
+                @include max(768) {
+                    font-size: 132px;
+                }
+    
+                @include max(660) {
+                    font-size: 100px;
+                }
+        
+                @include max(500) {
+                    top: 38px;
+                    font-size: 64px;
+                }
+            }
+
+            & .m-contacts__contacts {
+                margin-top: 120px;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+                border-top: 1px solid rgba(255, 255, 255, 0.15);
+
+                @include max(1024) {
+                    padding: 22px 0;
+                    margin-top: 145px;
+                }
+
+                @include max(500) {
+                    margin-top: 32px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,864 @@
+section.section.blog-hero(data-js="blogHero") 
+    .container.blog-hero__container
+        .blog-hero__content
+            .blog-hero__content-top 
+                +title({ 
+                    text: 'Блог',
+                    classes: 'blog-hero__content-top__title'
+                })
+                form.blog-hero__content-top__filter(data-js="blogFilter")
+                    .blog-hero__content-top__filter-radio 
+                        label.blog-hero__content-top__filter-radio__label
+                            input(type="radio" name="blogGroup" value="Новости" checked)
+                            <span class="radio-custom">Новости</span>
+                        label.blog-hero__content-top__filter-radio__label
+                            input(type="radio" name="blogGroup" value="Статьи")
+                            <span class="radio-custom">Статьи</span>
+                        label.blog-hero__content-top__filter-radio__label
+                            input(type="radio" name="blogGroup" value="СМИ о нас")
+                            <span class="radio-custom">СМИ о нас</span>
+            .blog-hero__content-main 
+                .blog-hero__content-main__img 
+                    img(src="./img/blog/blog-hero__main-img.webp", alt="img")
+                .blog-hero__content-main__article
+                    span.blog-hero__content-main__article-date 09.11.2023
+                    +title({
+                        tag: 'h3',
+                        text: 'VI-interiors: квартира 130&nbsp;кв. метров для семьи с&nbsp;двумя детьми в&nbsp;Санкт-Петербурге',
+                        classes: 'blog-hero__content-main__article-title'
+                    })
+                    .blog-hero__content-main__article-text
+                        p В&nbsp;одном из&nbsp;тихих районов Петербурга, на&nbsp;просторах уютной квартиры площадью 130 квадратных метров, развернулась своя уникальная история. 
+                        p Команда дизайнеров под руководством Арины Волковой из&nbsp;студии VI-Interiors вложила душу в&nbsp;создание интерьера, где каждая деталь была тщательно продумана для комфортной жизни семьи с&nbsp;двумя детьми. 
+                        p Главная зона&nbsp;&mdash; это гостиная совмещенная с&nbsp;кухней. Здесь пространство переливается светом, 
+                        p который скользит по&nbsp;мягким обивкам мебели и&nbsp;отражается в&nbsp;гладких поверхностях кухонных фасадов. Теплые оттенки дерева на&nbsp;полу и&nbsp;коричневые акценты в&nbsp;текстиле добавляют комнате уюта и&nbsp;теплоты.
+                    +btn({
+                        text: 'Читать полностью',
+                        cMode: 'rgba(218, 197, 177, 0.1)',
+                        classes: 'blog-hero__content-main__article-link'
+                    })
+            .swiper.blog-hero__content-slides
+                .swiper-wrapper
+                    //- slide 1
+                    .swiper-slide.blog-hero__content-slides__slide 
+                        ul.blog-hero__content-slides__slide-cards   
+                            li.blog-hero__content-slides__slide-cards__card
+                                a(href="#" class="blog-hero__content-slides__slide-cards__card-link")
+                                span.hover-icon
+                                    img(src="./img/award_logo.webp", alt="icon")
+                                .blog-hero__content-slides__slide-cards__card-img 
+                                    img(src="./img/blog/blog-hero__card-img1.webp", alt="img")
+                                span.blog-hero__content-slides__slide-cards__card-date 09.11.2023
+                                +title({
+                                    text: 'Квартира дизайнера в центре Санкт-Петербурга',
+                                    classes: 'blog-hero__content-slides__slide-cards__card-title'
+                                })
+                            li.blog-hero__content-slides__slide-cards__card
+                                a(href="#" class="blog-hero__content-slides__slide-cards__card-link")
+                                span.hover-icon
+                                    img(src="./img/award_logo.webp", alt="icon")
+                                .blog-hero__content-slides__slide-cards__card-img 
+                                    img(src="./img/blog/blog-hero__card-img2.webp", alt="img")
+                                span.blog-hero__content-slides__slide-cards__card-date 09.11.2023
+                                +title({
+                                    text: 'Интерьер квартиры в старинном московском доме',
+                                    classes: 'blog-hero__content-slides__slide-cards__card-title'
+                                })
+                            li.blog-hero__content-slides__slide-cards__card 
+                                a(href="#" class="blog-hero__content-slides__slide-cards__card-link")
+                                span.hover-icon
+                                    img(src="./img/award_logo.webp", alt="icon")
+                                .blog-hero__content-slides__slide-cards__card-img 
+                                    img(src="./img/blog/blog-hero__card-img3.webp", alt="img")
+                                span.blog-hero__content-slides__slide-cards__card-date 09.11.2023
+                                +title({
+                                    text: 'Сводчатые потолки, старинный кирпич и арт-объекты: интерьер офиса дизайн-бюро',
+                                    classes: 'blog-hero__content-slides__slide-cards__card-title'
+                                })
+                            li.blog-hero__content-slides__slide-cards__card 
+                                a(href="#" class="blog-hero__content-slides__slide-cards__card-link")
+                                span.hover-icon
+                                    img(src="./img/award_logo.webp", alt="icon")
+                                .blog-hero__content-slides__slide-cards__card-img 
+                                    img(src="./img/blog/blog-hero__card-img4.webp", alt="img")
+                                span.blog-hero__content-slides__slide-cards__card-date 09.11.2023
+                                +title({
+                                    text: 'Интерьер «Американская готика»',
+                                    classes: 'blog-hero__content-slides__slide-cards__card-title'
+                                })
+                            li.blog-hero__content-slides__slide-cards__card 
+                                a(href="#" class="blog-hero__content-slides__slide-cards__card-link")
+                                span.hover-icon
+                                    img(src="./img/award_logo.webp", alt="icon")
+                                .blog-hero__content-slides__slide-cards__card-img 
+                                    img(src="./img/blog/blog-hero__card-img5.webp", alt="img")
+                                span.blog-hero__content-slides__slide-cards__card-date 09.11.2023
+                                +title({
+                                    text: 'Эти приемы в дизайне ванной комнаты уже не актуальны: 5 мнений дизайнеров',
+                                    classes: 'blog-hero__content-slides__slide-cards__card-title'
+                                })
+                            li.blog-hero__content-slides__slide-cards__card 
+                                a(href="#" class="blog-hero__content-slides__slide-cards__card-link")
+                                span.hover-icon
+                                    img(src="./img/award_logo.webp", alt="icon")
+                                .blog-hero__content-slides__slide-cards__card-img 
+                                    img(src="./img/blog/blog-hero__card-img6.webp", alt="img")
+                                span.blog-hero__content-slides__slide-cards__card-date 09.11.2023
+                                +title({
+                                    text: 'Квартира дизайнера в центре Санкт-Петербурга',
+                                    classes: 'blog-hero__content-slides__slide-cards__card-title'
+                                })
+                            li.blog-hero__content-slides__slide-cards__card 
+                                a(href="#" class="blog-hero__content-slides__slide-cards__card-link")
+                                span.hover-icon
+                                    img(src="./img/award_logo.webp", alt="icon")
+                                .blog-hero__content-slides__slide-cards__card-img 
+                                    img(src="./img/blog/blog-hero__card-img2.webp", alt="img")
+                                span.blog-hero__content-slides__slide-cards__card-date 09.11.2023
+                                +title({
+                                    text: 'Интерьер квартиры в старинном московском доме',
+                                    classes: 'blog-hero__content-slides__slide-cards__card-title'
+                                })
+                            li.blog-hero__content-slides__slide-cards__card 
+                                a(href="#" class="blog-hero__content-slides__slide-cards__card-link")
+                                span.hover-icon
+                                    img(src="./img/award_logo.webp", alt="icon")
+                                .blog-hero__content-slides__slide-cards__card-img 
+                                    img(src="./img/blog/blog-hero__card-img3.webp", alt="img")
+                                span.blog-hero__content-slides__slide-cards__card-date 09.11.2023
+                                +title({
+                                    text: 'Сводчатые потолки, старинный кирпич и арт-объекты: интерьер офиса дизайн-бюро',
+                                    classes: 'blog-hero__content-slides__slide-cards__card-title'
+                                })
+                            li.blog-hero__content-slides__slide-cards__card
+                                a(href="#" class="blog-hero__content-slides__slide-cards__card-link")
+                                span.hover-icon
+                                    img(src="./img/award_logo.webp", alt="icon")
+                                .blog-hero__content-slides__slide-cards__card-img 
+                                    img(src="./img/blog/blog-hero__card-img1.webp", alt="img")
+                                span.blog-hero__content-slides__slide-cards__card-date 09.11.2023
+                                +title({
+                                    text: 'Квартира дизайнера в центре Санкт-Петербурга',
+                                    classes: 'blog-hero__content-slides__slide-cards__card-title'
+                                })
+                    //- slide 2
+                    .swiper-slide.blog-hero__content-slides__slide 
+                        ul.blog-hero__content-slides__slide-cards   
+                            li.blog-hero__content-slides__slide-cards__card
+                                a(href="#" class="blog-hero__content-slides__slide-cards__card-link")
+                                span.hover-icon
+                                    img(src="./img/award_logo.webp", alt="icon")
+                                .blog-hero__content-slides__slide-cards__card-img 
+                                    img(src="./img/blog/blog-hero__card-img1.webp", alt="img")
+                                span.blog-hero__content-slides__slide-cards__card-date 09.11.2023
+                                +title({
+                                    text: 'Квартира дизайнера в центре Санкт-Петербурга',
+                                    classes: 'blog-hero__content-slides__slide-cards__card-title'
+                                })
+                            li.blog-hero__content-slides__slide-cards__card
+                                a(href="#" class="blog-hero__content-slides__slide-cards__card-link")
+                                span.hover-icon
+                                    img(src="./img/award_logo.webp", alt="icon")
+                                .blog-hero__content-slides__slide-cards__card-img 
+                                    img(src="./img/blog/blog-hero__card-img2.webp", alt="img")
+                                span.blog-hero__content-slides__slide-cards__card-date 09.11.2023
+                                +title({
+                                    text: 'Интерьер квартиры в старинном московском доме',
+                                    classes: 'blog-hero__content-slides__slide-cards__card-title'
+                                })
+                            li.blog-hero__content-slides__slide-cards__card 
+                                a(href="#" class="blog-hero__content-slides__slide-cards__card-link")
+                                span.hover-icon
+                                    img(src="./img/award_logo.webp", alt="icon")
+                                .blog-hero__content-slides__slide-cards__card-img 
+                                    img(src="./img/blog/blog-hero__card-img3.webp", alt="img")
+                                span.blog-hero__content-slides__slide-cards__card-date 09.11.2023
+                                +title({
+                                    text: 'Сводчатые потолки, старинный кирпич и арт-объекты: интерьер офиса дизайн-бюро',
+                                    classes: 'blog-hero__content-slides__slide-cards__card-title'
+                                })
+                            li.blog-hero__content-slides__slide-cards__card 
+                                a(href="#" class="blog-hero__content-slides__slide-cards__card-link")
+                                span.hover-icon
+                                    img(src="./img/award_logo.webp", alt="icon")
+                                .blog-hero__content-slides__slide-cards__card-img 
+                                    img(src="./img/blog/blog-hero__card-img4.webp", alt="img")
+                                span.blog-hero__content-slides__slide-cards__card-date 09.11.2023
+                                +title({
+                                    text: 'Интерьер «Американская готика»',
+                                    classes: 'blog-hero__content-slides__slide-cards__card-title'
+                                })
+                            li.blog-hero__content-slides__slide-cards__card 
+                                a(href="#" class="blog-hero__content-slides__slide-cards__card-link")
+                                span.hover-icon
+                                    img(src="./img/award_logo.webp", alt="icon")
+                                .blog-hero__content-slides__slide-cards__card-img 
+                                    img(src="./img/blog/blog-hero__card-img5.webp", alt="img")
+                                span.blog-hero__content-slides__slide-cards__card-date 09.11.2023
+                                +title({
+                                    text: 'Эти приемы в дизайне ванной комнаты уже не актуальны: 5 мнений дизайнеров',
+                                    classes: 'blog-hero__content-slides__slide-cards__card-title'
+                                })
+                            li.blog-hero__content-slides__slide-cards__card 
+                                a(href="#" class="blog-hero__content-slides__slide-cards__card-link")
+                                span.hover-icon
+                                    img(src="./img/award_logo.webp", alt="icon")
+                                .blog-hero__content-slides__slide-cards__card-img 
+                                    img(src="./img/blog/blog-hero__card-img6.webp", alt="img")
+                                span.blog-hero__content-slides__slide-cards__card-date 09.11.2023
+                                +title({
+                                    text: 'Квартира дизайнера в центре Санкт-Петербурга',
+                                    classes: 'blog-hero__content-slides__slide-cards__card-title'
+                                })
+                            li.blog-hero__content-slides__slide-cards__card 
+                                a(href="#" class="blog-hero__content-slides__slide-cards__card-link")
+                                span.hover-icon
+                                    img(src="./img/award_logo.webp", alt="icon")
+                                .blog-hero__content-slides__slide-cards__card-img 
+                                    img(src="./img/blog/blog-hero__card-img2.webp", alt="img")
+                                span.blog-hero__content-slides__slide-cards__card-date 09.11.2023
+                                +title({
+                                    text: 'Интерьер квартиры в старинном московском доме',
+                                    classes: 'blog-hero__content-slides__slide-cards__card-title'
+                                })
+                            li.blog-hero__content-slides__slide-cards__card 
+                                a(href="#" class="blog-hero__content-slides__slide-cards__card-link")
+                                span.hover-icon
+                                    img(src="./img/award_logo.webp", alt="icon")
+                                .blog-hero__content-slides__slide-cards__card-img 
+                                    img(src="./img/blog/blog-hero__card-img3.webp", alt="img")
+                                span.blog-hero__content-slides__slide-cards__card-date 09.11.2023
+                                +title({
+                                    text: 'Сводчатые потолки, старинный кирпич и арт-объекты: интерьер офиса дизайн-бюро',
+                                    classes: 'blog-hero__content-slides__slide-cards__card-title'
+                                })
+                            li.blog-hero__content-slides__slide-cards__card
+                                a(href="#" class="blog-hero__content-slides__slide-cards__card-link")
+                                span.hover-icon
+                                    img(src="./img/award_logo.webp", alt="icon")
+                                .blog-hero__content-slides__slide-cards__card-img 
+                                    img(src="./img/blog/blog-hero__card-img1.webp", alt="img")
+                                span.blog-hero__content-slides__slide-cards__card-date 09.11.2023
+                                +title({
+                                    text: 'Квартира дизайнера в центре Санкт-Петербурга',
+                                    classes: 'blog-hero__content-slides__slide-cards__card-title'
+                                })
+                    //- slide 3
+                    .swiper-slide.blog-hero__content-slides__slide 
+                        ul.blog-hero__content-slides__slide-cards   
+                            li.blog-hero__content-slides__slide-cards__card
+                                a(href="#" class="blog-hero__content-slides__slide-cards__card-link")
+                                span.hover-icon
+                                    img(src="./img/award_logo.webp", alt="icon")
+                                .blog-hero__content-slides__slide-cards__card-img 
+                                    img(src="./img/blog/blog-hero__card-img1.webp", alt="img")
+                                span.blog-hero__content-slides__slide-cards__card-date 09.11.2023
+                                +title({
+                                    text: 'Квартира дизайнера в центре Санкт-Петербурга',
+                                    classes: 'blog-hero__content-slides__slide-cards__card-title'
+                                })
+                            li.blog-hero__content-slides__slide-cards__card
+                                a(href="#" class="blog-hero__content-slides__slide-cards__card-link")
+                                span.hover-icon
+                                    img(src="./img/award_logo.webp", alt="icon")
+                                .blog-hero__content-slides__slide-cards__card-img 
+                                    img(src="./img/blog/blog-hero__card-img2.webp", alt="img")
+                                span.blog-hero__content-slides__slide-cards__card-date 09.11.2023
+                                +title({
+                                    text: 'Интерьер квартиры в старинном московском доме',
+                                    classes: 'blog-hero__content-slides__slide-cards__card-title'
+                                })
+                            li.blog-hero__content-slides__slide-cards__card 
+                                a(href="#" class="blog-hero__content-slides__slide-cards__card-link")
+                                span.hover-icon
+                                    img(src="./img/award_logo.webp", alt="icon")
+                                .blog-hero__content-slides__slide-cards__card-img 
+                                    img(src="./img/blog/blog-hero__card-img3.webp", alt="img")
+                                span.blog-hero__content-slides__slide-cards__card-date 09.11.2023
+                                +title({
+                                    text: 'Сводчатые потолки, старинный кирпич и арт-объекты: интерьер офиса дизайн-бюро',
+                                    classes: 'blog-hero__content-slides__slide-cards__card-title'
+                                })
+                            li.blog-hero__content-slides__slide-cards__card 
+                                a(href="#" class="blog-hero__content-slides__slide-cards__card-link")
+                                span.hover-icon
+                                    img(src="./img/award_logo.webp", alt="icon")
+                                .blog-hero__content-slides__slide-cards__card-img 
+                                    img(src="./img/blog/blog-hero__card-img4.webp", alt="img")
+                                span.blog-hero__content-slides__slide-cards__card-date 09.11.2023
+                                +title({
+                                    text: 'Интерьер «Американская готика»',
+                                    classes: 'blog-hero__content-slides__slide-cards__card-title'
+                                })
+                            li.blog-hero__content-slides__slide-cards__card 
+                                a(href="#" class="blog-hero__content-slides__slide-cards__card-link")
+                                span.hover-icon
+                                    img(src="./img/award_logo.webp", alt="icon")
+                                .blog-hero__content-slides__slide-cards__card-img 
+                                    img(src="./img/blog/blog-hero__card-img5.webp", alt="img")
+                                span.blog-hero__content-slides__slide-cards__card-date 09.11.2023
+                                +title({
+                                    text: 'Эти приемы в дизайне ванной комнаты уже не актуальны: 5 мнений дизайнеров',
+                                    classes: 'blog-hero__content-slides__slide-cards__card-title'
+                                })
+                            li.blog-hero__content-slides__slide-cards__card 
+                                a(href="#" class="blog-hero__content-slides__slide-cards__card-link")
+                                span.hover-icon
+                                    img(src="./img/award_logo.webp", alt="icon")
+                                .blog-hero__content-slides__slide-cards__card-img 
+                                    img(src="./img/blog/blog-hero__card-img6.webp", alt="img")
+                                span.blog-hero__content-slides__slide-cards__card-date 09.11.2023
+                                +title({
+                                    text: 'Квартира дизайнера в центре Санкт-Петербурга',
+                                    classes: 'blog-hero__content-slides__slide-cards__card-title'
+                                })
+                            li.blog-hero__content-slides__slide-cards__card 
+                                a(href="#" class="blog-hero__content-slides__slide-cards__card-link")
+                                span.hover-icon
+                                    img(src="./img/award_logo.webp", alt="icon")
+                                .blog-hero__content-slides__slide-cards__card-img 
+                                    img(src="./img/blog/blog-hero__card-img2.webp", alt="img")
+                                span.blog-hero__content-slides__slide-cards__card-date 09.11.2023
+                                +title({
+                                    text: 'Интерьер квартиры в старинном московском доме',
+                                    classes: 'blog-hero__content-slides__slide-cards__card-title'
+                                })
+                            li.blog-hero__content-slides__slide-cards__card 
+                                a(href="#" class="blog-hero__content-slides__slide-cards__card-link")
+                                span.hover-icon
+                                    img(src="./img/award_logo.webp", alt="icon")
+                                .blog-hero__content-slides__slide-cards__card-img 
+                                    img(src="./img/blog/blog-hero__card-img3.webp", alt="img")
+                                span.blog-hero__content-slides__slide-cards__card-date 09.11.2023
+                                +title({
+                                    text: 'Сводчатые потолки, старинный кирпич и арт-объекты: интерьер офиса дизайн-бюро',
+                                    classes: 'blog-hero__content-slides__slide-cards__card-title'
+                                })
+                            li.blog-hero__content-slides__slide-cards__card
+                                a(href="#" class="blog-hero__content-slides__slide-cards__card-link")
+                                span.hover-icon
+                                    img(src="./img/award_logo.webp", alt="icon")
+                                .blog-hero__content-slides__slide-cards__card-img 
+                                    img(src="./img/blog/blog-hero__card-img1.webp", alt="img")
+                                span.blog-hero__content-slides__slide-cards__card-date 09.11.2023
+                                +title({
+                                    text: 'Квартира дизайнера в центре Санкт-Петербурга',
+                                    classes: 'blog-hero__content-slides__slide-cards__card-title'
+                                })
+                    //- slide 4
+                    .swiper-slide.blog-hero__content-slides__slide
+                        ul.blog-hero__content-slides__slide-cards   
+                            li.blog-hero__content-slides__slide-cards__card
+                                a(href="#" class="blog-hero__content-slides__slide-cards__card-link")
+                                span.hover-icon
+                                    img(src="./img/award_logo.webp", alt="icon")
+                                .blog-hero__content-slides__slide-cards__card-img 
+                                    img(src="./img/blog/blog-hero__card-img1.webp", alt="img")
+                                span.blog-hero__content-slides__slide-cards__card-date 09.11.2023
+                                +title({
+                                    text: 'Квартира дизайнера в центре Санкт-Петербурга',
+                                    classes: 'blog-hero__content-slides__slide-cards__card-title'
+                                })
+                            li.blog-hero__content-slides__slide-cards__card
+                                a(href="#" class="blog-hero__content-slides__slide-cards__card-link")
+                                span.hover-icon
+                                    img(src="./img/award_logo.webp", alt="icon")
+                                .blog-hero__content-slides__slide-cards__card-img 
+                                    img(src="./img/blog/blog-hero__card-img2.webp", alt="img")
+                                span.blog-hero__content-slides__slide-cards__card-date 09.11.2023
+                                +title({
+                                    text: 'Интерьер квартиры в старинном московском доме',
+                                    classes: 'blog-hero__content-slides__slide-cards__card-title'
+                                })
+                            li.blog-hero__content-slides__slide-cards__card 
+                                a(href="#" class="blog-hero__content-slides__slide-cards__card-link")
+                                span.hover-icon
+                                    img(src="./img/award_logo.webp", alt="icon")
+                                .blog-hero__content-slides__slide-cards__card-img 
+                                    img(src="./img/blog/blog-hero__card-img3.webp", alt="img")
+                                span.blog-hero__content-slides__slide-cards__card-date 09.11.2023
+                                +title({
+                                    text: 'Сводчатые потолки, старинный кирпич и арт-объекты: интерьер офиса дизайн-бюро',
+                                    classes: 'blog-hero__content-slides__slide-cards__card-title'
+                                })
+                            li.blog-hero__content-slides__slide-cards__card 
+                                a(href="#" class="blog-hero__content-slides__slide-cards__card-link")
+                                span.hover-icon
+                                    img(src="./img/award_logo.webp", alt="icon")
+                                .blog-hero__content-slides__slide-cards__card-img 
+                                    img(src="./img/blog/blog-hero__card-img4.webp", alt="img")
+                                span.blog-hero__content-slides__slide-cards__card-date 09.11.2023
+                                +title({
+                                    text: 'Интерьер «Американская готика»',
+                                    classes: 'blog-hero__content-slides__slide-cards__card-title'
+                                })
+                            li.blog-hero__content-slides__slide-cards__card 
+                                a(href="#" class="blog-hero__content-slides__slide-cards__card-link")
+                                span.hover-icon
+                                    img(src="./img/award_logo.webp", alt="icon")
+                                .blog-hero__content-slides__slide-cards__card-img 
+                                    img(src="./img/blog/blog-hero__card-img5.webp", alt="img")
+                                span.blog-hero__content-slides__slide-cards__card-date 09.11.2023
+                                +title({
+                                    text: 'Эти приемы в дизайне ванной комнаты уже не актуальны: 5 мнений дизайнеров',
+                                    classes: 'blog-hero__content-slides__slide-cards__card-title'
+                                })
+                            li.blog-hero__content-slides__slide-cards__card 
+                                a(href="#" class="blog-hero__content-slides__slide-cards__card-link")
+                                span.hover-icon
+                                    img(src="./img/award_logo.webp", alt="icon")
+                                .blog-hero__content-slides__slide-cards__card-img 
+                                    img(src="./img/blog/blog-hero__card-img6.webp", alt="img")
+                                span.blog-hero__content-slides__slide-cards__card-date 09.11.2023
+                                +title({
+                                    text: 'Квартира дизайнера в центре Санкт-Петербурга',
+                                    classes: 'blog-hero__content-slides__slide-cards__card-title'
+                                })
+                            li.blog-hero__content-slides__slide-cards__card 
+                                a(href="#" class="blog-hero__content-slides__slide-cards__card-link")
+                                span.hover-icon
+                                    img(src="./img/award_logo.webp", alt="icon")
+                                .blog-hero__content-slides__slide-cards__card-img 
+                                    img(src="./img/blog/blog-hero__card-img2.webp", alt="img")
+                                span.blog-hero__content-slides__slide-cards__card-date 09.11.2023
+                                +title({
+                                    text: 'Интерьер квартиры в старинном московском доме',
+                                    classes: 'blog-hero__content-slides__slide-cards__card-title'
+                                })
+                            li.blog-hero__content-slides__slide-cards__card 
+                                a(href="#" class="blog-hero__content-slides__slide-cards__card-link")
+                                span.hover-icon
+                                    img(src="./img/award_logo.webp", alt="icon")
+                                .blog-hero__content-slides__slide-cards__card-img 
+                                    img(src="./img/blog/blog-hero__card-img3.webp", alt="img")
+                                span.blog-hero__content-slides__slide-cards__card-date 09.11.2023
+                                +title({
+                                    text: 'Сводчатые потолки, старинный кирпич и арт-объекты: интерьер офиса дизайн-бюро',
+                                    classes: 'blog-hero__content-slides__slide-cards__card-title'
+                                })
+                            li.blog-hero__content-slides__slide-cards__card
+                                a(href="#" class="blog-hero__content-slides__slide-cards__card-link")
+                                span.hover-icon
+                                    img(src="./img/award_logo.webp", alt="icon")
+                                .blog-hero__content-slides__slide-cards__card-img 
+                                    img(src="./img/blog/blog-hero__card-img1.webp", alt="img")
+                                span.blog-hero__content-slides__slide-cards__card-date 09.11.2023
+                                +title({
+                                    text: 'Квартира дизайнера в центре Санкт-Петербурга',
+                                    classes: 'blog-hero__content-slides__slide-cards__card-title'
+                                })
+                    //- slide 5
+                    .swiper-slide.blog-hero__content-slides__slide
+                        ul.blog-hero__content-slides__slide-cards   
+                            li.blog-hero__content-slides__slide-cards__card
+                                a(href="#" class="blog-hero__content-slides__slide-cards__card-link")
+                                span.hover-icon
+                                    img(src="./img/award_logo.webp", alt="icon")
+                                .blog-hero__content-slides__slide-cards__card-img 
+                                    img(src="./img/blog/blog-hero__card-img1.webp", alt="img")
+                                span.blog-hero__content-slides__slide-cards__card-date 09.11.2023
+                                +title({
+                                    text: 'Квартира дизайнера в центре Санкт-Петербурга',
+                                    classes: 'blog-hero__content-slides__slide-cards__card-title'
+                                })
+                            li.blog-hero__content-slides__slide-cards__card
+                                a(href="#" class="blog-hero__content-slides__slide-cards__card-link")
+                                span.hover-icon
+                                    img(src="./img/award_logo.webp", alt="icon")
+                                .blog-hero__content-slides__slide-cards__card-img 
+                                    img(src="./img/blog/blog-hero__card-img2.webp", alt="img")
+                                span.blog-hero__content-slides__slide-cards__card-date 09.11.2023
+                                +title({
+                                    text: 'Интерьер квартиры в старинном московском доме',
+                                    classes: 'blog-hero__content-slides__slide-cards__card-title'
+                                })
+                            li.blog-hero__content-slides__slide-cards__card 
+                                a(href="#" class="blog-hero__content-slides__slide-cards__card-link")
+                                span.hover-icon
+                                    img(src="./img/award_logo.webp", alt="icon")
+                                .blog-hero__content-slides__slide-cards__card-img 
+                                    img(src="./img/blog/blog-hero__card-img3.webp", alt="img")
+                                span.blog-hero__content-slides__slide-cards__card-date 09.11.2023
+                                +title({
+                                    text: 'Сводчатые потолки, старинный кирпич и арт-объекты: интерьер офиса дизайн-бюро',
+                                    classes: 'blog-hero__content-slides__slide-cards__card-title'
+                                })
+                            li.blog-hero__content-slides__slide-cards__card 
+                                a(href="#" class="blog-hero__content-slides__slide-cards__card-link")
+                                span.hover-icon
+                                    img(src="./img/award_logo.webp", alt="icon")
+                                .blog-hero__content-slides__slide-cards__card-img 
+                                    img(src="./img/blog/blog-hero__card-img4.webp", alt="img")
+                                span.blog-hero__content-slides__slide-cards__card-date 09.11.2023
+                                +title({
+                                    text: 'Интерьер «Американская готика»',
+                                    classes: 'blog-hero__content-slides__slide-cards__card-title'
+                                })
+                            li.blog-hero__content-slides__slide-cards__card 
+                                a(href="#" class="blog-hero__content-slides__slide-cards__card-link")
+                                span.hover-icon
+                                    img(src="./img/award_logo.webp", alt="icon")
+                                .blog-hero__content-slides__slide-cards__card-img 
+                                    img(src="./img/blog/blog-hero__card-img5.webp", alt="img")
+                                span.blog-hero__content-slides__slide-cards__card-date 09.11.2023
+                                +title({
+                                    text: 'Эти приемы в дизайне ванной комнаты уже не актуальны: 5 мнений дизайнеров',
+                                    classes: 'blog-hero__content-slides__slide-cards__card-title'
+                                })
+                            li.blog-hero__content-slides__slide-cards__card 
+                                a(href="#" class="blog-hero__content-slides__slide-cards__card-link")
+                                span.hover-icon
+                                    img(src="./img/award_logo.webp", alt="icon")
+                                .blog-hero__content-slides__slide-cards__card-img 
+                                    img(src="./img/blog/blog-hero__card-img6.webp", alt="img")
+                                span.blog-hero__content-slides__slide-cards__card-date 09.11.2023
+                                +title({
+                                    text: 'Квартира дизайнера в центре Санкт-Петербурга',
+                                    classes: 'blog-hero__content-slides__slide-cards__card-title'
+                                })
+                            li.blog-hero__content-slides__slide-cards__card 
+                                a(href="#" class="blog-hero__content-slides__slide-cards__card-link")
+                                span.hover-icon
+                                    img(src="./img/award_logo.webp", alt="icon")
+                                .blog-hero__content-slides__slide-cards__card-img 
+                                    img(src="./img/blog/blog-hero__card-img2.webp", alt="img")
+                                span.blog-hero__content-slides__slide-cards__card-date 09.11.2023
+                                +title({
+                                    text: 'Интерьер квартиры в старинном московском доме',
+                                    classes: 'blog-hero__content-slides__slide-cards__card-title'
+                                })
+                            li.blog-hero__content-slides__slide-cards__card 
+                                a(href="#" class="blog-hero__content-slides__slide-cards__card-link")
+                                span.hover-icon
+                                    img(src="./img/award_logo.webp", alt="icon")
+                                .blog-hero__content-slides__slide-cards__card-img 
+                                    img(src="./img/blog/blog-hero__card-img3.webp", alt="img")
+                                span.blog-hero__content-slides__slide-cards__card-date 09.11.2023
+                                +title({
+                                    text: 'Сводчатые потолки, старинный кирпич и арт-объекты: интерьер офиса дизайн-бюро',
+                                    classes: 'blog-hero__content-slides__slide-cards__card-title'
+                                })
+                            li.blog-hero__content-slides__slide-cards__card
+                                a(href="#" class="blog-hero__content-slides__slide-cards__card-link")
+                                span.hover-icon
+                                    img(src="./img/award_logo.webp", alt="icon")
+                                .blog-hero__content-slides__slide-cards__card-img 
+                                    img(src="./img/blog/blog-hero__card-img1.webp", alt="img")
+                                span.blog-hero__content-slides__slide-cards__card-date 09.11.2023
+                                +title({
+                                    text: 'Квартира дизайнера в центре Санкт-Петербурга',
+                                    classes: 'blog-hero__content-slides__slide-cards__card-title'
+                                })
+                    //- slide 6
+                    .swiper-slide.blog-hero__content-slides__slide
+                        ul.blog-hero__content-slides__slide-cards   
+                            li.blog-hero__content-slides__slide-cards__card
+                                a(href="#" class="blog-hero__content-slides__slide-cards__card-link")
+                                span.hover-icon
+                                    img(src="./img/award_logo.webp", alt="icon")
+                                .blog-hero__content-slides__slide-cards__card-img 
+                                    img(src="./img/blog/blog-hero__card-img1.webp", alt="img")
+                                span.blog-hero__content-slides__slide-cards__card-date 09.11.2023
+                                +title({
+                                    text: 'Квартира дизайнера в центре Санкт-Петербурга',
+                                    classes: 'blog-hero__content-slides__slide-cards__card-title'
+                                })
+                            li.blog-hero__content-slides__slide-cards__card
+                                a(href="#" class="blog-hero__content-slides__slide-cards__card-link")
+                                span.hover-icon
+                                    img(src="./img/award_logo.webp", alt="icon")
+                                .blog-hero__content-slides__slide-cards__card-img 
+                                    img(src="./img/blog/blog-hero__card-img2.webp", alt="img")
+                                span.blog-hero__content-slides__slide-cards__card-date 09.11.2023
+                                +title({
+                                    text: 'Интерьер квартиры в старинном московском доме',
+                                    classes: 'blog-hero__content-slides__slide-cards__card-title'
+                                })
+                            li.blog-hero__content-slides__slide-cards__card 
+                                a(href="#" class="blog-hero__content-slides__slide-cards__card-link")
+                                span.hover-icon
+                                    img(src="./img/award_logo.webp", alt="icon")
+                                .blog-hero__content-slides__slide-cards__card-img 
+                                    img(src="./img/blog/blog-hero__card-img3.webp", alt="img")
+                                span.blog-hero__content-slides__slide-cards__card-date 09.11.2023
+                                +title({
+                                    text: 'Сводчатые потолки, старинный кирпич и арт-объекты: интерьер офиса дизайн-бюро',
+                                    classes: 'blog-hero__content-slides__slide-cards__card-title'
+                                })
+                            li.blog-hero__content-slides__slide-cards__card 
+                                a(href="#" class="blog-hero__content-slides__slide-cards__card-link")
+                                span.hover-icon
+                                    img(src="./img/award_logo.webp", alt="icon")
+                                .blog-hero__content-slides__slide-cards__card-img 
+                                    img(src="./img/blog/blog-hero__card-img4.webp", alt="img")
+                                span.blog-hero__content-slides__slide-cards__card-date 09.11.2023
+                                +title({
+                                    text: 'Интерьер «Американская готика»',
+                                    classes: 'blog-hero__content-slides__slide-cards__card-title'
+                                })
+                            li.blog-hero__content-slides__slide-cards__card 
+                                a(href="#" class="blog-hero__content-slides__slide-cards__card-link")
+                                span.hover-icon
+                                    img(src="./img/award_logo.webp", alt="icon")
+                                .blog-hero__content-slides__slide-cards__card-img 
+                                    img(src="./img/blog/blog-hero__card-img5.webp", alt="img")
+                                span.blog-hero__content-slides__slide-cards__card-date 09.11.2023
+                                +title({
+                                    text: 'Эти приемы в дизайне ванной комнаты уже не актуальны: 5 мнений дизайнеров',
+                                    classes: 'blog-hero__content-slides__slide-cards__card-title'
+                                })
+                            li.blog-hero__content-slides__slide-cards__card 
+                                a(href="#" class="blog-hero__content-slides__slide-cards__card-link")
+                                span.hover-icon
+                                    img(src="./img/award_logo.webp", alt="icon")
+                                .blog-hero__content-slides__slide-cards__card-img 
+                                    img(src="./img/blog/blog-hero__card-img6.webp", alt="img")
+                                span.blog-hero__content-slides__slide-cards__card-date 09.11.2023
+                                +title({
+                                    text: 'Квартира дизайнера в центре Санкт-Петербурга',
+                                    classes: 'blog-hero__content-slides__slide-cards__card-title'
+                                })
+                            li.blog-hero__content-slides__slide-cards__card 
+                                a(href="#" class="blog-hero__content-slides__slide-cards__card-link")
+                                span.hover-icon
+                                    img(src="./img/award_logo.webp", alt="icon")
+                                .blog-hero__content-slides__slide-cards__card-img 
+                                    img(src="./img/blog/blog-hero__card-img2.webp", alt="img")
+                                span.blog-hero__content-slides__slide-cards__card-date 09.11.2023
+                                +title({
+                                    text: 'Интерьер квартиры в старинном московском доме',
+                                    classes: 'blog-hero__content-slides__slide-cards__card-title'
+                                })
+                            li.blog-hero__content-slides__slide-cards__card 
+                                a(href="#" class="blog-hero__content-slides__slide-cards__card-link")
+                                span.hover-icon
+                                    img(src="./img/award_logo.webp", alt="icon")
+                                .blog-hero__content-slides__slide-cards__card-img 
+                                    img(src="./img/blog/blog-hero__card-img3.webp", alt="img")
+                                span.blog-hero__content-slides__slide-cards__card-date 09.11.2023
+                                +title({
+                                    text: 'Сводчатые потолки, старинный кирпич и арт-объекты: интерьер офиса дизайн-бюро',
+                                    classes: 'blog-hero__content-slides__slide-cards__card-title'
+                                })
+                            li.blog-hero__content-slides__slide-cards__card
+                                a(href="#" class="blog-hero__content-slides__slide-cards__card-link")
+                                span.hover-icon
+                                    img(src="./img/award_logo.webp", alt="icon")
+                                .blog-hero__content-slides__slide-cards__card-img 
+                                    img(src="./img/blog/blog-hero__card-img1.webp", alt="img")
+                                span.blog-hero__content-slides__slide-cards__card-date 09.11.2023
+                                +title({
+                                    text: 'Квартира дизайнера в центре Санкт-Петербурга',
+                                    classes: 'blog-hero__content-slides__slide-cards__card-title'
+                                })
+                    //- slide 7
+                    .swiper-slide.blog-hero__content-slides__slide
+                        ul.blog-hero__content-slides__slide-cards   
+                            li.blog-hero__content-slides__slide-cards__card
+                                a(href="#" class="blog-hero__content-slides__slide-cards__card-link")
+                                span.hover-icon
+                                    img(src="./img/award_logo.webp", alt="icon")
+                                .blog-hero__content-slides__slide-cards__card-img 
+                                    img(src="./img/blog/blog-hero__card-img1.webp", alt="img")
+                                span.blog-hero__content-slides__slide-cards__card-date 09.11.2023
+                                +title({
+                                    text: 'Квартира дизайнера в центре Санкт-Петербурга',
+                                    classes: 'blog-hero__content-slides__slide-cards__card-title'
+                                })
+                            li.blog-hero__content-slides__slide-cards__card
+                                a(href="#" class="blog-hero__content-slides__slide-cards__card-link")
+                                span.hover-icon
+                                    img(src="./img/award_logo.webp", alt="icon")
+                                .blog-hero__content-slides__slide-cards__card-img 
+                                    img(src="./img/blog/blog-hero__card-img2.webp", alt="img")
+                                span.blog-hero__content-slides__slide-cards__card-date 09.11.2023
+                                +title({
+                                    text: 'Интерьер квартиры в старинном московском доме',
+                                    classes: 'blog-hero__content-slides__slide-cards__card-title'
+                                })
+                            li.blog-hero__content-slides__slide-cards__card 
+                                a(href="#" class="blog-hero__content-slides__slide-cards__card-link")
+                                span.hover-icon
+                                    img(src="./img/award_logo.webp", alt="icon")
+                                .blog-hero__content-slides__slide-cards__card-img 
+                                    img(src="./img/blog/blog-hero__card-img3.webp", alt="img")
+                                span.blog-hero__content-slides__slide-cards__card-date 09.11.2023
+                                +title({
+                                    text: 'Сводчатые потолки, старинный кирпич и арт-объекты: интерьер офиса дизайн-бюро',
+                                    classes: 'blog-hero__content-slides__slide-cards__card-title'
+                                })
+                            li.blog-hero__content-slides__slide-cards__card 
+                                a(href="#" class="blog-hero__content-slides__slide-cards__card-link")
+                                span.hover-icon
+                                    img(src="./img/award_logo.webp", alt="icon")
+                                .blog-hero__content-slides__slide-cards__card-img 
+                                    img(src="./img/blog/blog-hero__card-img4.webp", alt="img")
+                                span.blog-hero__content-slides__slide-cards__card-date 09.11.2023
+                                +title({
+                                    text: 'Интерьер «Американская готика»',
+                                    classes: 'blog-hero__content-slides__slide-cards__card-title'
+                                })
+                            li.blog-hero__content-slides__slide-cards__card 
+                                a(href="#" class="blog-hero__content-slides__slide-cards__card-link")
+                                span.hover-icon
+                                    img(src="./img/award_logo.webp", alt="icon")
+                                .blog-hero__content-slides__slide-cards__card-img 
+                                    img(src="./img/blog/blog-hero__card-img5.webp", alt="img")
+                                span.blog-hero__content-slides__slide-cards__card-date 09.11.2023
+                                +title({
+                                    text: 'Эти приемы в дизайне ванной комнаты уже не актуальны: 5 мнений дизайнеров',
+                                    classes: 'blog-hero__content-slides__slide-cards__card-title'
+                                })
+                            li.blog-hero__content-slides__slide-cards__card 
+                                a(href="#" class="blog-hero__content-slides__slide-cards__card-link")
+                                span.hover-icon
+                                    img(src="./img/award_logo.webp", alt="icon")
+                                .blog-hero__content-slides__slide-cards__card-img 
+                                    img(src="./img/blog/blog-hero__card-img6.webp", alt="img")
+                                span.blog-hero__content-slides__slide-cards__card-date 09.11.2023
+                                +title({
+                                    text: 'Квартира дизайнера в центре Санкт-Петербурга',
+                                    classes: 'blog-hero__content-slides__slide-cards__card-title'
+                                })
+                            li.blog-hero__content-slides__slide-cards__card 
+                                a(href="#" class="blog-hero__content-slides__slide-cards__card-link")
+                                span.hover-icon
+                                    img(src="./img/award_logo.webp", alt="icon")
+                                .blog-hero__content-slides__slide-cards__card-img 
+                                    img(src="./img/blog/blog-hero__card-img2.webp", alt="img")
+                                span.blog-hero__content-slides__slide-cards__card-date 09.11.2023
+                                +title({
+                                    text: 'Интерьер квартиры в старинном московском доме',
+                                    classes: 'blog-hero__content-slides__slide-cards__card-title'
+                                })
+                            li.blog-hero__content-slides__slide-cards__card 
+                                a(href="#" class="blog-hero__content-slides__slide-cards__card-link")
+                                span.hover-icon
+                                    img(src="./img/award_logo.webp", alt="icon")
+                                .blog-hero__content-slides__slide-cards__card-img 
+                                    img(src="./img/blog/blog-hero__card-img3.webp", alt="img")
+                                span.blog-hero__content-slides__slide-cards__card-date 09.11.2023
+                                +title({
+                                    text: 'Сводчатые потолки, старинный кирпич и арт-объекты: интерьер офиса дизайн-бюро',
+                                    classes: 'blog-hero__content-slides__slide-cards__card-title'
+                                })
+                            li.blog-hero__content-slides__slide-cards__card
+                                a(href="#" class="blog-hero__content-slides__slide-cards__card-link")
+                                span.hover-icon
+                                    img(src="./img/award_logo.webp", alt="icon")
+                                .blog-hero__content-slides__slide-cards__card-img 
+                                    img(src="./img/blog/blog-hero__card-img1.webp", alt="img")
+                                span.blog-hero__content-slides__slide-cards__card-date 09.11.2023
+                                +title({
+                                    text: 'Квартира дизайнера в центре Санкт-Петербурга',
+                                    classes: 'blog-hero__content-slides__slide-cards__card-title'
+                                })
+                    //- slide 8
+                    .swiper-slide.blog-hero__content-slides__slide
+                        ul.blog-hero__content-slides__slide-cards   
+                            li.blog-hero__content-slides__slide-cards__card
+                                a(href="#" class="blog-hero__content-slides__slide-cards__card-link")
+                                span.hover-icon
+                                    img(src="./img/award_logo.webp", alt="icon")
+                                .blog-hero__content-slides__slide-cards__card-img 
+                                    img(src="./img/blog/blog-hero__card-img1.webp", alt="img")
+                                span.blog-hero__content-slides__slide-cards__card-date 09.11.2023
+                                +title({
+                                    text: 'Квартира дизайнера в центре Санкт-Петербурга',
+                                    classes: 'blog-hero__content-slides__slide-cards__card-title'
+                                })
+                            li.blog-hero__content-slides__slide-cards__card
+                                a(href="#" class="blog-hero__content-slides__slide-cards__card-link")
+                                span.hover-icon
+                                    img(src="./img/award_logo.webp", alt="icon")
+                                .blog-hero__content-slides__slide-cards__card-img 
+                                    img(src="./img/blog/blog-hero__card-img2.webp", alt="img")
+                                span.blog-hero__content-slides__slide-cards__card-date 09.11.2023
+                                +title({
+                                    text: 'Интерьер квартиры в старинном московском доме',
+                                    classes: 'blog-hero__content-slides__slide-cards__card-title'
+                                })
+                            li.blog-hero__content-slides__slide-cards__card 
+                                a(href="#" class="blog-hero__content-slides__slide-cards__card-link")
+                                span.hover-icon
+                                    img(src="./img/award_logo.webp", alt="icon")
+                                .blog-hero__content-slides__slide-cards__card-img 
+                                    img(src="./img/blog/blog-hero__card-img3.webp", alt="img")
+                                span.blog-hero__content-slides__slide-cards__card-date 09.11.2023
+                                +title({
+                                    text: 'Сводчатые потолки, старинный кирпич и арт-объекты: интерьер офиса дизайн-бюро',
+                                    classes: 'blog-hero__content-slides__slide-cards__card-title'
+                                })
+                            li.blog-hero__content-slides__slide-cards__card 
+                                a(href="#" class="blog-hero__content-slides__slide-cards__card-link")
+                                span.hover-icon
+                                    img(src="./img/award_logo.webp", alt="icon")
+                                .blog-hero__content-slides__slide-cards__card-img 
+                                    img(src="./img/blog/blog-hero__card-img4.webp", alt="img")
+                                span.blog-hero__content-slides__slide-cards__card-date 09.11.2023
+                                +title({
+                                    text: 'Интерьер «Американская готика»',
+                                    classes: 'blog-hero__content-slides__slide-cards__card-title'
+                                })
+                            li.blog-hero__content-slides__slide-cards__card 
+                                a(href="#" class="blog-hero__content-slides__slide-cards__card-link")
+                                span.hover-icon
+                                    img(src="./img/award_logo.webp", alt="icon")
+                                .blog-hero__content-slides__slide-cards__card-img 
+                                    img(src="./img/blog/blog-hero__card-img5.webp", alt="img")
+                                span.blog-hero__content-slides__slide-cards__card-date 09.11.2023
+                                +title({
+                                    text: 'Эти приемы в дизайне ванной комнаты уже не актуальны: 5 мнений дизайнеров',
+                                    classes: 'blog-hero__content-slides__slide-cards__card-title'
+                                })
+                            li.blog-hero__content-slides__slide-cards__card 
+                                a(href="#" class="blog-hero__content-slides__slide-cards__card-link")
+                                span.hover-icon
+                                    img(src="./img/award_logo.webp", alt="icon")
+                                .blog-hero__content-slides__slide-cards__card-img 
+                                    img(src="./img/blog/blog-hero__card-img6.webp", alt="img")
+                                span.blog-hero__content-slides__slide-cards__card-date 09.11.2023
+                                +title({
+                                    text: 'Квартира дизайнера в центре Санкт-Петербурга',
+                                    classes: 'blog-hero__content-slides__slide-cards__card-title'
+                                })
+                            li.blog-hero__content-slides__slide-cards__card 
+                                a(href="#" class="blog-hero__content-slides__slide-cards__card-link")
+                                span.hover-icon
+                                    img(src="./img/award_logo.webp", alt="icon")
+                                .blog-hero__content-slides__slide-cards__card-img 
+                                    img(src="./img/blog/blog-hero__card-img2.webp", alt="img")
+                                span.blog-hero__content-slides__slide-cards__card-date 09.11.2023
+                                +title({
+                                    text: 'Интерьер квартиры в старинном московском доме',
+                                    classes: 'blog-hero__content-slides__slide-cards__card-title'
+                                })
+                            li.blog-hero__content-slides__slide-cards__card 
+                                a(href="#" class="blog-hero__content-slides__slide-cards__card-link")
+                                span.hover-icon
+                                    img(src="./img/award_logo.webp", alt="icon")
+                                .blog-hero__content-slides__slide-cards__card-img 
+                                    img(src="./img/blog/blog-hero__card-img3.webp", alt="img")
+                                span.blog-hero__content-slides__slide-cards__card-date 09.11.2023
+                                +title({
+                                    text: 'Сводчатые потолки, старинный кирпич и арт-объекты: интерьер офиса дизайн-бюро',
+                                    classes: 'blog-hero__content-slides__slide-cards__card-title'
+                                })
+                            li.blog-hero__content-slides__slide-cards__card
+                                a(href="#" class="blog-hero__content-slides__slide-cards__card-link")
+                                span.hover-icon
+                                    img(src="./img/award_logo.webp", alt="icon")
+                                .blog-hero__content-slides__slide-cards__card-img 
+                                    img(src="./img/blog/blog-hero__card-img1.webp", alt="img")
+                                span.blog-hero__content-slides__slide-cards__card-date 09.11.2023
+                                +title({
+                                    text: 'Квартира дизайнера в центре Санкт-Петербурга',
+                                    classes: 'blog-hero__content-slides__slide-cards__card-title'
+                                })
+                .blog-hero__content-slides__nav 
+                    button(class="blog-hero__content-slides__nav-btn blog-hero__prev-btn" type="button")
+                        img(src="./img/svg/slider-arrow.svg", alt="arrow")
+                    .swiper-pagination-custom 
+                        //- Добовляется автоматически в зависимости от количества slide
+                    button(class="blog-hero__content-slides__nav-btn blog-hero__next-btn" type="button")
+                        img(src="./img/svg/slider-arrow.svg", alt="arrow")

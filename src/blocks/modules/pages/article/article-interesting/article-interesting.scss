@@ -1,0 +1,191 @@
+.article-intresting {
+    padding-bottom: 120px;
+
+    &__content {
+
+        &-top {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 40px;
+
+            &__title {
+                text-align: left;
+                font-weight: 400; 
+                font-size: 56px;
+                line-height: 108%;
+
+                @include max(1300) {
+                    font-size: 56px;
+                }
+        
+                @include max(1199) {
+                    font-size: 56px;
+                }
+        
+                @include max(1024) {
+                    font-size: 48px;
+                }
+        
+                @include max(500) {
+                    font-size: 40px;
+                }
+            }
+
+            &__link {
+                text-wrap: nowrap;
+                color: #dac5b1;
+                background-color: rgba(218, 197, 177, 0.1);
+                transition: all 0.3s linear;
+
+                &:hover {
+                    background-color: #C5A486;
+                    color: #563F3B;
+                }
+            }
+
+            @include max(1024) {
+                margin-bottom: 25px;
+            }
+
+            @include max(500) {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 16px;
+                margin-bottom: 16px;
+            }
+        }
+
+        &-cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 64px 40px;
+
+            &::-webkit-scrollbar {
+                display: none;
+            }
+
+            &__card {
+                position: relative;
+
+                & .hover-icon {
+                    position: absolute;
+                    right: 24px;
+                    top: 24px;
+                    width: 64px;
+                    height: 64px;
+                    opacity: 0;
+                    transition: all 0.5s ease;
+                    z-index: 2;
+                }
+
+                &-link {
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    top: 0;
+                    left: 0;
+                    z-index: 1;
+                }
+
+                &-img {
+                    margin-bottom: 11px;
+                    transition: all 0.3s ease;
+
+                    & img {
+                        width: 100%;
+                    }
+
+                    @include max(500) {
+                        margin-bottom: 7px;
+                    }
+                }
+
+                &-date {
+                    font-weight: 400;
+                    font-size: 12px;
+                    line-height: 122%;
+                    color: rgba(255, 255, 255, 0.5);
+                }
+
+                &-title {
+                    text-align: start;
+                    margin-top: 10px;
+                    font-weight: 400;
+                    font-size: 20px;
+                    line-height: 108%;
+                    color: #fff;
+
+                    @include max(1300) {
+                        font-size: 20px;
+                    }
+            
+                    @include max(1199) {
+                        font-size: 18px;
+                    }
+            
+                    @include max(1024) {
+                        font-size: 18px;
+                    }
+
+                    @include max(730) {
+                        font-size: 18px;
+                    }
+            
+                    @include max(500) {
+                        margin-top: 0;
+                        font-size: 14px;
+                    }
+                }
+
+                &:hover {
+
+                    & .hover-icon {
+                        opacity: 1;
+                    }
+
+                    & .article-intresting__content-cards__card-img {
+                        opacity: 0.7;
+                    }
+                }
+
+                @include max(1024) {
+                    min-width: 324px;
+                }
+
+                @include max(500) {
+                    min-width: auto;
+                }
+            }
+
+            @include max(1300) {
+                gap: 20px 24px;
+            }
+
+            @include max(1024) {
+                width: calc(100% + 48px);
+                overflow-x: auto;
+            }
+
+            @include max(730) {
+                width: calc(100% + 16px);
+            }
+
+            @include max(500) {
+                gap: 25px;
+                grid-template-columns: 1fr;
+                overflow-x: none;
+                width: 100%;
+            }
+        }
+    }
+
+    @include max(1024) {
+        padding-top: 80px;
+        padding-bottom: 56px;
+    }
+
+    @include max(500) {
+        padding-bottom: 65px;
+    }
+}

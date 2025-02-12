@@ -1,0 +1,266 @@
+.about-joinTeam {
+    padding-bottom: 120px;
+
+    &__content {
+
+        &-top {
+            padding: 56px 156px;
+            margin-bottom: 72px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+            border-top: 1px solid rgba(255, 255, 255, 0.15);
+
+            &__title {
+                margin-bottom: 24px;
+                font-weight: 400;
+                font-size: 56px;
+                line-height: 108%;
+                text-align: center;
+
+                @include max(1300) {
+                    font-size: 56px;
+                }
+
+                @include max(1199) {
+                    font-size: 56px;
+                }
+
+                @include max(1024) {
+                    font-size: 48px;
+                    margin-bottom: 24px;
+                }
+
+                @include max(500) {
+                    font-size: 40px;
+                    margin-bottom: 12px;
+                }
+            }
+
+            &__descr {
+                transition: all 0.3s ease;
+
+                & p {
+                    font-weight: 400;
+                    font-size: 16px;
+                    line-height: 150%;
+                    text-align: center;
+                    color: rgba(255, 255, 255, 0.7);
+
+                    @include max(500) {
+                        line-height: 133%;
+                    }
+                }
+
+                @include max(500) {
+                    overflow: hidden;
+                    max-height: 215px;
+                    margin-bottom: 23px;
+                }
+            }
+
+
+            & .about-joinTeam__show-btn {
+                display: none;
+                align-items: center;
+                gap: 8px;
+                margin: auto;
+
+                & span {
+                    font-weight: 400;
+                    font-size: 16px;
+                    line-height: 130%;
+                    color: #fff;
+                }
+
+                & img {
+                    transition: all 0.53s ease;
+                }
+
+            }
+
+            @include max(1024) {
+                padding: 40px 0;
+                margin-bottom: 80px;
+            }
+
+            @include max(500) {
+                padding: 32px 0;
+                margin-bottom: 64px;
+            }
+        }
+
+        & .about-joinTeam__form {
+            padding: 48px 48px;
+            background-color: #292929;
+
+            &-title {
+                margin-bottom: 47px;
+                font-weight: 400;
+                font-size: 56px;
+                line-height: 108%;
+                text-align: center;
+
+                @include max(1300) {
+                    font-size: 56px;
+                }
+        
+                @include max(1199) {
+                    font-size: 56px;
+                }
+        
+                @include max(1024) {
+                    font-size: 48px;
+                    margin-bottom: 24px;
+                }
+        
+                @include max(500) {
+                    font-size: 40px;
+                    margin-bottom: 16px;
+                }
+            }
+
+            &-content {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px 24px;
+                margin-bottom: 20px;
+
+                @include max(1024) {
+                    grid-template-columns: 1fr;
+                    gap: 29px;
+                    margin-bottom: 24px;
+                }
+
+                &__input {
+                    min-height: 104px;
+                    width: 100%;
+                    font-size: 16px;
+                    line-height: 150%;
+                    color: #C5A486;
+                    text-align: center;
+                    border-bottom: 1px solid #dac5b1;
+                    transition: all 0.2s ease;
+                    cursor: pointer;
+
+                    &::placeholder {
+                        font-size: 16px;
+                        line-height: 150%;
+                        color: rgba(218, 197, 177, 0.5);
+                        text-align: center;
+                    }
+
+                    &:focus {
+                        color: #C5A486;
+                        border-bottom: 1px solid #C5A486;
+                    }
+
+                    &:hover {
+                        border-bottom: 1px solid #C5A486;
+
+                        &::placeholder {
+                            color: #C5A486;
+                        }
+                    }
+
+                    @include max(1024) {
+                        min-height: 70px;
+                    }
+
+                    @include max(500) {
+                        min-height: 48px;
+                    }
+                }
+
+                & .label-fail {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 8px;
+                    grid-column: span 2;
+                    min-height: 104px;
+
+                    font-size: 16px;
+                    line-height: 150%;
+                    color: rgba(218, 197, 177, 0.5);
+                    text-align: center;
+                    border-bottom: 1px solid #dac5b1;
+                    transition: all 0.2s ease;
+                    cursor: pointer;
+
+                    &:focus {
+                        color: #C5A486;
+                        border-bottom: 1px solid #C5A486;
+                    }
+
+                    &:hover {
+                        color: #C5A486;
+                        border-bottom: 1px solid #C5A486;
+                    }
+
+                    @include max(1024) {
+                        grid-column: span 1;
+                        min-height: 70px;
+                    }
+
+                    @include max(500) {
+                        min-height: 48px;
+                    }
+                }
+
+                &__descr {
+                    margin-bottom: 40px;
+                    text-align: center;
+                    font-weight: 400;
+                    font-size: 12px;
+                    line-height: 122%;
+                    color: rgba(255, 255, 255, 0.5);
+
+                    & a {
+                        margin-left: 5px;
+                        color: #dac5b1;
+
+                        &:hover {
+                            text-decoration: underline;
+                        }
+                    }
+
+                    @include max(1024) {
+                        display: flex;
+                        flex-direction: column;
+                        max-width: 340px;
+                        margin: auto;
+                        margin-bottom: 29px;
+                        line-height: 162%;
+                    }
+                }
+
+                &__btn {
+                    margin: auto;
+                    color: #563f3b;
+                    background-color: #dac5b1;
+                    transition: all 0.3s linear;
+        
+                    &:hover {
+                        background-color: #C5A486;
+                        color: #563F3B;
+                    }
+                }
+            }
+
+            @include max(1024) {
+                padding: 40px 40px;
+            }
+
+            @include max(500) {
+                padding: 32px 16px;
+            }
+        }
+    }
+
+    @include max(1024) {
+        padding-bottom: 82px;
+    }
+
+    @include max(500) {
+        padding-bottom: 64px;
+    }
+}

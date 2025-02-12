@@ -1,0 +1,196 @@
+.awards-media {
+
+    &__content {
+
+        &-top {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 40px;
+
+            &__title {
+                font-weight: 400;
+                font-size: 56px;
+                line-height: 108%;
+
+                @include max(1300) {
+                    font-size: 56px;
+                }
+        
+                @include max(1199) {
+                    font-size: 56px;
+                }
+        
+                @include max(1024) {
+                    font-size: 48px;
+                    text-align: left;
+                }
+        
+                @include max(500) {
+                    font-size: 48px;
+                }
+            }
+
+            &__btns {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 20px;
+
+                &-btn {
+                    cursor: pointer;
+                    transition: all 0.3s linear;
+
+                    & img {
+                        -webkit-user-drag: none;
+                        user-drag: none;
+                    }
+
+                    &.awards-media__prev-btn {
+                        transform: rotate(180deg);
+                    }
+                    
+                    &.swiper-button-disabled {
+                        opacity: .2;
+                    }
+                }
+
+                @include max(500) {
+                    display: none;
+                }
+            }
+
+            @include max(1024) {
+                margin-bottom: 24px;
+            }
+
+            @include max(500) {
+                margin-bottom: 16px;
+            }
+        }
+
+        &-cards {
+            margin-bottom: 40px;
+
+            &__card {
+                display: flex;
+                gap: 40px;
+                width: 100%;
+
+                &-img {
+                    min-width: 753px;
+
+                    & img {
+                        width: 100%;
+                    }
+
+                    @include max(800) {
+                        min-width: 100%;
+                    }
+                }
+
+                &-article {
+                    position: relative;
+                    padding-top: 5px;
+                    min-height: 536px;
+
+                    &__date {
+                        padding: 10px 16px;
+                        border-radius: 40px;
+                        border: 1px solid rgba(255, 255, 255, 0.3);
+                        font-weight: 400;
+                        font-size: 12px;
+                        line-height: 122%;
+                        color: #fff;
+                    }
+
+                    &__title {
+                        margin-top: 18px;
+                        margin-bottom: 16px;
+                        font-weight: 400;
+                        font-size: 40px;
+                        line-height: 108%;
+                        color: #fff;
+
+                        @include max(1300) {
+                            font-size: 40px;
+                        }
+                
+                        @include max(1199) {
+                            font-size: 24px;
+                        }
+                
+                        @include max(1024) {
+                            font-size: 24px;
+                        }
+                
+                        @include max(500) {
+                            font-size: 20px;
+                        }
+                    }
+
+                    & p {
+                        overflow: hidden;
+                        max-height: 190px;
+                        font-weight: 400;
+                        font-size: 16px;
+                        line-height: 150%;
+                        color: rgba(255, 255, 255, 0.7);
+
+                        @include max(1300) {
+                            margin-bottom: 24px;
+                        }
+
+                        @include max(1024) {
+                            margin-bottom: 39px;
+                        }
+
+                        @include max(500) {
+                            margin-bottom: 20px;
+                            max-height: 110px;
+                            line-height: 133%;
+                        }
+                    }
+
+                    &__link {
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                        color: #dac5b1;
+                        background-color: rgba(218, 197, 177, 0.1);
+                        transition: all 0.3s linear;
+
+                        &:hover {
+                            background-color: #C5A486;
+                            color: #563F3B;
+                        }
+
+                        @include max(1300) {
+                            position: relative;
+                        }
+                    }
+
+                    @include max(1300) {
+                        min-height: auto;
+                    }
+                }
+
+                @include max(1300) {
+                    flex-direction: column;
+                }
+
+                @include max(1024) {
+                    gap: 24px;
+                }
+
+                @include max(500) {
+                    gap: 17px;
+                }
+            }
+
+            @include max(1024) {
+                margin-bottom: 0;
+            }
+        }
+    }
+}

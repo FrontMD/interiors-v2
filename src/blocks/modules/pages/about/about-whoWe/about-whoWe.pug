@@ -1,0 +1,37 @@
+section.section.about-whoWe(data-js="aboutWhoWe")
+    .container.about-whoWe__container
+        .about-whoWe__content 
+            .icon
+                <img src="./img/svg/vi.svg" alt="">
+            +title({ 
+                text: 'Это не просто команда',
+                classes: 'about-whoWe__content-title',
+                tag: 'h2'
+            })
+            .about-whoWe__content-text
+                p VI&nbsp;&mdash; это не&nbsp;просто символика, не&nbsp;просто инициалы. Это символ совершенства, заключение цикла, полной гармонии, отвечает шести направлениям пространства. VI&nbsp;&mdash; это не&nbsp;просто команда, это коалиция, тандем людей, преследующих одни и&nbsp;те&nbsp;же идеи, идущих навстречу одной и&nbsp;той&nbsp;же цели.
+                p Каждый наш проект&nbsp;&mdash; это погружение в&nbsp;индивидуальный мир клиента, понимание его желаний, потребностей, понимание его обихода и&nbsp;характера, которые мы&nbsp;преобразуем в&nbsp;конкретные решения через призму профессионального взгляда.
+                .info
+                    p Волкова Арина Владимировна 
+                    span.post Руководитель студии VI interiors
+            button(class="about-whoWe__show-btn" type="button")
+                    span
+                        |Развернуть
+                    img(src="./img/svg/arrow-bottom.svg", alt="arrow")
+        .about-whoWe__cards 
+            .about-whoWe__cards-card
+                span.number 01
+                +title({
+                            text: 'Миссия',
+                            classes: 'about-whoWe__cards-card__title',
+                            tag: 'h3'
+                })  
+                p VI это студия дизайна интерьеров, цель и миссия которой сделать жизнь лучше, пространство функциональнее, а каждый день – ярче.
+            .about-whoWe__cards-card
+                span.number 02
+                +title({
+                            text: 'Ценности',
+                            classes: 'about-whoWe__cards-card__title',
+                            tag: 'h3'
+                }) 
+                p VI это студия дизайна интерьеров, цель и миссия которой сделать жизнь лучше, пространство функциональнее, а каждый день – ярче.

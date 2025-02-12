@@ -1,0 +1,38 @@
+.awards-bid {
+    padding-top: 80px;
+
+    & .form {
+        margin-top: 0;
+
+        &__title {
+            font-size: 56px;
+
+            @include max(1300) {
+                font-size: 56px;
+            }
+    
+            @include max(1199) {
+                font-size: 56px;
+            }
+    
+            @include max(1024) {
+                font-size: 48px;
+            }
+    
+            @include max(500) {
+                font-size: 40px;
+            }
+        }
+
+        &__fields {
+
+            @include max(500) {
+                margin-top: 11px;
+            }
+        }
+    }
+
+    @include max(500) {
+        padding-top: 64px;
+    }
+}

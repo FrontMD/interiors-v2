@@ -1,0 +1,136 @@
+section.section.article-hero(data-js="articleHero")
+    .container.article-hero__container
+        .article-hero__content 
+            .article-hero__content-top  
+                +btn({
+                    classes: 'article-hero__content-top__back',
+                    vMode: 'btn',
+                    link: 'javascript:void(0)',
+                    text: 'Назад к блогу',
+                    cMode: 'transparent',
+                    icon: true,
+                    iconName: 'back_arrow',
+                })
+                span.article-hero__content-top__date 09.11.2023
+                +title({
+                    classes: 'article-hero__content-top__title',
+                    tag: 'h1',
+                    text: 'VI-interiors: квартира 130&nbsp;кв. метров для семьи с&nbsp;двумя детьми в&nbsp;Санкт-Петербурге',
+                    animated: 'flase'
+                })
+                <picture class="article-hero__content-top__img">
+                    <source srcset="./img/article/article-hero__top-img-768.webp" media="(max-width: 768px)">
+                    <img src="./img/article/article-hero__top-img-1440.webp" alt="img">
+                </picture>
+                .article-hero__content-descr
+                    p Команда бюро VI-interiors&nbsp;&mdash; Егор Игнатьев, Никита Бахмат, Наталья Овдиенко&nbsp;&mdash; под руководством Арины Волковой оформила квартиру в&nbsp;питерском жилом комплексе премиум-класса &laquo;Маленькая Франция&raquo;. Целью авторов было создать комфортное пространство для жизни четырех человек и&nbsp;продумать каждую деталь так, чтобы интерьер вызывал вау-эффект.
+            .article-hero__content-drawings
+                .article-hero__content-descr 
+                    p В&nbsp;одном из&nbsp;тихих районов Петербурга, на&nbsp;просторах уютной квартиры площадью 130 квадратных метров, развернулась своя уникальная история. Команда дизайнеров под руководством Арины Волковой из&nbsp;студии VI-Interiors вложила душу в&nbsp;создание интерьера, где каждая деталь была тщательно продумана для комфортной жизни семьи с&nbsp;двумя детьми.
+                    p Главная зона&nbsp;&mdash; это гостиная совмещенная с&nbsp;кухней. Здесь пространство переливается светом, который скользит по&nbsp;мягким обивкам мебели и&nbsp;отражается в&nbsp;гладких поверхностях кухонных фасадов. Теплые оттенки дерева на&nbsp;полу и&nbsp;коричневые акценты в&nbsp;текстиле добавляют комнате уюта и&nbsp;теплоты.
+                .project-drawings__content
+                    .project-drawings__slider(data-js="projectDrawingsSlider")
+                        .swiper-wrapper
+                            .swiper-slide.project-drawings__slide
+                                a.project-drawings__fancybox(href="./img/article/article-hero__drawings-img1.webp" data-fancybox="drawings" data-thumb="./img/projects/project_drawings_img_1.webp")
+                                    svg 
+                                        use(xlink:href=`./img/sprites/sprite.svg#fancybox`)
+                                .project-drawings__img
+                                    img(src="./img/article/article-hero__drawings-img1.webp" alt="")
+                                .project-drawings__text Свет, Bright Buro
+
+                            .swiper-slide.project-drawings__slide
+                                a.project-drawings__fancybox(href="./img/article/article-hero__drawings-img2.webp" data-fancybox="drawings" data-thumb="./img/projects/project_drawings_img_2.webp")
+                                    svg 
+                                        use(xlink:href=`./img/sprites/sprite.svg#fancybox`)
+                                .project-drawings__img
+                                    img(src="./img/article/article-hero__drawings-img2.webp" alt="")
+                                .project-drawings__text Диван, Molteni. Кресло, Giorgetti.
+
+                            .swiper-slide.project-drawings__slide
+                                a.project-drawings__fancybox(href="./img/article/article-hero__drawings-img3.webp" data-fancybox="drawings" data-thumb="./img/projects/project_drawings_img_1.webp")
+                                    svg 
+                                        use(xlink:href=`./img/sprites/sprite.svg#fancybox`)
+                                .project-drawings__img
+                                    img(src="./img/article/article-hero__drawings-img3.webp" alt="")
+                                .project-drawings__text Столик, Marelli.
+
+                            .swiper-slide.project-drawings__slide
+                                a.project-drawings__fancybox(href="./img/article/article-hero__drawings-img1.webp" data-fancybox="drawings" data-thumb="./img/projects/project_drawings_img_2.webp")
+                                    svg 
+                                        use(xlink:href=`./img/sprites/sprite.svg#fancybox`)
+                                .project-drawings__img
+                                    img(src="./img/article/article-hero__drawings-img1.webp" alt="")
+                                .project-drawings__text Свет, Bright Buro
+
+                    .project-drawings__thumbs(data-js="projectDrawingsThumbs") 
+                        .project-drawings__controls
+                            +btn({
+                                classes: 'slider-control slider-control--prev',
+                                vMode: 'slider',
+                                icon: true,
+                                iconName: 'slider_arrow',
+                            })(data-js="sliderControlPrev")
+                            +btn({
+                                classes: 'slider-control slider-control--next',
+                                vMode: 'slider',
+                                icon: true,
+                                iconName: 'slider_arrow',
+                            })(data-js="sliderControlNext")
+                        .swiper-wrapper
+                            .swiper-slide.project-drawings__thumb
+                                .project-drawings__fancybox(href="./img/article/article-hero__drawings-img1.webp" data-fancybox="drawingsMob" data-thumb="./img/projects/project_drawings_img_2.webp")
+                                    svg 
+                                        use(xlink:href=`./img/sprites/sprite.svg#fancybox`)
+                                .project-drawings__img
+                                    img(src="./img/article/article-hero__drawings-img1.webp" alt="")
+                                .project-drawings__text Свет, Bright Buro
+
+                            .swiper-slide.project-drawings__thumb
+                                .project-drawings__fancybox(href="./img/article/article-hero__drawings-img2.webp" data-fancybox="drawingsMob" data-thumb="./img/projects/project_drawings_img_2.webp")
+                                    svg 
+                                        use(xlink:href=`./img/sprites/sprite.svg#fancybox`)
+                                .project-drawings__img
+                                    img(src="./img/article/article-hero__drawings-img2.webp" alt="")
+                                .project-drawings__text Диван, Molteni. Кресло, Giorgetti.
+
+                            .swiper-slide.project-drawings__thumb
+                                .project-drawings__fancybox(href="./img/article/article-hero__drawings-img3.webp" data-fancybox="drawingsMob" data-thumb="./img/projects/project_drawings_img_1.webp")
+                                    svg 
+                                        use(xlink:href=`./img/sprites/sprite.svg#fancybox`)
+                                .project-drawings__img
+                                    img(src="./img/article/article-hero__drawings-img3.webp" alt="")
+                                .project-drawings__text Столик, Marelli.
+
+                            .swiper-slide.project-drawings__thumb
+                                .project-drawings__fancybox(href="./img/article/article-hero__drawings-img1.webp" data-fancybox="drawingsMob" data-thumb="./img/projects/project_drawings_img_2.webp")
+                                    svg 
+                                        use(xlink:href=`./img/sprites/sprite.svg#fancybox`)
+                                .project-drawings__img
+                                    img(src="./img/article/article-hero__drawings-img1.webp" alt="")
+                                .project-drawings__text Свет, Bright Buro
+            .article-hero__content-descr 
+                p Спальня родителей скрыта от посторонних глаз, но открыта к простору и свету. Ванная комната, как оазис релаксации, оформлена в светлых тонах с акцентами из натурального камня. Детские комнаты, каждая со своим уникальным характером, наполнены яркостью и весельем, отражая индивидуальность каждого ребенка.
+                p Этот дом — истинное воплощение мечты о комфортной и функциональной семейной жизни, где каждый найдет свое место и уголок для личного пространства.
+            .article-hero__content-video
+                <picture class="article-hero__content-video__bg">
+                    <source srcset="./img/article/article-hero__video-bg-768.webp" media="(max-width: 768px)">
+                    <img src="./img/article/article-hero__video-bg-1440.webp" alt="img">
+                </picture>
+                button.article-hero__content-video__play
+                    img(src="./img/svg/play.svg", alt="img")
+                video(src="./video/about.mp4" clacc="article-hero__content-video__player" type="video/mp4" controls muted playsinline autoplay) 
+            .article-hero__content-files
+                +title({
+                    classes: 'article-hero__content-files__title',
+                    text: 'Скачать файлы',
+                })
+                a(href="#" download) 
+                    img(src="./img/svg/file.svg", alt="img", class="article-hero__content-files__download")
+                    span Планировка квартиры.pdf
+                a(href="#" download) 
+                    img(src="./img/svg/file.svg", alt="img", class="article-hero__content-files__download")
+                    span Визуализация.pdf
+            .article-hero__content-link 
+                p Вы можете прочитать по ссылке
+                    a(href="#") https://www.interior.ru/place/16437-vi-interiors-kvartira-130-kv-metrov-dlya-semii-s-dvumya-detimi-v-sankt-peterburge.html

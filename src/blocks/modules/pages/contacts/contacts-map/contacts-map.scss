@@ -1,0 +1,72 @@
+.contacts-map {
+    padding-top: 72px;
+
+    &__content {
+        position: relative;
+
+        & .map {
+            filter: grayscale(100%);
+            min-height: 650px;
+
+            @include max(1024) {
+                min-height: 334px;
+
+                & .ymaps-2-1-79-image {
+                    width: 16px !important;
+                    height: 16px !important;
+                    background-size: 16px 16px !important;
+                }
+            }
+
+            @include max(500) {
+                min-height: 328px;
+            }
+        }
+
+        & .markers-data {
+            display: none;
+        }
+
+        & .route-button {
+            position: absolute;
+            bottom: 24px;
+            left: 50%;
+            transform: translateX(-50%);
+            text-wrap: nowrap;
+            padding: 24px 40px;
+            border-radius: 40px;
+            background-color: #563f3b;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 150%;
+            color: #dac5b1;
+
+            &:hover {
+                color: #563f3b;
+                background-color: #dac5b1;
+            }
+
+            @include max(1024) {
+                bottom: 2px;
+            }
+
+            @include max(500) {
+                padding: 12px 24px;
+            }
+        }
+
+        @include max(1024) {
+            padding-bottom: 100px;
+        }
+
+        @include max(500) {
+            padding-bottom: 74px;
+        }
+    }
+
+    @include max(1024) {
+
+    }
+}

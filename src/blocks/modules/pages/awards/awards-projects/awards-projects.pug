@@ -1,0 +1,43 @@
+section.section.awards-projects(data-js="awardsProjects")
+    .container.awards-projects__container
+        .awards-projects__content 
+            .awards-projects__content-top 
+                +title({
+                    text: 'Наши проекты',
+                    classes: 'awards-projects__content-top__title'
+                })
+                +btn({
+                    text: 'Все проекты',
+                    cMode: 'rgba(218, 197, 177, 0.1)',
+                    classes: 'awards-projects__content-top__link'
+                })
+            .awards-projects__content-cards 
+                a(href="#").awards-projects__content-cards__card 
+                    span.hover-icon
+                        img(src="./img/award_logo.webp", alt="icon")
+                    .awards-projects__content-cards__card-bg
+                        img(src="./img/awards/awards-projects__card-img1.webp", alt="img")
+                    span.awards-projects__content-cards__card-location Россия, Санкт-Петербург
+                    p.awards-projects__content-cards__card-descr Neva House
+                a(href="#").awards-projects__content-cards__card
+                    span.hover-icon
+                        img(src="./img/award_logo.webp", alt="icon")
+                    .awards-projects__content-cards__card-bg
+                        img(src="./img/awards/awards-projects__card-img2.webp", alt="img")
+                    span.awards-projects__content-cards__card-location Россия, Москва
+                    p.awards-projects__content-cards__card-descr Бассейная 45
+                a(href="#").awards-projects__content-cards__card
+                    span.hover-icon
+                        img(src="./img/award_logo.webp", alt="icon")
+                    .awards-projects__content-cards__card-bg
+                        img(src="./img/awards/awards-projects__card-img3.webp", alt="img")
+                    span.awards-projects__content-cards__card-location Россия, Москва
+                    p.awards-projects__content-cards__card-descr Старый Арбат II
+                a(href="#").awards-projects__content-cards__card
+                    span.hover-icon
+                        img(src="./img/award_logo.webp", alt="icon")
+                    .awards-projects__content-cards__card-bg
+                        img(src="./img/awards/awards-projects__card-img4.webp", alt="img")
+                    span.awards-projects__content-cards__card-location Россия, Москва
+                    p.awards-projects__content-cards__card-descr Старый Арбат
+            

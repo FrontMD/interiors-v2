@@ -1,0 +1,76 @@
+extends ../layouts/default
+
+block variables
+    - const title = "Контакты" // <== тут meta title страницы
+
+block content
+    .page
+        .anim-container.anim-container--service(style="position:relative;" data-js="animContainerAbout")
+            .contacts-hero
+                +m-contacts()
+            include ../../blocks/modules/pages/contacts/contacts-map/contacts-map.pug
+            .contacts-form 
+                .container
+                    +form({
+                            classes: 'm-contacts__form',
+                            title: 'Оставить заявку',
+                            text: 'Оставьте Ваши контакты, и мы свяжемся с Вами в ближайшее время',
+                            btnText: 'Отправить заявку',
+                        })
+                            +field({
+                                classes: '',
+                                type: 'text',
+                                placeholder: 'Ваше имя*',
+                                inputAttr: {
+                                    "required": ""
+                                }, 
+                                isRequired: true
+                            })
+                            +field({
+                                classes: '',
+                                type: 'tel',
+                                placeholder: '+7 (___)___-__-__*',
+                                inputAttr: {
+                                    "data-type": "phoneNumber",
+                                    "data-v-name": "phone",
+                                    "required": ""
+                                },
+                                isRequired: true
+                            })
+                            +field({
+                                classes: '',
+                                type: 'email',
+                                placeholder: 'Email*',
+                                inputAttr: {
+                                    "required": ""
+                                },
+                                isRequired: true
+                            })
+                            +field({
+                                classes: '',
+                                type: 'text',
+                                placeholder: 'Что хотите заказать*',
+                                inputAttr: {
+                                    "required": ""
+                                },
+                                isRequired: true
+                            })
+                            +field({
+                                classes: '',
+                                type: 'text',
+                                placeholder: 'Комментарий',
+                                inputAttr: {
+                                    "required": ""
+                                },
+                                isRequired: true
+                            })
+
+            //- вся страница должна быть внутри этого элемента (.anim-container)
+            //- тут каждый раздел - это <section></section>
+            //- если контент ограничен по ширине, то обернуть в container. <section><div class="container"></div></section> 
+            //- Пример в файле src/blocks/modules/pages/service/service-intro/service-intro.pug Там как раз есть фоновый элемент без контейнера, а контент в контейнере.
+            //- В идеале создавать каждую секцию отдельным модулем со своим пространством классов и сюда просто импортировать. пример в файле src/views/pages/service.pug
+            //- Прошу максимально переиспользовать уже готовые компоненты (src/blocks/components) и модули (src/blocks/modules)
+            //- Минимально использовать фоны через css, лучше вообще не использовать. Пример создания фона также в этом файле src/blocks/modules/pages/service/service-intro/service-intro.pug
+            //- Если редактируются готовые компоненты и модули, то обязательно проверять, чтобы они не сломались там где уже используются.
+            //- Некоторые служебные классы (section, desktop, mobile, has-scroll и т.д.), есть в файле src/styles/base/general.scss

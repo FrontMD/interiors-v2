@@ -1,0 +1,88 @@
+.awards-about {
+
+    &__content {
+        padding: 64px 0px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+        border-top: 1px solid rgba(255, 255, 255, 0.15);
+
+        &-title {
+            margin-bottom: 24px;
+            text-align: left;
+            font-weight: 400;
+            font-size: 56px;
+            line-height: 108%;
+            color: #fff;
+
+            @include max(1300) {
+                font-size: 56px;
+            }
+    
+            @include max(1199) {
+                font-size: 56px;
+            }
+    
+            @include max(1024) {
+                font-size: 48px;
+            }
+    
+            @include max(500) {
+                margin-bottom: 14px;
+                font-size: 40px;
+            }
+        }
+
+        &-text {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            transition: all 0.3s ease;
+
+            & p {
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 150%;
+                color: rgba(255, 255, 255, 0.7);
+                transition: all 0.3s ease;
+
+                @include max(500) {
+                    line-height: 134%;
+                }
+            }
+
+            @include max(1024) {
+                gap: 7px;
+            }
+            
+            @include max(500) {
+                overflow: hidden;
+                max-height: 220px;
+                margin-bottom: 20px;
+            }
+        }
+
+        & .awards-about__show-btn {
+            display: none;
+            align-items: center;
+            gap: 8px;
+
+            & span {
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 130%;
+                color: #fff;
+            }
+
+            & img {
+                transition: all 0.53s ease;
+            }
+        }
+
+        @include max(1024) {
+            padding: 40px 0;
+        }
+
+        @include max(500) {
+            padding: 30px 0;
+        }
+    }
+}

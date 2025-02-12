@@ -13,6 +13,22 @@
 @@include("../../blocks/modules/pages/service/service-photos/service-photos.js")
 @@include("../../blocks/modules/pages/service/service-process/service-process.js")
 
+@@include("../../blocks/modules/pages/about/about-awards/about-awards.js")
+@@include("../../blocks/modules/pages/about/about-joinTeam/about-joinTeam.js")
+@@include("../../blocks/modules/pages/about/about-whoWe/about-whoWe.js")
+
+@@include("../../blocks/modules/pages/employee/employee-awards/employee-awards.js")
+@@include("../../blocks/modules/pages/employee/employee-history/employee-history.js")
+
+@@include("../../blocks/modules/pages/awards/awards-about/awards-about.js")
+@@include("../../blocks/modules/pages/awards/awards-media/awards-media.js")
+
+@@include("../../blocks/modules/pages/blog/blog-hero/blog-hero.js")
+
+@@include("../../blocks/modules/pages/article/article-hero/article-hero.js")
+
+@@include("../../blocks/modules/pages/contacts/contacts-map/contacts-map.js")
+
 @@include("../../blocks/modules/modals/modals.js")
 
 
@@ -28,4 +44,9 @@ document.addEventListener('DOMContentLoaded', () => {
     servicesProcess();
     servicePhotos();
     serviceProcess();
+    aboutAwardsSlider();
+    employeeAwardsSlider();
+    awardsMediaSlider();
+    blogHeroSwier();
+    loadYandexMaps();
 })

@@ -1,0 +1,12 @@
+section.section.awards-intro(data-js="awardsIntro")
+    .container.awards-intro__container
+        .awards-intro__content
+            <picture class="awards-intro__content-img">
+                <source srcset="./img/awards/awards-intro__img-360.webp" media="(max-width: 400px)">
+                <source srcset="./img/awards/awards-intro__img-768.webp" media="(max-width: 768px)">
+                <img src="./img/awards/awards-intro__img-1440.webp" alt="img">
+            </picture> 
+            +title({
+                    text: 'Награды',
+                    classes: 'awards-intro__content-title'
+            }) 

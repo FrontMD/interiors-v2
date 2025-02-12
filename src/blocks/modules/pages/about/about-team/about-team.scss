@@ -1,0 +1,159 @@
+.about-team {
+    padding: 64px 0;
+    background-color: #292929;
+
+    &__content {
+
+        &-title {
+            margin-bottom: 64px;
+            font-family: 'Vertino';
+            font-weight: 400;
+            font-size: 260px;
+            line-height: 108%;
+            text-align: center;
+            color: #fff;
+
+            @include max(1024) {
+                text-align: start;
+                margin-bottom: 63px;
+            }
+
+            @include max(500) {
+                margin-bottom: 22px;
+            }
+        }
+
+        & .team-list {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 147px 64px;
+
+            &__item {
+                &:nth-child(2) {
+                    padding-top: 465px;
+                }
+
+                &:nth-child(odd):not(:first-child) {
+                    margin-top: -494px;
+                }
+
+                & .number {
+                    display: block;
+                    margin-bottom: 1px;
+                    font-family: 'Vertino';
+                    font-weight: 400;
+                    font-size: 96px;
+                    line-height: 100%;
+                    color: rgba(255, 255, 255, 0.7);
+
+                    @include max(1024) {
+                        margin-bottom: 4px;
+                        font-size: 80px;
+                    }
+            
+                    @include max(500) {
+                        font-size: 56px;
+                        margin-bottom: 5px;
+                    }
+                }
+
+                & p {
+                    margin-bottom: 24px;
+                    padding: 20px 0;
+                    border-top: 1px solid rgba(218, 197, 177, 0.2);
+                    border-bottom: 1px solid rgba(218, 197, 177, 0.2);
+                    font-weight: 400;
+                    font-size: 16px;
+                    line-height: 150%;
+                    color: rgba(255, 255, 255, 0.7);
+
+                    @include max(1024) {
+                        padding: 24px 0;
+                    }
+
+                    @include max(500) {
+                        line-height: 130%;
+                        padding: 16px 0;
+                    }
+                }
+
+                &-img {
+                    width: 100%;
+                    margin-bottom: 24px;
+
+                    @include max(500) {
+                        margin-bottom: 16px;
+                    }
+                }
+
+                &-name {
+                    font-weight: 400;
+                    font-size: 40px;
+                    line-height: 108%;
+                    color: #fff;
+
+                    @include max(1024) {
+                        margin-bottom: 5px;
+                        font-size: 24px;
+                    }
+
+                    @include max(500) {
+                        font-size: 20px;
+                    }
+                }
+
+                &-post {
+                    display: block;
+                    margin-bottom: 24px;
+                    font-weight: 400;
+                    font-size: 16px;
+                    line-height: 150%;
+                    color: rgba(255, 255, 255, 0.3);
+
+                    @include max(500) {
+                        margin-bottom: 12px;
+                    }
+                }
+
+                &-link {
+                    color: #dac5b1;
+                    background-color: rgba(218, 197, 177, 0.1);
+                    transition: all 0.3s linear;
+
+                    &:hover {
+                        background-color: #C5A486;
+                        color: #563F3B;
+                    }
+                }
+
+                @include max(1024) {
+
+                    &:nth-child(2) {
+                        padding-top: 0;
+                    }
+    
+                    &:nth-child(odd):not(:first-child) {
+                        margin-top: 0;
+                    }
+                }
+            }
+
+            @include max(1024) {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            @include max(500) {
+                gap:19px;
+            }
+        }
+    }
+
+    @include max(1024) {
+        padding: 40px 0;
+    }
+
+    @include max(500) {
+        padding: 32px 0 42px 0;
+    }
+}

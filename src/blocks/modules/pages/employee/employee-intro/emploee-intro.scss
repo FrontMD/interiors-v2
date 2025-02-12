@@ -1,0 +1,123 @@
+.empoloyee-intro {
+    padding-bottom: 64px;
+    background-color: #292929;
+
+    &__content {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 64px;
+
+        &-img {
+
+            & img {
+                width: 100%;
+            }
+        }
+
+        &-article {
+            position: relative;
+            padding-top: 4px;
+
+            & .post {
+                padding: 10px 16px;
+                border: 1px solid rgba(255, 255, 255, 0.3);
+                border-radius: 40px;
+                font-weight: 400;
+                font-size: 12px;
+                line-height: 122%;
+                color: #fff;
+            }
+
+            &__title {
+                margin-top: 24px;
+                margin-bottom: 48px;
+
+                @include max(1300) {
+                    font-size: 48px;
+                }
+        
+                @include max(1199) {
+                    font-size: 48px;
+                }
+        
+                @include max(1024) {
+                    font-size: 48px;
+                    margin-top: 30px;
+                    margin-bottom: 24px;
+                }
+        
+                @include max(500) {
+                    margin-top: 22px;
+                    font-size: 40px;
+                    margin-bottom: 16px;
+                }  
+            }
+
+            &__text {
+                display: flex;
+                align-items: flex-start;
+                gap: 14px;
+                padding-top: 46px;
+                padding-right: 30px;
+                padding-left: 7px;
+                border-top: 1px solid rgba(218, 197, 177, 0.2);
+
+                & .icon {
+                    min-width: 43px;
+                }
+
+                & p {
+                    font-weight: 400;
+                    font-size: 16px;
+                    line-height: 150%;
+                    color: rgba(255, 255, 255, 0.7);
+
+                    @include max(500) {
+                        line-height: 133%;
+                    }
+                }
+
+                @include max(1024) {
+                    padding-top: 24px;
+                }
+
+                @include max(500) {
+                    padding-top: 13px;
+                    padding-right: 10px;
+                    padding-left: 6px;
+                }
+            }
+
+            & .employe__scroll-btn {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                padding: 0;
+
+                @include max(1024) {
+                    display: none;
+                }
+            }
+        }
+
+        @include max(1024) {
+            grid-template-columns: 1fr;
+            gap: 40px;
+        }
+
+        @include max(500) {
+            gap: 24px;
+        }
+
+    }
+
+    @include max(1024) {
+        padding-top: 140px;
+        padding-bottom: 47px;
+    }
+
+    @include max(500) {
+        padding-bottom: 15px;
+        padding-top: 95px;
+    }
+}

@@ -1,0 +1,132 @@
+.error-hero {
+    padding-top: 109px;
+    padding-bottom: 67px;
+
+    &__content {
+
+        &-top {
+
+            &__img {
+    
+                & img {
+                    width: 100%;
+                }
+            }
+    
+            &__title {
+                position: relative;
+                margin-top: -157px;
+                font-weight: 400;
+                font-size: 260px;
+                line-height: 108%;
+                text-align: center;
+                color: #fff;
+    
+                @include max(1300) {
+                    margin-top: -122px;
+                    font-size: 200px;
+                }
+        
+                @include max(1199) {
+                    font-size: 180px;
+                }
+        
+                @include max(1024) {
+                    margin-top: -29px;
+                    font-size: 132px;
+                }
+    
+                @include max(768) {
+                    font-size: 132px;
+                }
+        
+                @include max(500) {
+                    margin-top: -38px;
+                    font-size: 64px;
+                }
+            }
+
+            @include max(1024) {
+                margin-bottom: 34px;
+            }
+
+            @include max(500) {
+                margin-bottom: 2px;
+            }
+        }
+
+        &-info {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 32px 48px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+            border-top: 1px solid rgba(255, 255, 255, 0.15);
+
+            &__title {
+                font-weight: 400;
+                font-size: 20px;
+                line-height: 108%;
+                text-align: center;
+                color: #dac5b1;
+
+                @include max(1300) {
+                    font-size: 20px;
+                }
+        
+                @include max(1199) {
+                    font-size: 20px;
+                }
+        
+                @include max(1024) {
+                    font-size: 20px;
+                }
+    
+                @include max(730) {
+                    font-size: 20px;
+                }
+    
+                @include max(660) {
+                    font-size: 16px;
+                }
+        
+                @include max(500) {
+                    font-size: 16px;
+                }
+            }
+
+            &__link {
+                text-wrap: nowrap;
+                color: #563f3b;
+                background-color: #dac5b1;
+
+                &:hover {
+                    color: #dac5b1;
+                    background-color: #563f3b;
+                }
+            }
+
+            @include max(1024) {
+                flex-direction: column;
+                padding: 24px 48px;
+                gap: 31px;
+            }
+
+            @include max(500) {
+                gap: 23px;
+            }
+
+        }
+
+    }
+
+    @include max(1024) {
+        padding-top: 140px;
+        padding-bottom: 81px;
+    }
+
+    @include max(500) {
+        padding-top: 114px;
+        padding-bottom: 63px;
+    }
+}

@@ -1,0 +1,160 @@
+.employee-awards {
+    padding-bottom: 120px;
+    padding-top: 60px;
+
+    &__content {
+
+        &-top {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 40px;
+
+            &__title {
+                font-weight: 400;
+                font-size: 56px;
+                line-height: 108%;
+
+                @include max(1300) {
+                    font-size: 56px;
+                }
+        
+                @include max(1199) {
+                    font-size: 56px;
+                }
+        
+                @include max(1024) {
+                    font-size: 48px;
+                    text-align: left;
+                }
+        
+                @include max(500) {
+                    font-size: 40px;
+                }
+            }
+
+            &__btns {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 20px;
+
+                &-btn {
+                    cursor: pointer;
+                    transition: all 0.3s linear;
+
+                    & img {
+                        -webkit-user-drag: none;
+                        user-drag: none;
+                    }
+
+                    &.employee-awards__prev-btn {
+                        transform: rotate(180deg);
+                    }
+                    
+                    &.swiper-button-disabled {
+                        opacity: .2;
+                    }
+                }
+
+                @include max(1024) {
+                    display: none;
+                }
+            }
+
+            @include max(1024) {
+                margin-bottom: 24px;
+            }
+
+            @include max(500) {
+                margin-bottom: 16px;
+            }
+        }
+
+        &-cards {
+            margin-bottom: 40px;
+
+            &__card {
+                width: 298px;
+
+                &-img {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    margin-bottom: 20px;
+                    width: 100%;
+                    height: 298px;
+                    background-color: #292929;
+
+                    @include max(500) {
+                        margin-bottom: 16px;
+                        width: 100%;
+                        height: 269px;
+                    }
+                }
+
+                & .awards__card-title {
+                    font-weight: 400;
+                    font-size: 20px;
+                    line-height: 108%;
+
+                    @include max(1024) {
+                        font-size: 18px;
+                    }
+            
+                    @include max(500) {
+                        font-size: 14px;
+                    }
+                }
+
+                @include max(1024) {
+                    width: 298px;
+                }
+
+                @include max(500) {
+                    width: 269px;
+                }
+            }
+
+            @include max(1024) {
+                margin-bottom: -18px;
+                width: calc(100% + 48px);
+            }
+
+            @include max(730) {
+                width: calc(100% + 16px);
+            }
+
+            @include max(500) {
+                margin-bottom: 0px;
+            }
+        }
+
+        &-link {
+            margin: auto;
+            color: #dac5b1;
+            background-color: rgba(218, 197, 177, 0.1);
+            transition: all 0.3s linear;
+
+            &:hover {
+                background-color: #C5A486;
+                color: #563F3B;
+            }
+
+            @include max(1024) {
+                margin: 0;
+                margin-right: auto;
+            }
+        }
+    }
+
+    @include max(1024) {
+        padding-top: 40px;
+        padding-bottom: 80px;
+    }
+
+    @include max(500) {
+        padding-top: 22px;
+        padding-bottom: 64px;
+    }
+}

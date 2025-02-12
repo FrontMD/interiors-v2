@@ -1,0 +1,114 @@
+.employee-history {
+    padding-top: 40px;
+    padding-bottom: 40px;
+
+    &__content {
+        padding-top: 40px;
+        border-top: 1px solid rgba(218, 197, 177, 0.2);
+ 
+        &-list {
+            display: flex;
+            flex-direction: column;
+            gap: 32px;
+            transition: all 0.5s ease;
+
+            &__item {
+                display: grid;
+                grid-template-columns: 344px auto;
+                align-content: flex-start;
+
+                & p {
+                    font-family: 'Vertino';
+                    font-weight: 400;
+                    font-size: 24px;
+                    line-height: 108%;
+                    color: #fff;
+
+                    @include max(1024) {
+                        font-size: 20px;
+                    }
+
+                    @include max(500) {
+                        font-size: 16px;
+                    }
+                }
+
+                &-text {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 8px;
+
+                    & p {
+                        font-family: var(--font-family);
+                        font-weight: 400;
+                        font-size: 16px;
+                        line-height: 150%;
+                        color: rgba(255, 255, 255, 0.7);
+
+                        @include max(1024) {
+                            font-size: 16px;
+                        }
+    
+                        @include max(500) {
+                            line-height: 132%;
+                        }
+                    }
+                }
+
+
+                @include max(1024) {
+                    grid-template-columns: 1fr;
+                    gap: 17px;
+                }
+
+                @include max(500) {
+                    gap: 6px;
+                }
+            }
+
+            @include max(1024) {
+                gap: 23px;
+            }
+
+            @include max(500) {
+                overflow: hidden;
+                max-height: 220px;
+                margin-bottom: 16px;
+                gap: 26px;
+            }
+        }
+
+        & .employee-history__show-btn {
+            display: none;
+            align-items: center;
+            gap: 8px;
+
+            & span {
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 130%;
+                color: #fff;
+            }
+
+            & img {
+                transition: all 0.5s ease;
+            }
+        }
+
+        @include max(1024) {
+            padding-top: 48px;
+        }
+
+        @include max(500) {
+            padding-top: 25px;
+        }
+    }
+
+    @include max(1024) {
+        padding-top: 47px;
+    }
+
+    @include max(500) {
+        padding-top: 23px;
+    }
+}

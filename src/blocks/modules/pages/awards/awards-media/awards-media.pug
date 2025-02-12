@@ -1,0 +1,48 @@
+section.section.awards-media(data-js="awardsMedia")
+    .container.awards-media__container
+        .awards-media__content 
+            .awards-media__content-top 
+                +title({
+                    text: 'СМИ о нас',
+                    classes: 'awards-media__content-top__title'
+                })
+                .awards-media__content-top__btns
+                    button(class="awards-media__content-top__btns-btn awards-media__prev-btn" type="button")
+                        img(src="./img/svg/slider-arrow.svg", alt="arrow")
+                    button(class="awards-media__content-top__btns-btn awards-media__next-btn" type="button")
+                        img(src="./img/svg/slider-arrow.svg", alt="arrow")
+            .awards-media__content-cards.swiper
+                .swiper-wrapper
+                    .swiper-slide.awards-media__content-cards__card
+                        .awards-media__content-cards__card-img
+                            img(src="./img/awards/awards-media__card-img1.webp", alt="img")
+                        .awards-media__content-cards__card-article
+                            span.awards-media__content-cards__card-article__date 09.11.2023
+                            +title({
+                                tag: 'h3',
+                                text: 'Интерьер квартиры в старинном московском доме',
+                                classes: 'awards-media__content-cards__card-article__title'
+                            })
+                            p В&nbsp;самом центре Москвы расположен старинный дом, где и&nbsp;находится эта квартира. &quot;Когда я&nbsp;в&nbsp;неё попала, то&nbsp;увидела ремонт в&nbsp;стиле начала 2000‑х,&nbsp;&mdash; вспоминает автор проекта. &mdash;&nbsp;Многоуровневые потолки, помещения причудливой формы; канаты и&nbsp;верёвки, намекающие на&nbsp;морскую тематику, были использованы в&nbsp;отделке сауны, а&nbsp;посреди коридора стоял фонтан&laquo;.В первую очередь, &laquo;почистили&raquo; пространство, и, в&nbsp;частности, убрали гипсокартон со&nbsp;стен и&nbsp;потолков, увеличив тем самым площадь квартиры и&nbsp;высоту потолков. В&nbsp;интерьере решено было создать ответ экстерьеру дома и&nbsp;духу места; сохранить и&nbsp;усилить историческое звучание пространства.
+                            +btn({
+                                text: 'Читать полностью',
+                                cMode: 'rgba(218, 197, 177, 0.1)',
+                                classes: 'awards-media__content-cards__card-article__link'
+                            })
+                    .swiper-slide.awards-media__content-cards__card
+                        .awards-media__content-cards__card-img
+                            img(src="./img/awards/awards-media__card-img1.webp", alt="img")
+                        .awards-media__content-cards__card-article
+                            span.awards-media__content-cards__card-article__date 09.11.2023
+                            +title({
+                                tag: 'h3',
+                                text: 'Интерьер квартиры в старинном московском доме',
+                                classes: 'awards-media__content-cards__card-article__title'
+                            })
+                            p В&nbsp;самом центре Москвы расположен старинный дом, где и&nbsp;находится эта квартира. &quot;Когда я&nbsp;в&nbsp;неё попала, то&nbsp;увидела ремонт в&nbsp;стиле начала 2000‑х,&nbsp;&mdash; вспоминает автор проекта. &mdash;&nbsp;Многоуровневые потолки, помещения причудливой формы; канаты и&nbsp;верёвки, намекающие на&nbsp;морскую тематику, были использованы в&nbsp;отделке сауны, а&nbsp;посреди коридора стоял фонтан&laquo;.В первую очередь, &laquo;почистили&raquo; пространство, и, в&nbsp;частности, убрали гипсокартон со&nbsp;стен и&nbsp;потолков, увеличив тем самым площадь квартиры и&nbsp;высоту потолков. В&nbsp;интерьере решено было создать ответ экстерьеру дома и&nbsp;духу места; сохранить и&nbsp;усилить историческое звучание пространства.
+                            +btn({
+                                text: 'Читать полностью',
+                                cMode: 'rgba(218, 197, 177, 0.1)',
+                                classes: 'awards-media__content-cards__card-article__link'
+                            })
+                

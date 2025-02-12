@@ -40,3 +40,39 @@
 @import "pages/service/service-process/service-process.scss";
 @import "pages/service/service-quote/service-quote.scss";
 @import "pages/service/service-services/service-services.scss";
+
+// О нас
+@import "pages/about/about-intro/about-intro.scss";
+@import "pages/about/about-whoWe/about-whoWe.scss";
+@import "pages/about/about-team/about-team.scss";
+@import "pages/about/about-awards/about-awards.scss";
+@import "pages/about/about-joinTeam/about-joinTeam.scss";
+
+// Страница сотрудника
+@import "pages/employee/employee-intro/emploee-intro.scss";
+@import "pages/employee/employee-history/employee-history.scss";
+@import "pages/employee/employee-awards/employee-awards.scss";
+
+// Награды
+@import "pages/awards/awards-intro/awards-intro.scss";
+@import "pages/awards/awards-honors/awards-honors.scss";
+@import "pages/awards/awards-about/awards-about.scss";
+@import "pages/awards/awards-media/awards-media.scss";
+@import "pages/awards/awards-bid/awards-bid.scss";
+@import "pages/awards/awards-projects/awards-projects.scss";
+
+// Блог
+@import "pages/blog/blog-hero/blog-hero.scss";
+@import "pages/blog/blog-contacts/blog-contacts.scss";
+
+// Страница статьи
+@import "pages/article/article-hero/article-hero.scss";
+@import "pages/article/article-interesting/article-interesting.scss";
+
+// Контакты
+@import "pages/contacts/contacts-hero/contacts-hero.scss";
+@import "pages/contacts/contacts-map/contacts-map.scss";
+@import "pages/contacts/contacts-form/contacts-form.scss";
+
+// 404
+@import "pages/404/404-hero/404-hero.scss";

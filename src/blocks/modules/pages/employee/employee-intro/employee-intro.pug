@@ -1,0 +1,25 @@
+section.section.empoloyee-intro(data-js="empoloyeeIntro")
+    .container.empoloyee-intro__container
+        .empoloyee-intro__content
+            .empoloyee-intro__content-img 
+                img(src="./img/employee/employee-intro_img1.webp", alt="img")
+            .empoloyee-intro__content-article   
+                span.post Руководитель студии VI interiors
+                +title({
+                        text: 'Арина Волкова',
+                        tag: 'h1',
+                        classes: 'empoloyee-intro__content-article__title'
+                })
+                .empoloyee-intro__content-article__text
+                    span.icon 
+                        img(src="./img/svg/commas.svg", alt="img")
+                    p Очень сложно сейчас сказать, с чего именно начался мой путь как дизайнера интерьера. Если заглянуть в прошлое, кажется, что я «по умолчанию» шла по этому пути, как будто это было и так понятно и определенно
+                +btn({
+                    classes: 'employe__scroll-btn',
+                    vMode: 'btn',
+                    link: '#projectsDesc',
+                    text: 'Скролл',
+                    cMode: 'transparent',
+                    icon: true,
+                    iconName: 'scroll',
+                }) 

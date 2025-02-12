@@ -1,0 +1,40 @@
+section.section.about-joinTeam(data-js="aboutJoinTeam")
+    .container.about-joinTeam__container
+        .about-joinTeam__content 
+            .about-joinTeam__content-top 
+                +title({
+                    text: 'Стать частью команды',
+                    classes: 'about-joinTeam__content-top__title'
+                })
+                .about-joinTeam__content-top__descr
+                    p Студия дизайна интерьера &laquo;VI&raquo; ценит внимание к&nbsp;деталям, учёт интересов клиентов, практичность решений, прозрачность в&nbsp;финансовых вопросах, грамотный выбор брендов, соблюдение сроков и&nbsp;сотрудничество с&nbsp;надёжными подрядчиками. Важно не&nbsp;просто создать красивое пространство, но&nbsp;и&nbsp;сделать его &laquo;работающим&raquo;: каждый его элемент должен выполнять свою роль, облегчая повседневную жизнь. И&nbsp;конечно&nbsp;же важен эмоциональный комфорт интерьера, его способность отразить характер и&nbsp;стиль жизни заказчика.
+                button(class="about-joinTeam__show-btn" type="button")
+                    span
+                        | Развернуть
+                    img(src="./img/svg/arrow-bottom.svg", alt="arrow")
+            .about-joinTeam__content-bottom 
+                form.about-joinTeam__form
+                    +title({
+                        text: 'Отправить резюме',
+                        classes: 'about-joinTeam__form-title'
+                    })
+                    .about-joinTeam__form-content
+                        label(for="name")
+                            input(class="about-joinTeam__form-content__input" type="text", id="name" placeholder="Ваше имя*" required)
+                        label(for="email")
+                            input(class="about-joinTeam__form-content__input" type="email", id="email" placeholder="Email*" required)
+                        label(class="label-fail" for="file")
+                            img(src="./img/svg/clip.svg", alt="file-icon")
+                            | Прикрепить резюме
+                            input(class="about-joinTeam__form-content__input" type="file", id="file" required hidden)
+                    p.about-joinTeam__form-content__descr
+                        |Нажимая на кнопку «Отправить заявку» я соглашаюсь
+                        a(href="#")
+                            |с политикой конфиденциальности 
+                    +btn({
+                        buttonType: 'submit',
+                        text: 'Отправить заявку',
+                        cMode: '#dac5b1',
+                        tag: 'button',
+                        classes: 'about-joinTeam__form-content__btn'
+                    })
