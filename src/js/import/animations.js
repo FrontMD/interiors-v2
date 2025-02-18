@@ -43,16 +43,18 @@ if(preloader !== null ) {
                 startPageAnimation();
                 break;
             case "services":
-                projectsAnimationMarkup()
+                projectsAnimationMarkup();
                 startPageAnimation();
                 break;
             case "service":
-                projectsAnimationMarkup()
+                projectsAnimationMarkup();
                 startPageAnimation();
                 break;
             default:
-                cookieInit()
-                startPageAnimation()
+                titlesMarkup();
+                cookieInit();
+                startPageAnimation();
+                cursorRunAway();
                 break
         }
 
@@ -1599,6 +1601,16 @@ function commonPageAnimation() {
 
     currentPage.style.height = "100vh"
 
+    let titlesAnimActive = false
+    let teamAnim = false
+
+    const teamListItems = document.querySelector('[data-js="aboutTeamItems"]')
+
+    if(teamListItems) {
+        heightAnimMarkup();
+        teamAnim = true;
+    }
+
     const footer = document.querySelector('[data-js="footer"]')
     footer.style.bottom = "0"
     footer.style.position = 'relative'
@@ -1611,6 +1623,10 @@ function commonPageAnimation() {
         opacity: '1',
         duration: 0.5,
         delay: 0.5,
+        onComplete: () => {
+            titlesAnimation();
+            titlesAnimActive = true;
+        }
     }, '0')
 
     addTime = Math.round(document.querySelector('[data-js="animContainerCommon"]').offsetHeight * 0.176)
@@ -1634,7 +1650,15 @@ function commonPageAnimation() {
                 top: () => {
                     let animContainerServicesHeight = document.querySelector('[data-js="animContainerCommon"]').offsetHeight;
                     return -(animContainerServicesHeight - window.innerHeight) + "px"
-                },      
+                },
+                onUpdate: () => {
+                    if(titlesAnimActive) {
+                        titlesAnimation();
+                    }
+                    if(teamAnim) {
+                        teamCardsAnimation();
+                    }
+                },
                 duration: 2,
             }, '0')
 
@@ -1649,6 +1673,14 @@ function commonPageAnimation() {
                 top: () => {
                     let animContainerServicesHeight = document.querySelector('[data-js="animContainerCommon"]').offsetHeight;
                     return -(animContainerServicesHeight - window.innerHeight) + "px"
+                },
+                onUpdate: () => {
+                    if(titlesAnimActive) {
+                        titlesAnimation();
+                    }
+                    if(teamAnim) {
+                        teamCardsAnimation();
+                    }
                 },      
                 duration: 2,
             }, '0')
@@ -1752,6 +1784,7 @@ function detailedAnimation() {
 
     if(detailedsAnim.length < 1) return
 
+
     detailedsAnim.forEach(detailedAnim => {
         
         let detailedAnimPosition = detailedAnim.getBoundingClientRect().top
@@ -1765,6 +1798,53 @@ function detailedAnimation() {
         }
     
     })
+}
+
+/* анимация заголовков на общих страницах */
+function titlesAnimation() {
+    
+    const titles = document.querySelectorAll('[data-js="titleAnimInternal"]');
+
+    const showPosition = windowWidth > 500 ? 200 : 100
+
+    if(titles.length < 1) return
+
+    titles.forEach(title => {
+        
+        let titleAnimPosition = title.getBoundingClientRect().top;
+        title.style.transition = 'margin-top 0.5s linear'
+      
+        if(windowHeight - titleAnimPosition > showPosition) {
+            title.style.marginTop = '0'
+        } else {
+            title.style.marginTop = '1em'
+        }
+    
+    })
+}
+
+/* анимация карточек команды на общих страницах */
+function teamCardsAnimation() {
+    
+    const teamItems = document.querySelectorAll('[data-js="aboutTeamItem"] [data-anim="heightEl"]');
+
+    const showPosition = windowWidth > 500 ? 400 : 200
+
+    if(teamItems.length < 1) return
+
+    teamItems.forEach(item => {
+        
+        let itemAnimPosition = item.getBoundingClientRect().top;
+      
+        if(windowHeight - itemAnimPosition > showPosition) {
+            item.style.height = '100%'
+        } else {
+            item.style.height = '0%'
+        }
+    
+    })
+
+
 }
 
 /* анимация картинок контактов */
@@ -1833,5 +1913,8 @@ function defaultHeaderAnim() {
         opacity: '1',
         duration: 0.5,
         delay: 0.5,
+        onComplete: () => {
+            titlesAnimation();
+        }
     }, '0')
 }

@@ -6,68 +6,84 @@ section.section.about-team(data-js="aboutTeam")
                 classes: 'about-team__content-title'
             })
             .team__list-wrapper
-                ul.team-list
-                    li.team-list__item 
-                        span.number 01
-                        p После окончания института начала создавать более крупные проекты, как частный дизайнер. За все это время я ни разу не оглянулась назад, никогда передо мной не стоял вопрос «а моё ли это?». Я просто всегда знала – моё.
-                        img(class="team-list__item-img" src="./img/about/about-team_cards-img1.webp", alt="img")
-                        +title({
-                            tag: 'h3',
-                            text: 'Арина Волкова',
-                            classes: 'team-list__item-name'
-                        })
-                        span.team-list__item-post
-                            | Руководитель студии VI interiors
-                        +btn({
-                            text: 'Читать историю Арины',
-                            cMode: 'rgba(218, 197, 177, 0.1)',
-                            classes: 'team-list__item-link'
-                        })
-                    li.team-list__item 
-                        span.number 02
-                        p В 2016 в студию появился и остался навсегда наш прекрасный визуализатор и душа предприятия – Игнатьев Егор. Именно с Его появления мы начали разрастаться и стали «VI interiors». Благодаря Егору студия набрала невероятные обороты и уже не может остановиться!
-                        img(class="team-list__item-img" src="./img/about/about-team_cards-img2.webp", alt="img")
-                        +title({
-                            tag: 'h3',
-                            text: 'Егор Игнатьев',
-                            classes: 'team-list__item-name'
-                        })
-                        span.team-list__item-post
-                            | Визуализатор, 3D художник
-                        +btn({
-                            text: 'Читать историю Егора',
-                            cMode: 'rgba(218, 197, 177, 0.1)',
-                            classes: 'team-list__item-link'
-                        })
-                    li.team-list__item
-                        span.number 03
-                        p В 2022 году полноценной сотрудницей студии стала старая её знакомая – Арбузова Наталья, человек-оркестр. Наташа занимается вопросами реализации проектов, документооборотом и немного внутренними делами студии.
-                        img(class="team-list__item-img" src="./img/about/about-team_cards-img3.webp", alt="img")
-                        +title({
-                            tag: 'h3',
-                            text: 'Наталья Арбузова',
-                            classes: 'team-list__item-name'
-                        })
-                        span.team-list__item-post
-                            | Дизайнер
-                        +btn({
-                            text: 'Читать историю Натальи',
-                            cMode: 'rgba(218, 197, 177, 0.1)',
-                            classes: 'team-list__item-link'
-                        })
-                    li.team-list__item 
-                        span.number 04
-                        p В 2023 году наконец к нам присоединилась Петрякова Екатерина, дизайнер, который готов решить любой вопрос, ввязаться в любую авантюру и сопровождать проект на любом его этапе.
-                        img(class="team-list__item-img" src="./img/about/about-team_cards-img4.webp", alt="img")
-                        +title({
-                            tag: 'h3',
-                            text: 'Екатерина Петрякова',
-                            classes: 'team-list__item-name'
-                        })
-                        span.team-list__item-post
-                            | Дизайнер
-                        +btn({
-                            text: 'Читать историю Екатерины',
-                            cMode: 'rgba(218, 197, 177, 0.1)',
-                            classes: 'team-list__item-link'
-                        })
+                ul.team-list(data-js="aboutTeamItems")
+                    li.team-list__item(data-js="aboutTeamItem")
+                        .height-anim-wrap(data-anim="heightWrap")
+                            .height-anim-el(data-anim="heightEl")
+                                div(data-anim="heightContent")
+                                    span.number 01
+                                    p После окончания института начала создавать более крупные проекты, как частный дизайнер. За все это время я ни разу не оглянулась назад, никогда передо мной не стоял вопрос «а моё ли это?». Я просто всегда знала – моё.
+                                    img(class="team-list__item-img" src="./img/about/about-team_cards-img1.webp" alt="img")
+                                    +title({
+                                        tag: 'h3',
+                                        text: 'Арина Волкова',
+                                        classes: 'team-list__item-name',
+                                        animated: 'false'
+                                    })
+                                    span.team-list__item-post
+                                        | Руководитель студии VI interiors
+                                    +btn({
+                                        text: 'Читать историю Арины',
+                                        cMode: 'n',
+                                        classes: 'team-list__item-link',
+                                    })
+                    li.team-list__item(data-js="aboutTeamItem")
+                        .height-anim-wrap(data-anim="heightWrap")
+                            .height-anim-el(data-anim="heightEl")
+                                div(data-anim="heightContent")
+                                    span.number 02
+                                    p В 2016 в студию появился и остался навсегда наш прекрасный визуализатор и душа предприятия – Игнатьев Егор. Именно с Его появления мы начали разрастаться и стали «VI interiors». Благодаря Егору студия набрала невероятные обороты и уже не может остановиться!
+                                    img(class="team-list__item-img" src="./img/about/about-team_cards-img2.webp" alt="img")
+                                    +title({
+                                        tag: 'h3',
+                                        text: 'Егор Игнатьев',
+                                        classes: 'team-list__item-name',
+                                        animated: 'false'
+                                    })
+                                    span.team-list__item-post
+                                        | Визуализатор, 3D художник
+                                    +btn({
+                                        text: 'Читать историю Егора',
+                                        cMode: 'n',
+                                        classes: 'team-list__item-link'
+                                    })
+                    li.team-list__item(data-js="aboutTeamItem")
+                        .height-anim-wrap(data-anim="heightWrap")
+                            .height-anim-el(data-anim="heightEl")
+                                div(data-anim="heightContent")
+                                    span.number 03
+                                    p В 2022 году полноценной сотрудницей студии стала старая её знакомая – Арбузова Наталья, человек-оркестр. Наташа занимается вопросами реализации проектов, документооборотом и немного внутренними делами студии.
+                                    img(class="team-list__item-img" src="./img/about/about-team_cards-img3.webp" alt="img")
+                                    +title({
+                                        tag: 'h3',
+                                        text: 'Наталья Арбузова',
+                                        classes: 'team-list__item-name',
+                                        animated: 'false'
+                                    })
+                                    span.team-list__item-post
+                                        | Дизайнер
+                                    +btn({
+                                        text: 'Читать историю Натальи',
+                                        cMode: 'n',
+                                        classes: 'team-list__item-link'
+                                    })
+                    li.team-list__item(data-js="aboutTeamItem")
+                        .height-anim-wrap(data-anim="heightWrap")
+                            .height-anim-el(data-anim="heightEl")
+                                div(data-anim="heightContent")
+                                    span.number 04
+                                    p В 2023 году наконец к нам присоединилась Петрякова Екатерина, дизайнер, который готов решить любой вопрос, ввязаться в любую авантюру и сопровождать проект на любом его этапе.
+                                    img(class="team-list__item-img" src="./img/about/about-team_cards-img4.webp" alt="img")
+                                    +title({
+                                        tag: 'h3',
+                                        text: 'Екатерина Петрякова',
+                                        classes: 'team-list__item-name',
+                                        animated: 'false'
+                                    })
+                                    span.team-list__item-post
+                                        | Дизайнер
+                                    +btn({
+                                        text: 'Читать историю Екатерины',
+                                        cMode: 'n',
+                                        classes: 'team-list__item-link'
+                                    })

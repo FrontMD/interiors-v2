@@ -8,53 +8,58 @@ section.section.employee-awards(data-js="employeeAwards")
             })
                 .employee-awards__content-top__btns
                     button(class="employee-awards__content-top__btns-btn employee-awards__prev-btn" type="button")
-                        img(src="./img/svg/slider-arrow.svg", alt="arrow")
+                        img(src="./img/svg/slider-arrow.svg" alt="arrow")
                     button(class="employee-awards__content-top__btns-btn employee-awards__next-btn" type="button")
-                        img(src="./img/svg/slider-arrow.svg", alt="arrow")
+                        img(src="./img/svg/slider-arrow.svg" alt="arrow")
             .employee-awards__content-cards.swiper
                 .swiper-wrapper
                     .swiper-slide.employee-awards__content-cards__card
                         .employee-awards__content-cards__card-img
-                            img(src="./img/employee/employee-awards__cards-img1.webp", alt="award")
+                            img(src="./img/employee/employee-awards__cards-img1.webp" alt="award")
                         +title({
                             tag: 'h3',
                             text: 'ADD Awards',
-                            classes: 'awards__card-title'
+                            classes: 'awards__card-title',
+                            animated: 'false'
                         })
                     .swiper-slide.employee-awards__content-cards__card
                         .employee-awards__content-cards__card-img
-                            img(src="./img/employee/employee-awards__cards-img2.webp", alt="award")
+                            img(src="./img/employee/employee-awards__cards-img2.webp" alt="award")
                         +title({
                             tag: 'h3',
                             text: 'Premium living award',
-                            classes: 'awards__card-title'
+                            classes: 'awards__card-title',
+                            animated: 'false'
                         })
                     .swiper-slide.employee-awards__content-cards__card
                         .employee-awards__content-cards__card-img
-                            img(src="./img/employee/employee-awards__cards-img3.webp", alt="award")
+                            img(src="./img/employee/employee-awards__cards-img3.webp" alt="award")
                         +title({
                             tag: 'h3',
                             text: 'Modern home award',
-                            classes: 'awards__card-title'
+                            classes: 'awards__card-title',
+                            animated: 'false'
                         })
                     .swiper-slide.employee-awards__content-cards__card
                         .employee-awards__content-cards__card-img
-                            img(src="./img/employee/employee-awards__cards-img4.webp", alt="award")
+                            img(src="./img/employee/employee-awards__cards-img4.webp" alt="award")
                         +title({
                             tag: 'h3',
                             text: 'Диплом СПбИЖСиА имени Репина Российской Академии Художеств',
-                            classes: 'awards__card-title'
+                            classes: 'awards__card-title',
+                            animated: 'false'
                         })
                     .swiper-slide.employee-awards__content-cards__card
                         .employee-awards__content-cards__card-img
-                            img(src="./img/employee/employee-awards__cards-img1.webp", alt="award")
+                            img(src="./img/employee/employee-awards__cards-img1.webp" alt="award")
                         +title({
                             tag: 'h3',
                             text: 'ADD Awards',
-                            classes: 'awards__card-title'
+                            classes: 'awards__card-title',
+                            animated: 'false'
                         })
             +btn({
                 text: 'Все награды',
-                cMode: 'rgba(218, 197, 177, 0.1)',
+                cMode: 'n',
                 classes: 'employee-awards__content-link'
             })

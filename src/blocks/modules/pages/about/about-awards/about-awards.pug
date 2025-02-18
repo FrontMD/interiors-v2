@@ -8,53 +8,58 @@ section.section.about-awards(data-js="aboutAwards")
                 })
                 .about-awards__content-top__btns
                     button(class="about-awards__content-top__btns-btn about-awards__prev-btn" type="button")
-                        img(src="./img/svg/slider-arrow.svg", alt="arrow")
+                        img(src="./img/svg/slider-arrow.svg" alt="arrow")
                     button(class="about-awards__content-top__btns-btn about-awards__next-btn" type="button")
-                        img(src="./img/svg/slider-arrow.svg", alt="arrow")
+                        img(src="./img/svg/slider-arrow.svg" alt="arrow")
             .about-awards__content-cards.swiper
                 .swiper-wrapper
                     .swiper-slide.about-awards__content-cards__card
                         .about-awards__content-cards__card-img
-                            img(src="./img/about/about-awards__cards-img1.webp", alt="award")
+                            img(src="./img/about/about-awards__cards-img1.webp" alt="award")
                         +title({
                             tag: 'h3',
                             text: 'ADD Awards',
-                            classes: 'awards__card-title'
+                            classes: 'awards__card-title',
+                            animated: 'false'
                         })
                     .swiper-slide.about-awards__content-cards__card
                         .about-awards__content-cards__card-img
-                            img(src="./img/about/about-awards__cards-img2.webp", alt="award")
+                            img(src="./img/about/about-awards__cards-img2.webp" alt="award")
                         +title({
                             tag: 'h3',
                             text: 'Premium living award',
-                            classes: 'awards__card-title'
+                            classes: 'awards__card-title',
+                            animated: 'false'
                         })
                     .swiper-slide.about-awards__content-cards__card
                         .about-awards__content-cards__card-img
-                            img(src="./img/about/about-awards__cards-img3.webp", alt="award")
+                            img(src="./img/about/about-awards__cards-img3.webp" alt="award")
                         +title({
                             tag: 'h3',
                             text: 'Modern home award',
-                            classes: 'awards__card-title'
+                            classes: 'awards__card-title',
+                            animated: 'false'
                         })
                     .swiper-slide.about-awards__content-cards__card
                         .about-awards__content-cards__card-img
-                            img(src="./img/about/about-awards__cards-img4.webp", alt="award")
+                            img(src="./img/about/about-awards__cards-img4.webp" alt="award")
                         +title({
                             tag: 'h3',
                             text: 'Public space award',
-                            classes: 'awards__card-title'
+                            classes: 'awards__card-title',
+                            animated: 'false'
                         })
                     .swiper-slide.about-awards__content-cards__card
                         .about-awards__content-cards__card-img
-                            img(src="./img/about/about-awards__cards-img1.webp", alt="award")
+                            img(src="./img/about/about-awards__cards-img1.webp" alt="award")
                         +title({
                             tag: 'h3',
                             text: 'ADD Awards',
-                            classes: 'awards__card-title'
+                            classes: 'awards__card-title',
+                            animated: 'false'
                         })
             +btn({
                 text: 'Все награды',
-                cMode: 'rgba(218, 197, 177, 0.1)',
+                cMode: 'n',
                 classes: 'about-awards__content-link'
             })

@@ -16,7 +16,6 @@ section.section.article-hero(data-js="articleHero")
                     classes: 'article-hero__content-top__title',
                     tag: 'h1',
                     text: 'VI-interiors: квартира 130&nbsp;кв. метров для семьи с&nbsp;двумя детьми в&nbsp;Санкт-Петербурге',
-                    animated: 'flase'
                 })
                 <picture class="article-hero__content-top__img">
                     <source srcset="./img/article/article-hero__top-img-768.webp" media="(max-width: 768px)">
@@ -118,18 +117,19 @@ section.section.article-hero(data-js="articleHero")
                     <img src="./img/article/article-hero__video-bg-1440.webp" alt="img">
                 </picture>
                 button.article-hero__content-video__play
-                    img(src="./img/svg/play.svg", alt="img")
+                    img(src="./img/svg/play.svg" alt="img")
                 video(src="./video/about.mp4" clacc="article-hero__content-video__player" type="video/mp4" controls muted playsinline autoplay) 
             .article-hero__content-files
                 +title({
                     classes: 'article-hero__content-files__title',
                     text: 'Скачать файлы',
+                    animated: 'false'
                 })
                 a(href="#" download) 
-                    img(src="./img/svg/file.svg", alt="img", class="article-hero__content-files__download")
+                    img(src="./img/svg/file.svg" alt="img" class="article-hero__content-files__download")
                     span Планировка квартиры.pdf
                 a(href="#" download) 
-                    img(src="./img/svg/file.svg", alt="img", class="article-hero__content-files__download")
+                    img(src="./img/svg/file.svg" alt="img" class="article-hero__content-files__download")
                     span Визуализация.pdf
             .article-hero__content-link 
                 p Вы можете прочитать по ссылке

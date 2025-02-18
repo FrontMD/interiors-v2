@@ -3,15 +3,16 @@ section.section.error-hero(data-js="errorHero")
         .error-hero__content
             .error-hero__content-top
                 .error-hero__content-top__img
-                    img(src="./img/404/404-hero__bg-img.webp", alt="img")
+                    img(src="./img/404/404-hero__bg-img.webp" alt="img")
                     +title({
-                            text: '404',
-                            classes: 'error-hero__content-top__title'
+                        text: '404',
+                        classes: 'error-hero__content-top__title'
                     })
             .error-hero__content-info 
                 +title({
                     text: 'Ничего не найдено',
-                    classes: 'error-hero__content-info__title'
+                    classes: 'error-hero__content-info__title',
+                    animated: 'false'
                 })
                 +btn({
                     text: 'Вернуться на главную',
