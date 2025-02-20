@@ -4,7 +4,7 @@
 
         &-top {
             display: flex;
-            align-items: center; 
+            align-items: center;
             flex-wrap: wrap;
             gap: 24px;
             margin-bottom: 39px;
@@ -18,15 +18,15 @@
                 @include max(1300) {
                     font-size: 56px;
                 }
-        
+
                 @include max(1199) {
                     font-size: 56px;
                 }
-        
+
                 @include max(1024) {
                     font-size: 48px;
                 }
-        
+
                 @include max(500) {
                     margin-bottom: 11px;
                     font-size: 40px;
@@ -63,7 +63,7 @@
                             top: 0;
                             visibility: hidden;
 
-                            &:checked + .radio-custom {
+                            &:checked+.radio-custom {
                                 color: #563f3b;
                                 background-color: #dac5b1;
                             }
@@ -103,7 +103,7 @@
             &__article {
                 position: relative;
                 padding-top: 5px;
-                padding-bottom: 72px;
+                padding-bottom: 96px;
 
                 &-date {
                     padding: 10px 16px;
@@ -130,15 +130,15 @@
                     @include max(1300) {
                         font-size: 40px;
                     }
-            
+
                     @include max(1199) {
                         font-size: 24px;
                     }
-            
+
                     @include max(1024) {
                         font-size: 24px;
                     }
-            
+
                     @include max(500) {
                         margin-bottom: 11px;
                         font-size: 20px;
@@ -150,7 +150,7 @@
                     flex-direction: column;
                     gap: 8px;
                     overflow: hidden;
-                    max-height: 205px;
+                    max-height: 180px;
 
                     & p {
                         font-weight: 400;
@@ -163,7 +163,7 @@
                             @include max(500) {
                                 display: -webkit-box;
                                 -webkit-box-orient: vertical;
-                                -webkit-line-clamp: 1; 
+                                -webkit-line-clamp: 1;
                                 text-overflow: ellipsis;
                                 width: 100%;
                             }
@@ -172,24 +172,24 @@
                         &:nth-last-child(2) {
                             display: -webkit-box;
                             -webkit-box-orient: vertical;
-                            -webkit-line-clamp: 1; 
+                            -webkit-line-clamp: 1;
                             text-overflow: ellipsis;
                             width: 100%;
 
                             @include max(1024) {
                                 display: inherit;
                                 -webkit-box-orient: inherit;
-                                -webkit-line-clamp: inherit; 
+                                -webkit-line-clamp: inherit;
                                 text-overflow: inherit;
                             }
                         }
 
                         &:last-child {
-        
+
                             @include max(1024) {
                                 display: -webkit-box;
                                 -webkit-box-orient: vertical;
-                                -webkit-line-clamp: 1; 
+                                -webkit-line-clamp: 1;
                                 text-overflow: ellipsis;
                                 width: 100%;
                             }
@@ -253,7 +253,7 @@
                 gap: 17px;
             }
         }
-        
+
         &-slides {
 
             &__slide {
@@ -289,7 +289,7 @@
                         &-img {
                             margin-bottom: 11px;
                             transition: all 0.3s ease;
-    
+
                             & img {
                                 width: 100%;
                             }
@@ -298,14 +298,14 @@
                                 margin-bottom: 7px;
                             }
                         }
-    
+
                         &-date {
                             font-weight: 400;
                             font-size: 12px;
                             line-height: 122%;
                             color: rgba(255, 255, 255, 0.5);
                         }
-    
+
                         &-title {
                             text-align: start;
                             margin-top: 10px;
@@ -313,15 +313,15 @@
                             font-size: 20px;
                             line-height: 108%;
                             color: #fff;
-        
+
                             @include max(1300) {
                                 font-size: 20px;
                             }
-                    
+
                             @include max(1199) {
                                 font-size: 18px;
                             }
-                    
+
                             @include max(1024) {
                                 font-size: 18px;
                             }
@@ -329,7 +329,7 @@
                             @include max(730) {
                                 font-size: 18px;
                             }
-                    
+
                             @include max(500) {
                                 margin-top: 0;
                                 font-size: 14px;
@@ -390,7 +390,7 @@
                         -webkit-user-drag: none;
                         user-drag: none;
                     }
-                    
+
                     &.blog-hero__prev-btn {
                         transform: rotate(180deg);
                     }
@@ -406,14 +406,14 @@
                     gap: 14px;
                     width: auto;
 
-                   & .swiper-pagination-bullet {
+                    & .swiper-pagination-bullet {
                         position: relative;
                         display: flex;
                         align-items: center;
                         justify-content: center;
                         width: 40px;
                         height: 40px;
-                        border-radius:inherit;
+                        border-radius: inherit;
                         background-color: inherit;
                         opacity: 1;
                         cursor: pointer;
