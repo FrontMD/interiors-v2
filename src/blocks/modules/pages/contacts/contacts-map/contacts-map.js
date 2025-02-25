@@ -17,6 +17,8 @@ function initMap() {
             zoom: 14,
             controls: ["zoomControl", "geolocationControl"]
         });
+
+        map.behaviors.disable('scrollZoom')
     
         // Чёрно-белый стиль карты
         map.setType('yandex#map');
