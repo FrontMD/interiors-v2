@@ -53,6 +53,7 @@ if(preloader !== null ) {
             default:
                 titlesMarkup();
                 cookieInit();
+                projectsAnimationMarkup();
                 startPageAnimation();
                 cursorRunAway();
                 break
@@ -1658,6 +1659,7 @@ function commonPageAnimation() {
                     if(teamAnim) {
                         teamCardsAnimation();
                     }
+                    projectsAnimation("service")
                 },
                 duration: 2,
             }, '0')
@@ -1681,6 +1683,7 @@ function commonPageAnimation() {
                     if(teamAnim) {
                         teamCardsAnimation();
                     }
+                    projectsAnimation("service")
                 },      
                 duration: 2,
             }, '0')
