@@ -89,10 +89,11 @@ function startPageAnimation() {
 }
 
 function refreshPageAnimation() {
-    if (typeof scrollTriggerObject !== "undefined") scrollTriggerObject.kill();
-	mainTimeline.clear();
-
-    startPageAnimation();
+    if(typeof scrollTriggerObject !== "undefined") {
+        scrollTriggerObject.kill();
+        mainTimeline.clear();
+        startPageAnimation();
+    }
 }
 
 window.addEventListener('resize', () => {

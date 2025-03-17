@@ -41,8 +41,9 @@ function mProjectsSliderInit(mProjectsEl) {
     })
 
     slidesSliderEx.on('transitionEnd', function () {
+        let currentScroll = window.scrollY
         refreshPageAnimation()
-        gsap.to(window, { duration: 2, scrollTo: { y: "#mProjects", offsetY: 0 } });
+        gsap.to(window, { duration: 0.001, scrollTo: { y: currentScroll, offsetY: 0 } });
     })
    
 }
