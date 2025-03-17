@@ -1,7 +1,7 @@
 .p-projects {
     position: relative;
     padding-top: 72px;
-    height: 100vh;
+    //height: 100vh;
     overflow: hidden;
 
     &__container {
@@ -10,7 +10,7 @@
     }
 
     &__list {
-        margin-top: 50vh;
+        margin-top: 20vh;
 
         @include max(1199) {
             display: flex;
@@ -19,10 +19,15 @@
             gap: 16px;
             margin-top: 5vh;
         }
+
+        @include max(1023) {
+            padding-bottom: 48px;
+        }
     }
 
     &__more {
-        margin: 96px auto 0;
+        //margin: 96px auto 0;
+        margin: 96px auto;
 
         @include max(1199) {
             display: none;
@@ -51,8 +56,10 @@
         align-items: center;
         justify-content: center;
         gap: 32px;
-        opacity: 0;
-        visibility: hidden;
+        //opacity: 0;
+        //visibility: hidden;
+        opacity: 1;
+        visibility: visible;
         transition: opacity 0.3s linear;
 
         @include max(730) {
