@@ -88,8 +88,8 @@ function startPageAnimation() {
     }
 }
 
-function refreshPageAnimation() {
-    let currentScroll = window.scrollY
+function refreshPageAnimation(currentScrollParam = false) {
+    let currentScroll = currentScrollParam  ? currentScrollParam : window.scrollY
     if(typeof scrollTriggerObject !== "undefined") {
         scrollTriggerObject.kill();
         mainTimeline.clear();
